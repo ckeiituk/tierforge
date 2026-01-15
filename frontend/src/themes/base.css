@@ -65,6 +65,8 @@
     --transition-slow: 400ms ease;
 
     /* Z-Index */
+    --z-hover: 10;
+    --z-sidebar: 200;
     --z-header: 100;
     --z-menu: 1000;
     --z-tooltip: 1100;
@@ -632,7 +634,7 @@ body {
 .item-card:hover {
     border-color: var(--color-accent);
     transform: scale(1.05);
-    z-index: 10;
+    z-index: var(--z-hover);
 }
 
 .item-card.dragging,
@@ -885,7 +887,7 @@ body.is-dragging * {
         width: var(--sidebar-width);
         transform: translateX(100%);
         transition: transform var(--transition-normal);
-        z-index: 200;
+        z-index: var(--z-sidebar);
     }
 
     .tierforge-sidebar.open,
