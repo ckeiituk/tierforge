@@ -377,14 +377,14 @@ export class TierEngine {
             if (action === 'delete') this.deleteTier(tier.id);
         });
 
-        menuBtn.addEventListener('click', (e) => {
+        menuBtn.onclick = (e) => {
             e.stopPropagation();
             // Close all other tier menus first
             document.querySelectorAll('.tier-menu').forEach(m => {
-                if (m !== menu) m.hidden = true;
+                if (m !== menu) (m as HTMLElement).hidden = true;
             });
             menu.hidden = !menu.hidden;
-        });
+        };
 
         // Close menu on outside click (using capture phase)
         menu.addEventListener('click', (e) => {

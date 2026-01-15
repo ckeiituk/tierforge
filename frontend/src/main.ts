@@ -4,6 +4,7 @@ import '@/themes/bg3.css';
 
 import { TierEngine } from '@/core/TierEngine';
 
+
 // Initialize app
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('app');
