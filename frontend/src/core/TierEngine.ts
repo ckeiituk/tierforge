@@ -165,6 +165,16 @@ export class TierEngine {
         // Sidebar (unranked)
         const sidebar = this.renderSidebar();
         this.container.appendChild(sidebar);
+
+        // Global click to close tier menus
+        this.container.addEventListener('click', (e) => {
+            const target = e.target as HTMLElement;
+            if (!target.closest('.tier-label')) {
+                document.querySelectorAll('.tier-menu').forEach(m => {
+                    (m as HTMLElement).hidden = true;
+                });
+            }
+        });
     }
 
     private renderHeader(): HTMLElement {
@@ -369,12 +379,16 @@ export class TierEngine {
 
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+            // Close all other tier menus first
+            document.querySelectorAll('.tier-menu').forEach(m => {
+                if (m !== menu) m.hidden = true;
+            });
             menu.hidden = !menu.hidden;
         });
 
-        // Close menu on outside click
-        document.addEventListener('click', () => {
-            menu.hidden = true;
+        // Close menu on outside click (using capture phase)
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
 
         label.appendChild(tierName);
