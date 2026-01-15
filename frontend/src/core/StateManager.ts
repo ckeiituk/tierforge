@@ -303,12 +303,12 @@ class StateManager {
         const fromIndex = tiers.findIndex((tier) => tier.id === tierId);
         if (fromIndex === -1) return false;
 
-        const clampedTarget = Math.max(0, Math.min(targetIndex, tiers.length - 1));
-        if (fromIndex === clampedTarget) return false;
+        const clampedTarget = Math.max(0, Math.min(targetIndex, tiers.length));
 
         const tierIds = tiers.map((tier) => tier.id);
         const [moved] = tierIds.splice(fromIndex, 1);
         const insertIndex = fromIndex < clampedTarget ? clampedTarget - 1 : clampedTarget;
+        if (insertIndex === fromIndex) return false;
         tierIds.splice(insertIndex, 0, moved);
 
         return this.reorderTiers(tierIds);

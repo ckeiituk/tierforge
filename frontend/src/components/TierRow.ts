@@ -18,7 +18,7 @@ export interface TierRowProps {
 export class TierRow extends Component<Record<string, never>, TierRowProps> {
     private itemComponents: ItemCard[] = [];
     private isDropTarget = false;
-    private isReorderTarget = false;
+    private reorderPosition: 'before' | 'after' | null = null;
 
     constructor(props: TierRowProps) {
         super(props, {
@@ -29,9 +29,14 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
 
     render(): HTMLElement {
         const { tier } = this.props;
+        const reorderClass = this.reorderPosition === 'before'
+            ? 'tier-row--insert-before'
+            : this.reorderPosition === 'after'
+                ? 'tier-row--insert-after'
+                : '';
 
         const row = createElement('div', {
-            className: `tier-row ${this.isDropTarget ? 'tier-row--drop-target' : ''} ${this.isReorderTarget ? 'tier-row--reorder-target' : ''}`,
+            className: `tier-row ${this.isDropTarget ? 'tier-row--drop-target' : ''} ${reorderClass}`,
             'data-tier-id': tier.id,
         });
 
@@ -98,7 +103,7 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
 
         label.addEventListener('dragend', () => {
             this.element.classList.remove('tier-row--dragging');
-            this.setReorderTarget(false);
+            this.setReorderPosition(null);
         });
 
         label.appendChild(name);
@@ -232,13 +237,16 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             const payload = getTierDragPayload(e.dataTransfer || null);
             if (!payload || payload.tierId === this.props.tier.id) return;
             e.preventDefault();
-            this.setReorderTarget(true);
+            if (e.dataTransfer) {
+                e.dataTransfer.dropEffect = 'move';
+            }
+            this.setReorderPosition(this.getReorderPosition(row, e.clientY));
         });
 
         row.addEventListener('dragleave', (e: DragEvent) => {
             const relatedTarget = e.relatedTarget as Node | null;
             if (!relatedTarget || !row.contains(relatedTarget)) {
-                this.setReorderTarget(false);
+                this.setReorderPosition(null);
             }
         });
 
@@ -246,13 +254,14 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             const payload = getTierDragPayload(e.dataTransfer || null);
             if (!payload) return;
             e.preventDefault();
-            this.setReorderTarget(false);
+            const position = this.getReorderPosition(row, e.clientY);
+            this.setReorderPosition(null);
 
             if (payload.tierId === this.props.tier.id) return;
             this.emit({
                 type: 'TIER_REORDERED',
                 tierId: payload.tierId,
-                targetIndex: this.props.index,
+                targetIndex: position === 'before' ? this.props.index : this.props.index + 1,
             });
         });
     }
@@ -263,10 +272,16 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
         this.element.classList.toggle('tier-row--drop-target', isDropTarget);
     }
 
-    private setReorderTarget(isReorderTarget: boolean): void {
-        if (this.isReorderTarget === isReorderTarget) return;
-        this.isReorderTarget = isReorderTarget;
-        this.element.classList.toggle('tier-row--reorder-target', isReorderTarget);
+    private setReorderPosition(position: 'before' | 'after' | null): void {
+        if (this.reorderPosition === position) return;
+        this.reorderPosition = position;
+        this.element.classList.toggle('tier-row--insert-before', position === 'before');
+        this.element.classList.toggle('tier-row--insert-after', position === 'after');
+    }
+
+    private getReorderPosition(row: HTMLElement, clientY: number): 'before' | 'after' {
+        const rect = row.getBoundingClientRect();
+        return clientY < rect.top + rect.height / 2 ? 'before' : 'after';
     }
 
     protected cleanup(): void {
