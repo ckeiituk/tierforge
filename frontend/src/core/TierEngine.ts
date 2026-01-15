@@ -174,7 +174,13 @@ export class TierEngine {
         header.innerHTML = `
       <div class="header-content">
         <div class="header-left">
-          <h1 class="header-title">${this.game?.name || 'TierForge'}</h1>
+          <div class="game-switcher">
+            <button class="game-switcher-btn" id="gameSwitcherBtn">
+              <span class="game-name">${this.game?.name || 'Select Game'}</span>
+              <span class="game-switcher-arrow">▼</span>
+            </button>
+            <div class="game-switcher-dropdown" id="gameSwitcherDropdown" hidden></div>
+          </div>
           <div class="sheet-tabs" id="sheetTabs"></div>
         </div>
         <div class="header-right">
@@ -190,7 +196,71 @@ export class TierEngine {
         // Render sheet tabs
         this.renderSheetTabs(header.querySelector('#sheetTabs')!);
 
+        // Setup game switcher
+        this.setupGameSwitcher(header);
+
+        // Setup action buttons
+        this.setupActionButtons(header);
+
         return header;
+    }
+
+    private async setupGameSwitcher(header: HTMLElement): Promise<void> {
+        const btn = header.querySelector('#gameSwitcherBtn')!;
+        const dropdown = header.querySelector('#gameSwitcherDropdown')!;
+
+        // Load all games
+        const games = await api.getGames();
+
+        games.forEach((game) => {
+            const item = document.createElement('button');
+            item.className = `game-switcher-item ${game.id === this.game?.id ? 'active' : ''}`;
+            item.textContent = game.name;
+            item.onclick = () => {
+                window.location.href = `?game=${game.id}`;
+            };
+            dropdown.appendChild(item);
+        });
+
+        // Toggle dropdown
+        btn.addEventListener('click', () => {
+            const isOpen = !dropdown.hasAttribute('hidden');
+            if (isOpen) {
+                dropdown.setAttribute('hidden', '');
+            } else {
+                dropdown.removeAttribute('hidden');
+            }
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!btn.contains(e.target as Node) && !dropdown.contains(e.target as Node)) {
+                dropdown.setAttribute('hidden', '');
+            }
+        });
+    }
+
+    private setupActionButtons(header: HTMLElement): void {
+        // Undo
+        header.querySelector('#undoBtn')?.addEventListener('click', () => {
+            eventBus.emit({ type: 'UNDO' });
+            this.render();
+        });
+
+        // Redo
+        header.querySelector('#redoBtn')?.addEventListener('click', () => {
+            eventBus.emit({ type: 'REDO' });
+            this.render();
+        });
+
+        // Share
+        header.querySelector('#shareBtn')?.addEventListener('click', async () => {
+            if (this.tierList?.share_code) {
+                const url = `${window.location.origin}?s=${this.tierList.share_code}`;
+                await navigator.clipboard.writeText(url);
+                alert('Link copied to clipboard!');
+            }
+        });
     }
 
     private renderSheetTabs(container: HTMLElement): void {
@@ -209,6 +279,15 @@ export class TierEngine {
         this.sheet = sheet;
         eventBus.emit({ type: 'SHEET_CHANGED', sheet });
         await this.loadItems();
+
+        // Create new tier list for this sheet
+        this.tierList = await api.createTierList({
+            game_id: this.game!.id,
+            sheet_id: sheet.id,
+            name: 'My Tier List',
+        });
+        eventBus.emit({ type: 'TIERLIST_LOADED', tierList: this.tierList });
+
         this.render();
     }
 
@@ -218,8 +297,8 @@ export class TierEngine {
 
         if (!this.tierList) return container;
 
-        this.tierList.tiers.forEach((tier) => {
-            const tierRow = this.renderTierRow(tier);
+        this.tierList.tiers.forEach((tier, index) => {
+            const tierRow = this.renderTierRow(tier, index);
             container.appendChild(tierRow);
         });
 
@@ -233,19 +312,74 @@ export class TierEngine {
         return container;
     }
 
-    private renderTierRow(tier: { id: string; name: string; color: string; items: string[] }): HTMLElement {
+    private renderTierRow(tier: { id: string; name: string; color: string; order: number; items: string[] }, index: number): HTMLElement {
         const row = document.createElement('div');
         row.className = 'tier-row';
         row.dataset.tierId = tier.id;
 
-        // Tier label
+        // Tier label with menu
         const label = document.createElement('div');
         label.className = 'tier-label';
         label.style.backgroundColor = tier.color;
-        label.innerHTML = `
-      <span class="tier-name" contenteditable="true">${tier.name}</span>
-      <button class="tier-menu-btn" title="Tier options">⋮</button>
-    `;
+
+        const tierName = document.createElement('span');
+        tierName.className = 'tier-name';
+        tierName.contentEditable = 'true';
+        tierName.textContent = tier.name;
+        tierName.addEventListener('blur', () => {
+            const newName = tierName.textContent?.trim() || tier.name;
+            if (newName !== tier.name) {
+                this.renameTier(tier.id, newName);
+            }
+        });
+        tierName.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                tierName.blur();
+            }
+        });
+
+        const menuBtn = document.createElement('button');
+        menuBtn.className = 'tier-menu-btn';
+        menuBtn.title = 'Tier options';
+        menuBtn.textContent = '⋮';
+
+        const menu = document.createElement('div');
+        menu.className = 'tier-menu';
+        menu.hidden = true;
+
+        const isFirst = index === 0;
+        const isLast = index === (this.tierList?.tiers.length || 1) - 1;
+
+        menu.innerHTML = `
+          <button class="tier-menu-item" data-action="moveUp" ${isFirst ? 'disabled' : ''}>↑ Move Up</button>
+          <button class="tier-menu-item" data-action="moveDown" ${isLast ? 'disabled' : ''}>↓ Move Down</button>
+          <button class="tier-menu-item tier-menu-item--danger" data-action="delete">🗑 Delete</button>
+        `;
+
+        menu.addEventListener('click', (e) => {
+            const target = e.target as HTMLElement;
+            const action = target.dataset.action;
+            menu.hidden = true;
+
+            if (action === 'moveUp') this.moveTier(tier.id, -1);
+            if (action === 'moveDown') this.moveTier(tier.id, 1);
+            if (action === 'delete') this.deleteTier(tier.id);
+        });
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.hidden = !menu.hidden;
+        });
+
+        // Close menu on outside click
+        document.addEventListener('click', () => {
+            menu.hidden = true;
+        });
+
+        label.appendChild(tierName);
+        label.appendChild(menuBtn);
+        label.appendChild(menu);
 
         // Tier items container
         const itemsContainer = document.createElement('div');
@@ -267,6 +401,35 @@ export class TierEngine {
         row.appendChild(itemsContainer);
 
         return row;
+    }
+
+    private renameTier(tierId: string, newName: string): void {
+        if (!this.tierList) return;
+        const tier = this.tierList.tiers.find(t => t.id === tierId);
+        if (tier) {
+            eventBus.emit({ type: 'TIER_UPDATED', tier: { ...tier, name: newName } });
+        }
+    }
+
+    private moveTier(tierId: string, direction: number): void {
+        if (!this.tierList) return;
+
+        const index = this.tierList.tiers.findIndex(t => t.id === tierId);
+        const newIndex = index + direction;
+
+        if (newIndex < 0 || newIndex >= this.tierList.tiers.length) return;
+
+        const tierIds = this.tierList.tiers.map(t => t.id);
+        [tierIds[index], tierIds[newIndex]] = [tierIds[newIndex], tierIds[index]];
+
+        eventBus.emit({ type: 'TIERS_REORDERED', tierIds });
+        this.render();
+    }
+
+    private deleteTier(tierId: string): void {
+        if (!this.tierList) return;
+        eventBus.emit({ type: 'TIER_REMOVED', tierId });
+        this.render();
     }
 
     private renderItemCard(item: Item, containerId: string): HTMLElement {
