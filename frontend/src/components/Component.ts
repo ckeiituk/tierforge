@@ -53,7 +53,8 @@ export abstract class Component<TState = Record<string, never>, TProps = unknown
      * Re-render the component in place
      */
     protected rerender(): void {
-        const parent = this.element.parentNode;
+        const oldElement = this.element;
+        const parent = oldElement.parentNode;
 
         // Clean up old element
         this.cleanup();
@@ -63,7 +64,11 @@ export abstract class Component<TState = Record<string, never>, TProps = unknown
 
         // Replace in DOM if mounted
         if (parent) {
-            parent.replaceChild(newElement, this.element);
+            if (parent.contains(oldElement)) {
+                parent.replaceChild(newElement, oldElement);
+            } else {
+                parent.appendChild(newElement);
+            }
         }
 
         this.element = newElement;
