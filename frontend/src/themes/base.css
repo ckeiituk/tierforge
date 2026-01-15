@@ -1,0 +1,588 @@
+/* ========================================
+   TierForge Base Styles
+   ======================================== */
+
+:root {
+    /* Colors */
+    --color-bg-primary: #0f0f14;
+    --color-bg-secondary: #1a1a24;
+    --color-bg-tertiary: #252532;
+    --color-bg-hover: #2f2f42;
+
+    --color-text-primary: #f0f0f5;
+    --color-text-secondary: #a0a0b0;
+    --color-text-muted: #707080;
+
+    --color-border: #3a3a4a;
+    --color-border-light: #4a4a5a;
+
+    --color-accent: #6366f1;
+    --color-accent-hover: #818cf8;
+    --color-accent-muted: rgba(99, 102, 241, 0.2);
+
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+
+    /* Tier colors */
+    --tier-s: #ff7f7f;
+    --tier-a: #ffbf7f;
+    --tier-b: #ffff7f;
+    --tier-c: #7fff7f;
+    --tier-d: #7fbfff;
+    --tier-f: #ff7fff;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+
+    /* Radii */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 400ms ease;
+
+    /* Sizing */
+    --header-height: 64px;
+    --sidebar-width: 320px;
+    --tier-label-width: 80px;
+    --item-size: 64px;
+}
+
+/* ========================================
+   Reset & Base
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-text-primary);
+    background: var(--color-bg-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* ========================================
+   Layout
+   ======================================== */
+
+.tierforge {
+    display: grid;
+    grid-template-columns: 1fr var(--sidebar-width);
+    grid-template-rows: var(--header-height) 1fr;
+    min-height: 100vh;
+}
+
+.tierforge-header {
+    grid-column: 1 / -1;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-lg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+.btn-ghost:hover {
+    background: var(--color-bg-hover);
+    color: var(--color-text-primary);
+}
+
+/* ========================================
+   Sheet Tabs
+   ======================================== */
+
+.sheet-tabs {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.sheet-tab {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sheet-tab:hover {
+    background: var(--color-bg-hover);
+    color: var(--color-text-primary);
+}
+
+.sheet-tab.active {
+    background: var(--color-accent-muted);
+    color: var(--color-accent);
+}
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+.tierforge-main {
+    padding: var(--space-lg);
+    overflow-y: auto;
+}
+
+/* ========================================
+   Tier List
+   ======================================== */
+
+.tier-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.tier-row {
+    display: flex;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    min-height: calc(var(--item-size) + var(--space-md) * 2);
+}
+
+.tier-label {
+    width: var(--tier-label-width);
+    min-width: var(--tier-label-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.25rem;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.tier-name {
+    outline: none;
+    min-width: 20px;
+    text-align: center;
+}
+
+.tier-name:focus {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+}
+
+.tier-menu-btn {
+    position: absolute;
+    bottom: var(--space-xs);
+    right: var(--space-xs);
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: inherit;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.tier-label:hover .tier-menu-btn {
+    opacity: 1;
+}
+
+.tier-items {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    min-height: calc(var(--item-size) + var(--space-md));
+    transition: background var(--transition-fast);
+}
+
+.tier-items.drop-target {
+    background: var(--color-accent-muted);
+}
+
+/* ========================================
+   Item Cards
+   ======================================== */
+
+.item-card {
+    width: var(--item-size);
+    height: var(--item-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: grab;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.item-card:hover {
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.item-card.dragging {
+    opacity: 0.3;
+    cursor: grabbing;
+}
+
+.item-card.selected {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.item-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.item-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-xs);
+    font-size: 0.625rem;
+    font-weight: var(--font-weight-medium);
+    color: white;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.item-card:hover .item-name {
+    opacity: 1;
+}
+
+/* ========================================
+   Drag & Drop
+   ======================================== */
+
+.drag-ghost {
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+}
+
+.drop-placeholder {
+    width: var(--item-size);
+    height: var(--item-size);
+    border: 2px dashed var(--color-accent);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-muted);
+}
+
+body.is-dragging * {
+    cursor: grabbing !important;
+}
+
+/* ========================================
+   Sidebar
+   ======================================== */
+
+.tierforge-sidebar {
+    background: var(--color-bg-secondary);
+    border-left: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-header h2 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.sidebar-count {
+    background: var(--color-bg-tertiary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+}
+
+.sidebar-search {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-size: 0.875rem;
+}
+
+.sidebar-search input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.sidebar-search input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.sidebar-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-md);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: var(--space-sm);
+}
+
+.sidebar-items.drop-target {
+    background: var(--color-accent-muted);
+}
+
+/* ========================================
+   Add Tier Button
+   ======================================== */
+
+.add-tier-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    background: var(--color-bg-tertiary);
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.add-tier-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-accent-muted);
+}
+
+/* ========================================
+   Loading & Error States
+   ======================================== */
+
+.tierforge-loading,
+.tierforge-error,
+.tierforge-empty {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    min-height: 100vh;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--color-border);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.tierforge-error h2 {
+    color: var(--color-error);
+}
+
+/* ========================================
+   Scrollbar
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-light);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .tierforge {
+        grid-template-columns: 1fr;
+    }
+
+    .tierforge-sidebar {
+        position: fixed;
+        right: 0;
+        top: var(--header-height);
+        bottom: 0;
+        width: var(--sidebar-width);
+        transform: translateX(100%);
+        transition: transform var(--transition-normal);
+        z-index: 200;
+    }
+
+    .tierforge-sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --tier-label-width: 60px;
+        --item-size: 48px;
+    }
+
+    .header-title {
+        font-size: 1rem;
+    }
+}

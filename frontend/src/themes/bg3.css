@@ -1,0 +1,110 @@
+/* ========================================
+   Baldur's Gate 3 Theme
+   ======================================== */
+
+.tierforge.theme-bg3 {
+    /* Dark red/crimson D&D palette */
+    --color-bg-primary: #0c0809;
+    --color-bg-secondary: #140e10;
+    --color-bg-tertiary: #1e1518;
+    --color-bg-hover: #2a1e22;
+
+    --color-text-primary: #f5ebe0;
+    --color-text-secondary: #c4a98a;
+    --color-text-muted: #7a6050;
+
+    --color-border: #3a2828;
+    --color-border-light: #4a3838;
+
+    --color-accent: #c41e3a;
+    --color-accent-hover: #e02040;
+    --color-accent-muted: rgba(196, 30, 58, 0.15);
+
+    /* Tier colors - D&D style */
+    --tier-s: #ff4757;
+    --tier-a: #ff6348;
+    --tier-b: #ffa502;
+    --tier-c: #2ed573;
+    --tier-d: #1e90ff;
+    --tier-f: #a55eea;
+}
+
+.tierforge.theme-bg3 .tierforge-header {
+    background: linear-gradient(180deg,
+            #1a0e10 0%,
+            var(--color-bg-primary) 100%);
+    border-bottom: 1px solid var(--color-accent);
+    box-shadow: 0 2px 8px rgba(196, 30, 58, 0.2);
+}
+
+.tierforge.theme-bg3 .header-title {
+    font-family: 'Cinzel', serif;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+}
+
+.tierforge.theme-bg3 .tier-row {
+    background: linear-gradient(90deg,
+            var(--color-bg-tertiary) 0%,
+            var(--color-bg-secondary) 100%);
+    border-color: var(--color-border);
+}
+
+.tierforge.theme-bg3 .tier-label {
+    font-family: 'Cinzel', serif;
+    position: relative;
+}
+
+.tierforge.theme-bg3 .tier-label::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+    width: 2px;
+    background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(196, 30, 58, 0.5) 50%,
+            transparent 100%);
+}
+
+.tierforge.theme-bg3 .item-card {
+    border-color: var(--color-border);
+}
+
+.tierforge.theme-bg3 .item-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(196, 30, 58, 0.4);
+}
+
+.tierforge.theme-bg3 .btn-primary {
+    background: linear-gradient(180deg, #d62246 0%, var(--color-accent) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tierforge.theme-bg3 .btn-primary:hover {
+    background: linear-gradient(180deg, var(--color-accent-hover) 0%, #d62246 100%);
+    box-shadow: 0 0 12px rgba(196, 30, 58, 0.5);
+}
+
+.tierforge.theme-bg3 .sheet-tab.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.tierforge.theme-bg3 .tierforge-sidebar {
+    background: linear-gradient(180deg,
+            var(--color-bg-secondary) 0%,
+            var(--color-bg-primary) 100%);
+}
+
+/* Scrollbar */
+.tierforge.theme-bg3::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+}
+
+/* Loading spinner */
+.tierforge.theme-bg3 .spinner {
+    border-color: var(--color-border);
+    border-top-color: var(--color-accent);
+}

@@ -1,0 +1,162 @@
+{
+    "id": "bg3",
+    "name": "Baldur's Gate 3",
+    "description": "Epic D&D adventure with hundreds of spells",
+    "icon_url": "/icons/bg3/game-icon.png",
+    "item_schema": {
+        "level": {
+            "type": "number",
+            "label": "Spell Level"
+        },
+        "school": {
+            "type": "string",
+            "label": "School"
+        },
+        "casting_time": {
+            "type": "string",
+            "label": "Casting Time"
+        },
+        "range": {
+            "type": "string",
+            "label": "Range"
+        },
+        "duration": {
+            "type": "string",
+            "label": "Duration"
+        },
+        "concentration": {
+            "type": "boolean",
+            "label": "Concentration"
+        },
+        "ritual": {
+            "type": "boolean",
+            "label": "Ritual"
+        },
+        "components": {
+            "type": "array",
+            "label": "Components"
+        },
+        "classes": {
+            "type": "array",
+            "label": "Classes"
+        },
+        "description": {
+            "type": "text",
+            "label": "Description"
+        }
+    },
+    "filters": [
+        {
+            "id": "level",
+            "name": "Spell Level",
+            "field": "level",
+            "type": "multiselect",
+            "options": [
+                "Cantrip",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ]
+        },
+        {
+            "id": "school",
+            "name": "School",
+            "field": "school",
+            "type": "multiselect",
+            "options": [
+                "Abjuration",
+                "Conjuration",
+                "Divination",
+                "Enchantment",
+                "Evocation",
+                "Illusion",
+                "Necromancy",
+                "Transmutation"
+            ]
+        },
+        {
+            "id": "class",
+            "name": "Class",
+            "field": "classes",
+            "type": "multiselect",
+            "options": [
+                "Wizard",
+                "Sorcerer",
+                "Warlock",
+                "Cleric",
+                "Druid",
+                "Paladin",
+                "Ranger",
+                "Bard"
+            ]
+        },
+        {
+            "id": "concentration",
+            "name": "Concentration",
+            "field": "concentration",
+            "type": "toggle",
+            "options": []
+        }
+    ],
+    "default_tiers": [
+        {
+            "id": "s",
+            "name": "S",
+            "color": "#ff4757",
+            "order": 0
+        },
+        {
+            "id": "a",
+            "name": "A",
+            "color": "#ff6348",
+            "order": 1
+        },
+        {
+            "id": "b",
+            "name": "B",
+            "color": "#ffa502",
+            "order": 2
+        },
+        {
+            "id": "c",
+            "name": "C",
+            "color": "#2ed573",
+            "order": 3
+        },
+        {
+            "id": "d",
+            "name": "D",
+            "color": "#1e90ff",
+            "order": 4
+        },
+        {
+            "id": "f",
+            "name": "F",
+            "color": "#a55eea",
+            "order": 5
+        }
+    ],
+    "sheets": [
+        {
+            "id": "spells",
+            "name": "Spells",
+            "description": "All wizard, sorcerer, and warlock spells",
+            "item_filter": "sheet_id = 'spells'"
+        },
+        {
+            "id": "cleric-spells",
+            "name": "Cleric Spells",
+            "description": "Divine magic for clerics and paladins",
+            "item_filter": "sheet_id = 'cleric-spells'"
+        },
+        {
+            "id": "subclasses",
+            "name": "Subclasses",
+            "description": "All class subclasses ranked",
+            "item_filter": "sheet_id = 'subclasses'"
+        }
+    ]
+}

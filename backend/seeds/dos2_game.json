@@ -1,0 +1,128 @@
+{
+    "id": "dos2",
+    "name": "Divinity: Original Sin 2",
+    "description": "Classic tactical RPG with deep skill system",
+    "icon_url": "/icons/dos2/game-icon.png",
+    "item_schema": {
+        "ap_cost": {
+            "type": "number",
+            "label": "AP Cost"
+        },
+        "cooldown": {
+            "type": "number",
+            "label": "Cooldown"
+        },
+        "source_cost": {
+            "type": "number",
+            "label": "Source Cost"
+        },
+        "memory_cost": {
+            "type": "number",
+            "label": "Memory"
+        },
+        "school": {
+            "type": "string",
+            "label": "School"
+        },
+        "description": {
+            "type": "text",
+            "label": "Description"
+        },
+        "description_ru": {
+            "type": "text",
+            "label": "Description (RU)"
+        }
+    },
+    "filters": [
+        {
+            "id": "school",
+            "name": "School",
+            "field": "school",
+            "type": "multiselect",
+            "options": [
+                "Aerotheurge",
+                "Geomancer",
+                "Hydrosophist",
+                "Pyrokinetic",
+                "Necromancer",
+                "Summoning",
+                "Polymorph",
+                "Scoundrel",
+                "Huntsman",
+                "Warfare",
+                "Source"
+            ]
+        },
+        {
+            "id": "ap",
+            "name": "AP Cost",
+            "field": "ap_cost",
+            "type": "select",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4+"
+            ]
+        }
+    ],
+    "default_tiers": [
+        {
+            "id": "s",
+            "name": "S",
+            "color": "#ff6b6b",
+            "order": 0
+        },
+        {
+            "id": "a",
+            "name": "A",
+            "color": "#ffa94d",
+            "order": 1
+        },
+        {
+            "id": "b",
+            "name": "B",
+            "color": "#ffd43b",
+            "order": 2
+        },
+        {
+            "id": "c",
+            "name": "C",
+            "color": "#94d82d",
+            "order": 3
+        },
+        {
+            "id": "d",
+            "name": "D",
+            "color": "#69db7c",
+            "order": 4
+        },
+        {
+            "id": "f",
+            "name": "F",
+            "color": "#9775fa",
+            "order": 5
+        }
+    ],
+    "sheets": [
+        {
+            "id": "skills",
+            "name": "Skills",
+            "description": "All combat and utility skills",
+            "item_filter": "sheet_id = 'skills'"
+        },
+        {
+            "id": "talents",
+            "name": "Talents",
+            "description": "Character talents and abilities",
+            "item_filter": "sheet_id = 'talents'"
+        },
+        {
+            "id": "combos",
+            "name": "Combos",
+            "description": "Skill combinations and synergies",
+            "item_filter": "sheet_id = 'combos'"
+        }
+    ]
+}
