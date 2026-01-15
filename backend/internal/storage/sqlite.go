@@ -101,7 +101,7 @@ func (s *Store) GetGames() ([]models.Game, error) {
 	}
 	defer rows.Close()
 
-	var games []models.Game
+	games := make([]models.Game, 0)
 	for rows.Next() {
 		var g models.Game
 		var itemSchema, filters, defaultTiers, sheets string
@@ -178,7 +178,7 @@ func (s *Store) GetItems(gameID, sheetID string) ([]models.Item, error) {
 	}
 	defer rows.Close()
 
-	var items []models.Item
+	items := make([]models.Item, 0)
 	for rows.Next() {
 		var item models.Item
 		var dataStr string

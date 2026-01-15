@@ -83,11 +83,13 @@ export class TierEngine {
 
         const result = await api.getItems(this.game.id, this.sheet?.id);
         this.items.clear();
-        result.items.forEach((item) => {
+
+        const items = result.items || [];
+        items.forEach((item) => {
             this.items.set(item.id, item);
         });
 
-        eventBus.emit({ type: 'ITEMS_LOADED', items: result.items });
+        eventBus.emit({ type: 'ITEMS_LOADED', items });
     }
 
     private setupKeyboardShortcuts(): void {
