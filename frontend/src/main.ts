@@ -1,9 +1,9 @@
 import '@/themes/base.css';
 import '@/themes/dos2.css';
 import '@/themes/bg3.css';
+import '@/adapters';
 
-import { TierEngine } from '@/core/TierEngine';
-
+import { TierEngineV2 } from '@/core/TierEngineV2';
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameId = params.get('game');
 
     // Create tier engine
-    new TierEngine({
+    new TierEngineV2({
         container,
         shareCode: shareCode || undefined,
         gameId: gameId || undefined,
