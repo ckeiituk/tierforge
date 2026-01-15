@@ -484,6 +484,7 @@ body {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
     position: relative;
     cursor: grab;
+    touch-action: none;
 }
 
 .tier-name,
@@ -492,6 +493,11 @@ body {
     min-width: 20px;
     text-align: center;
     cursor: text;
+}
+
+.tier-row__label:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 .tier-row__label:active {
@@ -577,9 +583,10 @@ body {
     position: absolute;
     left: var(--space-sm);
     right: var(--space-sm);
-    height: 2px;
+    height: 3px;
     background: var(--color-accent);
     box-shadow: var(--shadow-glow);
+    border-radius: 999px;
     pointer-events: none;
 }
 
@@ -589,6 +596,18 @@ body {
 
 .tier-row--insert-after::after {
     bottom: -1px;
+}
+
+.tier-row--insert-before {
+    margin-top: 6px;
+}
+
+.tier-row--insert-after {
+    margin-bottom: 6px;
+}
+
+.tier-row--dragging .tier-row__label {
+    user-select: none;
 }
 
 /* ========================================

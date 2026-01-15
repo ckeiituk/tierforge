@@ -136,6 +136,8 @@ export type AppEvent =
     | { type: 'TIER_MOVE_UP'; tierId: string }
     | { type: 'TIER_MOVE_DOWN'; tierId: string }
     | { type: 'TIER_REORDERED'; tierId: string; targetIndex: number }
+    | { type: 'TIER_REORDER_PREVIEW'; tierId: string; position: 'before' | 'after' }
+    | { type: 'TIER_REORDER_PREVIEW_CLEARED' }
     | { type: 'TIERS_REORDERED'; tierIds: string[] }
     | { type: 'FILTER_CHANGED'; filterId: string; values: string[] }
     | { type: 'SEARCH_CHANGED'; query: string }

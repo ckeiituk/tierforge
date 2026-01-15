@@ -27,6 +27,8 @@ export class TierList extends Component<Record<string, never>, TierListProps> {
 
         const container = createElement('div', {
             className: 'tier-list',
+            role: 'list',
+            'aria-label': 'Tier list',
         });
 
         if (!tierList) {

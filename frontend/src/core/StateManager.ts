@@ -141,6 +141,11 @@ class StateManager {
                 stateChanged = this.reorderTier(event.tierId, event.targetIndex);
                 break;
 
+            case 'TIER_REORDER_PREVIEW':
+            case 'TIER_REORDER_PREVIEW_CLEARED':
+                stateChanged = false;
+                break;
+
             case 'TIERS_REORDERED':
                 stateChanged = this.reorderTiers(event.tierIds);
                 break;

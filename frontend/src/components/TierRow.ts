@@ -19,11 +19,30 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
     private itemComponents: ItemCard[] = [];
     private isDropTarget = false;
     private reorderPosition: 'before' | 'after' | null = null;
+    private pointerDragState: {
+        pointerId: number;
+        startY: number;
+        active: boolean;
+        lastTargetTierId: string | null;
+        lastPosition: 'before' | 'after' | null;
+    } | null = null;
 
     constructor(props: TierRowProps) {
         super(props, {
             initialState: {},
             className: 'tier-row',
+        });
+
+        this.on('TIER_REORDER_PREVIEW', (event) => {
+            if (event.tierId === this.props.tier.id) {
+                this.setReorderPosition(event.position);
+            } else if (this.reorderPosition !== null) {
+                this.setReorderPosition(null);
+            }
+        });
+
+        this.on('TIER_REORDER_PREVIEW_CLEARED', () => {
+            this.setReorderPosition(null);
         });
     }
 
@@ -38,6 +57,8 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
         const row = createElement('div', {
             className: `tier-row ${this.isDropTarget ? 'tier-row--drop-target' : ''} ${reorderClass}`,
             'data-tier-id': tier.id,
+            'data-tier-index': this.props.index.toString(),
+            role: 'listitem',
         });
 
         const actions = this.renderActions();
@@ -63,6 +84,11 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
         const label = createElement('div', {
             className: 'tier-row__label',
             draggable: 'true',
+            tabindex: '0',
+            role: 'button',
+            'aria-label': `${tier.name} tier. Drag to reorder.`,
+            'aria-grabbed': 'false',
+            'aria-keyshortcuts': 'Alt+ArrowUp Alt+ArrowDown Control+ArrowUp Control+ArrowDown',
         });
         label.style.backgroundColor = tier.color;
 
@@ -94,16 +120,91 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             }
         });
 
+        label.addEventListener('keydown', (e: KeyboardEvent) => {
+            if (e.target !== label) return;
+            const modifierPressed = e.altKey || e.ctrlKey || e.metaKey;
+            if (!modifierPressed) return;
+
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.emit({ type: 'TIER_MOVE_UP', tierId: tier.id });
+            }
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.emit({ type: 'TIER_MOVE_DOWN', tierId: tier.id });
+            }
+        });
+
         label.addEventListener('dragstart', (e: DragEvent) => {
             if (!e.dataTransfer) return;
             setTierDragPayload(e.dataTransfer, { tierId: tier.id });
             e.dataTransfer.effectAllowed = 'move';
-            this.element.classList.add('tier-row--dragging');
+            this.setDraggingVisual(label, true);
         });
 
         label.addEventListener('dragend', () => {
-            this.element.classList.remove('tier-row--dragging');
-            this.setReorderPosition(null);
+            this.setDraggingVisual(label, false);
+            this.emit({ type: 'TIER_REORDER_PREVIEW_CLEARED' });
+        });
+
+        label.addEventListener('pointerdown', (e: PointerEvent) => {
+            if (e.pointerType === 'mouse') return;
+            if (e.button !== 0) return;
+            if ((e.target as HTMLElement).isContentEditable) return;
+
+            e.preventDefault();
+            label.setPointerCapture(e.pointerId);
+            this.pointerDragState = {
+                pointerId: e.pointerId,
+                startY: e.clientY,
+                active: false,
+                lastTargetTierId: null,
+                lastPosition: null,
+            };
+        });
+
+        label.addEventListener('pointermove', (e: PointerEvent) => {
+            const state = this.pointerDragState;
+            if (!state || e.pointerId !== state.pointerId) return;
+
+            const delta = Math.abs(e.clientY - state.startY);
+            if (!state.active && delta < 6) return;
+
+            if (!state.active) {
+                state.active = true;
+                this.setDraggingVisual(label, true);
+            }
+
+            this.updatePointerPreview(e.clientX, e.clientY, state);
+        });
+
+        label.addEventListener('pointerup', (e: PointerEvent) => {
+            const state = this.pointerDragState;
+            if (!state || e.pointerId !== state.pointerId) return;
+            if (label.hasPointerCapture(e.pointerId)) {
+                label.releasePointerCapture(e.pointerId);
+            }
+
+            if (state.active) {
+                this.commitPointerReorder(e.clientX, e.clientY);
+            }
+
+            this.pointerDragState = null;
+            this.setDraggingVisual(label, false);
+            this.emit({ type: 'TIER_REORDER_PREVIEW_CLEARED' });
+        });
+
+        label.addEventListener('pointercancel', (e: PointerEvent) => {
+            const state = this.pointerDragState;
+            if (!state || e.pointerId !== state.pointerId) return;
+            if (label.hasPointerCapture(e.pointerId)) {
+                label.releasePointerCapture(e.pointerId);
+            }
+
+            this.pointerDragState = null;
+            this.setDraggingVisual(label, false);
+            this.emit({ type: 'TIER_REORDER_PREVIEW_CLEARED' });
         });
 
         label.appendChild(name);
@@ -240,13 +341,17 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             if (e.dataTransfer) {
                 e.dataTransfer.dropEffect = 'move';
             }
-            this.setReorderPosition(this.getReorderPosition(row, e.clientY));
+            this.emit({
+                type: 'TIER_REORDER_PREVIEW',
+                tierId: this.props.tier.id,
+                position: this.getReorderPosition(row, e.clientY),
+            });
         });
 
         row.addEventListener('dragleave', (e: DragEvent) => {
             const relatedTarget = e.relatedTarget as Node | null;
             if (!relatedTarget || !row.contains(relatedTarget)) {
-                this.setReorderPosition(null);
+                this.emit({ type: 'TIER_REORDER_PREVIEW_CLEARED' });
             }
         });
 
@@ -255,7 +360,7 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             if (!payload) return;
             e.preventDefault();
             const position = this.getReorderPosition(row, e.clientY);
-            this.setReorderPosition(null);
+            this.emit({ type: 'TIER_REORDER_PREVIEW_CLEARED' });
 
             if (payload.tierId === this.props.tier.id) return;
             this.emit({
@@ -282,6 +387,69 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
     private getReorderPosition(row: HTMLElement, clientY: number): 'before' | 'after' {
         const rect = row.getBoundingClientRect();
         return clientY < rect.top + rect.height / 2 ? 'before' : 'after';
+    }
+
+    private updatePointerPreview(clientX: number, clientY: number, state: {
+        pointerId: number;
+        startY: number;
+        active: boolean;
+        lastTargetTierId: string | null;
+        lastPosition: 'before' | 'after' | null;
+    }): void {
+        const target = this.getTierTargetFromPoint(clientX, clientY);
+        if (!target || target.tierId === this.props.tier.id) {
+            if (state.lastTargetTierId !== null) {
+                state.lastTargetTierId = null;
+                state.lastPosition = null;
+                this.emit({ type: 'TIER_REORDER_PREVIEW_CLEARED' });
+            }
+            return;
+        }
+
+        if (state.lastTargetTierId === target.tierId && state.lastPosition === target.position) return;
+        state.lastTargetTierId = target.tierId;
+        state.lastPosition = target.position;
+        this.emit({
+            type: 'TIER_REORDER_PREVIEW',
+            tierId: target.tierId,
+            position: target.position,
+        });
+    }
+
+    private commitPointerReorder(clientX: number, clientY: number): void {
+        const target = this.getTierTargetFromPoint(clientX, clientY);
+        if (!target || target.tierId === this.props.tier.id) return;
+
+        this.emit({
+            type: 'TIER_REORDERED',
+            tierId: this.props.tier.id,
+            targetIndex: target.position === 'before' ? target.index : target.index + 1,
+        });
+    }
+
+    private getTierTargetFromPoint(
+        clientX: number,
+        clientY: number
+    ): { tierId: string; index: number; position: 'before' | 'after' } | null {
+        const element = document.elementFromPoint(clientX, clientY);
+        if (!(element instanceof HTMLElement)) return null;
+        const row = element.closest<HTMLElement>('.tier-row');
+        if (!row) return null;
+        const tierId = row.dataset.tierId;
+        const indexRaw = row.dataset.tierIndex;
+        if (!tierId || indexRaw === undefined) return null;
+        const index = Number.parseInt(indexRaw, 10);
+        if (Number.isNaN(index)) return null;
+
+        const rect = row.getBoundingClientRect();
+        const position = clientY < rect.top + rect.height / 2 ? 'before' : 'after';
+        return { tierId, index, position };
+    }
+
+    private setDraggingVisual(label: HTMLElement, isDragging: boolean): void {
+        label.setAttribute('aria-grabbed', isDragging ? 'true' : 'false');
+        this.element.classList.toggle('tier-row--dragging', isDragging);
+        document.body.classList.toggle('is-dragging', isDragging);
     }
 
     protected cleanup(): void {
