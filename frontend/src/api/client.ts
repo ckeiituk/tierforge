@@ -1,4 +1,4 @@
-import type { Game, Item, ItemList, TierList, TierListCreate, TierListUpdate, SheetConfig } from '@/types';
+import type { Game, ItemList, TierList, TierListCreate, TierListUpdate, SheetConfig } from '@/types';
 
 const API_BASE = '/api';
 

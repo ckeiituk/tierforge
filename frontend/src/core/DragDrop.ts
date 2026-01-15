@@ -1,11 +1,11 @@
 import { eventBus } from './EventBus';
-import { stateManager } from './StateManager';
 
 interface DragState {
     itemId: string | null;
     sourceContainer: string | null;
     sourceIndex: number;
     ghostElement: HTMLElement | null;
+    ghostMoveHandler: ((e: DragEvent) => void) | null;
     placeholder: HTMLElement | null;
     lastDropTarget: HTMLElement | null;
 }
@@ -19,6 +19,7 @@ class DragDropManager {
         sourceContainer: null,
         sourceIndex: -1,
         ghostElement: null,
+        ghostMoveHandler: null,
         placeholder: null,
         lastDropTarget: null,
     };
@@ -115,6 +116,7 @@ class DragDropManager {
             sourceContainer: null,
             sourceIndex: -1,
             ghostElement: null,
+            ghostMoveHandler: null,
             placeholder: null,
             lastDropTarget: null,
         };
@@ -182,20 +184,20 @@ class DragDropManager {
         this.state.ghostElement = ghost;
 
         // Follow cursor
-        const moveGhost = (e: MouseEvent) => {
+        const moveGhost = (e: DragEvent) => {
             ghost.style.left = `${e.clientX - ghost.offsetWidth / 2}px`;
             ghost.style.top = `${e.clientY - ghost.offsetHeight / 2}px`;
         };
 
-        document.addEventListener('dragover', moveGhost as EventListener);
-        (ghost as any)._moveHandler = moveGhost;
+        document.addEventListener('dragover', moveGhost);
+        this.state.ghostMoveHandler = moveGhost;
     }
 
     private removeGhost(): void {
         if (this.state.ghostElement) {
-            const handler = (this.state.ghostElement as any)._moveHandler;
-            if (handler) {
-                document.removeEventListener('dragover', handler);
+            if (this.state.ghostMoveHandler) {
+                document.removeEventListener('dragover', this.state.ghostMoveHandler);
+                this.state.ghostMoveHandler = null;
             }
             this.state.ghostElement.remove();
             this.state.ghostElement = null;

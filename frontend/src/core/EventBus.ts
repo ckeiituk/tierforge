@@ -1,17 +1,23 @@
 import type { AppEvent } from '@/types';
 
+export type { AppEvent } from '@/types';
+
 type EventHandler = (event: AppEvent) => void;
 
 /**
  * Simple event bus for decoupled component communication
  */
 class EventBus {
-    private handlers: Map<string, Set<EventHandler>> = new Map();
+    private handlers: Map<AppEvent['type'], Set<EventHandler>> = new Map();
     private globalHandlers: Set<EventHandler> = new Set();
 
     /**
      * Subscribe to a specific event type
      */
+    on<K extends AppEvent['type']>(
+        eventType: K,
+        handler: (event: Extract<AppEvent, { type: K }>) => void
+    ): () => void;
     on(eventType: AppEvent['type'], handler: EventHandler): () => void {
         if (!this.handlers.has(eventType)) {
             this.handlers.set(eventType, new Set());

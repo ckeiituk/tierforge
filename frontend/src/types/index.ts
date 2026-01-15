@@ -104,6 +104,7 @@ export interface AppState {
     isDragging: boolean;
     isEditing: boolean;
     filters: Record<string, string[]>;
+    searchQuery: string;
     history: HistoryEntry[];
     historyIndex: number;
 }
@@ -119,14 +120,24 @@ export interface HistoryEntry {
 export type AppEvent =
     | { type: 'GAME_CHANGED'; game: Game }
     | { type: 'SHEET_CHANGED'; sheet: SheetConfig }
+    | { type: 'SHEET_CHANGE_REQUESTED'; sheet: SheetConfig }
     | { type: 'ITEMS_LOADED'; items: Item[] }
     | { type: 'TIERLIST_LOADED'; tierList: TierList }
     | { type: 'ITEM_MOVED'; itemId: string; fromTier: string; toTier: string; position: number }
+    | { type: 'ITEM_CLICKED'; itemId: string; multiSelect: boolean; rangeSelect: boolean }
+    | { type: 'ITEM_HOVERED'; itemId: string; element: HTMLElement }
+    | { type: 'ITEM_UNHOVERED'; itemId: string }
+    | { type: 'DRAG_START'; itemId: string; containerId: string }
+    | { type: 'DRAG_END'; itemId: string }
+    | { type: 'TIER_ADD_REQUESTED' }
     | { type: 'TIER_ADDED'; tier: Tier }
     | { type: 'TIER_REMOVED'; tierId: string }
     | { type: 'TIER_UPDATED'; tier: Tier }
+    | { type: 'TIER_MOVE_UP'; tierId: string }
+    | { type: 'TIER_MOVE_DOWN'; tierId: string }
     | { type: 'TIERS_REORDERED'; tierIds: string[] }
     | { type: 'FILTER_CHANGED'; filterId: string; values: string[] }
+    | { type: 'SEARCH_CHANGED'; query: string }
     | { type: 'UNDO' }
     | { type: 'REDO' }
     | { type: 'SAVE_REQUESTED' }
