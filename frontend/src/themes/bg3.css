@@ -50,12 +50,14 @@
     border-color: var(--color-border);
 }
 
-.tierforge.theme-bg3 .tier-label {
+.tierforge.theme-bg3 .tier-label,
+.tierforge.theme-bg3 .tier-row__label {
     font-family: 'Cinzel', serif;
     position: relative;
 }
 
-.tierforge.theme-bg3 .tier-label::after {
+.tierforge.theme-bg3 .tier-label::after,
+.tierforge.theme-bg3 .tier-row__label::after {
     content: '';
     position: absolute;
     right: 0;
@@ -77,22 +79,26 @@
     box-shadow: 0 0 15px rgba(196, 30, 58, 0.4);
 }
 
-.tierforge.theme-bg3 .btn-primary {
+.tierforge.theme-bg3 .btn-primary,
+.tierforge.theme-bg3 .btn--primary {
     background: linear-gradient(180deg, #d62246 0%, var(--color-accent) 100%);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.tierforge.theme-bg3 .btn-primary:hover {
+.tierforge.theme-bg3 .btn-primary:hover,
+.tierforge.theme-bg3 .btn--primary:hover {
     background: linear-gradient(180deg, var(--color-accent-hover) 0%, #d62246 100%);
     box-shadow: 0 0 12px rgba(196, 30, 58, 0.5);
 }
 
-.tierforge.theme-bg3 .sheet-tab.active {
+.tierforge.theme-bg3 .sheet-tab.active,
+.tierforge.theme-bg3 .sheet-tabs__tab--active {
     color: var(--color-accent);
     border-bottom: 2px solid var(--color-accent);
 }
 
-.tierforge.theme-bg3 .tierforge-sidebar {
+.tierforge.theme-bg3 .tierforge-sidebar,
+.tierforge.theme-bg3 .sidebar {
     background: linear-gradient(180deg,
             var(--color-bg-secondary) 0%,
             var(--color-bg-primary) 100%);
