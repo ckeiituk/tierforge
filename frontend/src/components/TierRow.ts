@@ -4,7 +4,7 @@
 
 import { Component, createElement } from './Component';
 import { ItemCard } from './ItemCard';
-import { getDragPayload } from '@/core/dragPayload';
+import { getDragPayload, getTierDragPayload, setTierDragPayload } from '@/core/dragPayload';
 import type { Item, Tier } from '@/types';
 
 export interface TierRowProps {
@@ -18,6 +18,7 @@ export interface TierRowProps {
 export class TierRow extends Component<Record<string, never>, TierRowProps> {
     private itemComponents: ItemCard[] = [];
     private isDropTarget = false;
+    private isReorderTarget = false;
 
     constructor(props: TierRowProps) {
         super(props, {
@@ -30,7 +31,7 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
         const { tier } = this.props;
 
         const row = createElement('div', {
-            className: `tier-row ${this.isDropTarget ? 'tier-row--drop-target' : ''}`,
+            className: `tier-row ${this.isDropTarget ? 'tier-row--drop-target' : ''} ${this.isReorderTarget ? 'tier-row--reorder-target' : ''}`,
             'data-tier-id': tier.id,
         });
 
@@ -45,6 +46,8 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
         const itemsContainer = this.renderItemsContainer();
         row.appendChild(itemsContainer);
 
+        this.setupReorderHandlers(row);
+
         this.element = row;
         return row;
     }
@@ -54,6 +57,7 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
 
         const label = createElement('div', {
             className: 'tier-row__label',
+            draggable: 'true',
         });
         label.style.backgroundColor = tier.color;
 
@@ -62,6 +66,7 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             className: 'tier-row__name',
             contenteditable: 'true',
         }, [tier.name]);
+        name.setAttribute('draggable', 'false');
 
         name.addEventListener('blur', () => {
             const newName = name.textContent?.trim() || tier.name;
@@ -73,11 +78,27 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             }
         });
 
+        name.addEventListener('dragstart', (e: DragEvent) => {
+            e.preventDefault();
+        });
+
         name.addEventListener('keydown', (e: KeyboardEvent) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 name.blur();
             }
+        });
+
+        label.addEventListener('dragstart', (e: DragEvent) => {
+            if (!e.dataTransfer) return;
+            setTierDragPayload(e.dataTransfer, { tierId: tier.id });
+            e.dataTransfer.effectAllowed = 'move';
+            this.element.classList.add('tier-row--dragging');
+        });
+
+        label.addEventListener('dragend', () => {
+            this.element.classList.remove('tier-row--dragging');
+            this.setReorderTarget(false);
         });
 
         label.appendChild(name);
@@ -206,10 +227,46 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
         });
     }
 
+    private setupReorderHandlers(row: HTMLElement): void {
+        row.addEventListener('dragover', (e: DragEvent) => {
+            const payload = getTierDragPayload(e.dataTransfer || null);
+            if (!payload || payload.tierId === this.props.tier.id) return;
+            e.preventDefault();
+            this.setReorderTarget(true);
+        });
+
+        row.addEventListener('dragleave', (e: DragEvent) => {
+            const relatedTarget = e.relatedTarget as Node | null;
+            if (!relatedTarget || !row.contains(relatedTarget)) {
+                this.setReorderTarget(false);
+            }
+        });
+
+        row.addEventListener('drop', (e: DragEvent) => {
+            const payload = getTierDragPayload(e.dataTransfer || null);
+            if (!payload) return;
+            e.preventDefault();
+            this.setReorderTarget(false);
+
+            if (payload.tierId === this.props.tier.id) return;
+            this.emit({
+                type: 'TIER_REORDERED',
+                tierId: payload.tierId,
+                targetIndex: this.props.index,
+            });
+        });
+    }
+
     private setDropTarget(isDropTarget: boolean): void {
         if (this.isDropTarget === isDropTarget) return;
         this.isDropTarget = isDropTarget;
         this.element.classList.toggle('tier-row--drop-target', isDropTarget);
+    }
+
+    private setReorderTarget(isReorderTarget: boolean): void {
+        if (this.isReorderTarget === isReorderTarget) return;
+        this.isReorderTarget = isReorderTarget;
+        this.element.classList.toggle('tier-row--reorder-target', isReorderTarget);
     }
 
     protected cleanup(): void {

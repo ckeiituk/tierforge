@@ -135,6 +135,7 @@ export type AppEvent =
     | { type: 'TIER_UPDATED'; tier: Tier }
     | { type: 'TIER_MOVE_UP'; tierId: string }
     | { type: 'TIER_MOVE_DOWN'; tierId: string }
+    | { type: 'TIER_REORDERED'; tierId: string; targetIndex: number }
     | { type: 'TIERS_REORDERED'; tierIds: string[] }
     | { type: 'FILTER_CHANGED'; filterId: string; values: string[] }
     | { type: 'SEARCH_CHANGED'; query: string }

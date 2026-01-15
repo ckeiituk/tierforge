@@ -137,6 +137,10 @@ class StateManager {
                 stateChanged = this.moveTier(event.tierId, 1);
                 break;
 
+            case 'TIER_REORDERED':
+                stateChanged = this.reorderTier(event.tierId, event.targetIndex);
+                break;
+
             case 'TIERS_REORDERED':
                 stateChanged = this.reorderTiers(event.tierIds);
                 break;
@@ -290,6 +294,24 @@ class StateManager {
 
         this.state.tierList = { ...this.state.tierList, tiers: reordered };
         return true;
+    }
+
+    private reorderTier(tierId: string, targetIndex: number): boolean {
+        if (!this.state.tierList) return false;
+
+        const tiers = this.state.tierList.tiers;
+        const fromIndex = tiers.findIndex((tier) => tier.id === tierId);
+        if (fromIndex === -1) return false;
+
+        const clampedTarget = Math.max(0, Math.min(targetIndex, tiers.length - 1));
+        if (fromIndex === clampedTarget) return false;
+
+        const tierIds = tiers.map((tier) => tier.id);
+        const [moved] = tierIds.splice(fromIndex, 1);
+        const insertIndex = fromIndex < clampedTarget ? clampedTarget - 1 : clampedTarget;
+        tierIds.splice(insertIndex, 0, moved);
+
+        return this.reorderTiers(tierIds);
     }
 
     private updateUnrankedItems(): void {

@@ -482,6 +482,7 @@ body {
     color: #000;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
     position: relative;
+    cursor: grab;
 }
 
 .tier-name,
@@ -489,6 +490,11 @@ body {
     outline: none;
     min-width: 20px;
     text-align: center;
+    cursor: text;
+}
+
+.tier-row__label:active {
+    cursor: grabbing;
 }
 
 .tier-name:focus,
@@ -558,6 +564,14 @@ body {
 .tier-items.drop-target,
 .tier-row--drop-target .tier-row__items {
     background: var(--color-accent-muted);
+}
+
+.tier-row--reorder-target {
+    box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.tier-row--dragging {
+    opacity: 0.7;
 }
 
 /* ========================================
