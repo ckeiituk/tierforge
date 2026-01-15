@@ -16,8 +16,10 @@ interface TierMenuState {
     isOpen: boolean;
 }
 
+type TierMenuAction = 'moveUp' | 'moveDown' | 'delete';
+
 export class TierMenu extends Component<TierMenuState, TierMenuProps> {
-    private closeHandler: ((e: MouseEvent) => void) | null = null;
+    private closeHandler: ((e: PointerEvent) => void) | null = null;
 
     constructor(props: TierMenuProps) {
         super(props, {
@@ -27,11 +29,13 @@ export class TierMenu extends Component<TierMenuState, TierMenuProps> {
     }
 
     render(): HTMLElement {
-        const { isFirst, isLast } = this.props;
+        const { isFirst, isLast, tierName } = this.props;
         const { isOpen } = this.state;
 
         const menu = createElement('div', {
             className: `tier-menu ${isOpen ? 'tier-menu--open' : ''}`,
+            role: 'menu',
+            'aria-label': `${tierName} options`,
         });
 
         if (!isOpen) {
@@ -61,21 +65,22 @@ export class TierMenu extends Component<TierMenuState, TierMenuProps> {
 
     private createMenuItem(
         label: string,
-        action: string,
+        action: TierMenuAction,
         disabled: boolean,
         isDanger: boolean = false
     ): HTMLElement {
         const item = createElement('button', {
             className: `tier-menu__item ${isDanger ? 'tier-menu__item--danger' : ''} ${disabled ? 'tier-menu__item--disabled' : ''}`,
             'data-action': action,
+            role: 'menuitem',
         }, [label]);
 
         if (disabled) {
             item.setAttribute('disabled', 'true');
         }
 
-        item.addEventListener('click', (e) => {
-            e.stopPropagation();
+        item.addEventListener('click', (e: MouseEvent) => {
+            e.preventDefault();
             if (disabled) return;
 
             this.handleAction(action);
@@ -85,15 +90,15 @@ export class TierMenu extends Component<TierMenuState, TierMenuProps> {
         return item;
     }
 
-    private handleAction(action: string): void {
+    private handleAction(action: TierMenuAction): void {
         const { tierId } = this.props;
 
         switch (action) {
             case 'moveUp':
-                this.emit({ type: 'TIER_MOVE_UP', tierId } as any);
+                this.emit({ type: 'TIER_MOVE_UP', tierId });
                 break;
             case 'moveDown':
-                this.emit({ type: 'TIER_MOVE_DOWN', tierId } as any);
+                this.emit({ type: 'TIER_MOVE_DOWN', tierId });
                 break;
             case 'delete':
                 this.emit({ type: 'TIER_REMOVED', tierId });
@@ -109,29 +114,30 @@ export class TierMenu extends Component<TierMenuState, TierMenuProps> {
         menu.style.position = 'fixed';
         menu.style.top = `${rect.bottom + 4}px`;
         menu.style.left = `${rect.left}px`;
-        menu.style.zIndex = '1000';
     }
 
     private setupCloseHandler(): void {
         // Remove old handler if exists
         this.removeCloseHandler();
 
-        this.closeHandler = (e: MouseEvent) => {
-            const target = e.target as HTMLElement;
-            if (!this.element.contains(target)) {
-                this.close();
+        this.closeHandler = (e: PointerEvent) => {
+            const target = e.target as Node | null;
+            if (!target) return;
+            if (this.element.contains(target) || this.props.anchorElement.contains(target)) {
+                return;
             }
+            this.close();
         };
 
         // Use setTimeout to avoid immediate close
         setTimeout(() => {
-            document.addEventListener('click', this.closeHandler!);
+            document.addEventListener('pointerdown', this.closeHandler!);
         }, 0);
     }
 
     private removeCloseHandler(): void {
         if (this.closeHandler) {
-            document.removeEventListener('click', this.closeHandler);
+            document.removeEventListener('pointerdown', this.closeHandler);
             this.closeHandler = null;
         }
     }

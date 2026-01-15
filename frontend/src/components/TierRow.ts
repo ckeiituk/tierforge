@@ -5,6 +5,7 @@
 import { Component, createElement } from './Component';
 import { ItemCard } from './ItemCard';
 import { TierMenu } from './TierMenu';
+import { getDragPayload } from '@/core/dragPayload';
 import type { Item, Tier } from '@/types';
 
 export interface TierRowProps {
@@ -12,30 +13,26 @@ export interface TierRowProps {
     items: Map<string, Item>;
     index: number;
     totalTiers: number;
+    selectedItems: Set<string>;
 }
 
-interface TierRowState {
-    isMenuOpen: boolean;
-    isDropTarget: boolean;
-}
-
-export class TierRow extends Component<TierRowState, TierRowProps> {
+export class TierRow extends Component<Record<string, never>, TierRowProps> {
     private menu: TierMenu | null = null;
     private itemComponents: ItemCard[] = [];
+    private isDropTarget = false;
 
     constructor(props: TierRowProps) {
         super(props, {
-            initialState: { isMenuOpen: false, isDropTarget: false },
+            initialState: {},
             className: 'tier-row',
         });
     }
 
     render(): HTMLElement {
-        const { tier, items, index, totalTiers } = this.props;
-        const { isDropTarget } = this.state;
+        const { tier } = this.props;
 
         const row = createElement('div', {
-            className: `tier-row ${isDropTarget ? 'tier-row--drop-target' : ''}`,
+            className: `tier-row ${this.isDropTarget ? 'tier-row--drop-target' : ''}`,
             'data-tier-id': tier.id,
         });
 
@@ -52,7 +49,7 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
     }
 
     private renderLabel(): HTMLElement {
-        const { tier, index, totalTiers } = this.props;
+        const { tier } = this.props;
 
         const label = createElement('div', {
             className: 'tier-row__label',
@@ -75,7 +72,7 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
             }
         });
 
-        name.addEventListener('keydown', (e) => {
+        name.addEventListener('keydown', (e: KeyboardEvent) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 name.blur();
@@ -88,8 +85,7 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
             title: 'Tier options',
         }, ['⋮']);
 
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
+        menuBtn.addEventListener('click', () => {
             this.toggleMenu(menuBtn);
         });
 
@@ -100,7 +96,7 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
     }
 
     private renderItemsContainer(): HTMLElement {
-        const { tier, items } = this.props;
+        const { tier, items, selectedItems } = this.props;
 
         const container = createElement('div', {
             className: 'tier-row__items',
@@ -117,6 +113,7 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
                 const card = new ItemCard({
                     item,
                     containerId: tier.id,
+                    isSelected: selectedItems.has(item.id),
                 });
                 this.itemComponents.push(card);
                 container.appendChild(card.render());
@@ -130,34 +127,32 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
     }
 
     private setupDropHandlers(container: HTMLElement): void {
-        container.addEventListener('dragover', (e) => {
+        container.addEventListener('dragover', (e: DragEvent) => {
             e.preventDefault();
             if (e.dataTransfer) {
                 e.dataTransfer.dropEffect = 'move';
             }
-            if (!this.state.isDropTarget) {
-                this.setState({ isDropTarget: true });
-            }
+            this.setDropTarget(true);
         });
 
-        container.addEventListener('dragleave', (e) => {
+        container.addEventListener('dragleave', (e: DragEvent) => {
             // Only handle if leaving the container itself
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!container.contains(relatedTarget)) {
-                this.setState({ isDropTarget: false });
+            const relatedTarget = e.relatedTarget as Node | null;
+            if (!relatedTarget || !container.contains(relatedTarget)) {
+                this.setDropTarget(false);
             }
         });
 
-        container.addEventListener('drop', (e) => {
+        container.addEventListener('drop', (e: DragEvent) => {
             e.preventDefault();
-            this.setState({ isDropTarget: false });
+            this.setDropTarget(false);
 
-            const itemId = e.dataTransfer?.getData('text/plain');
-            if (itemId) {
+            const payload = getDragPayload(e.dataTransfer || null);
+            if (payload) {
                 this.emit({
                     type: 'ITEM_MOVED',
-                    itemId,
-                    fromTier: 'unknown', // Will be resolved by StateManager
+                    itemId: payload.itemId,
+                    fromTier: payload.fromTier,
                     toTier: this.props.tier.id,
                     position: this.props.tier.items.length,
                 });
@@ -169,8 +164,7 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
         const { tier, index, totalTiers } = this.props;
 
         if (this.menu) {
-            this.menu.destroy();
-            this.menu = null;
+            this.menu.toggle();
             return;
         }
 
@@ -184,6 +178,12 @@ export class TierRow extends Component<TierRowState, TierRowProps> {
 
         document.body.appendChild(this.menu.render());
         this.menu.open();
+    }
+
+    private setDropTarget(isDropTarget: boolean): void {
+        if (this.isDropTarget === isDropTarget) return;
+        this.isDropTarget = isDropTarget;
+        this.element.classList.toggle('tier-row--drop-target', isDropTarget);
     }
 
     protected cleanup(): void {

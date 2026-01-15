@@ -3,22 +3,23 @@
  * Provides lifecycle methods and state management integration
  */
 
-import { eventBus, AppEvent } from '@/core/EventBus';
+import { eventBus } from '@/core/EventBus';
+import type { AppEvent } from '@/core/EventBus';
 
-export interface ComponentOptions<T = unknown> {
-    initialState?: T;
+export interface ComponentOptions<T = Record<string, never>> {
+    initialState: T;
     className?: string;
 }
 
-export abstract class Component<TState = unknown, TProps = unknown> {
+export abstract class Component<TState = Record<string, never>, TProps = unknown> {
     protected element: HTMLElement;
     protected state: TState;
     protected props: TProps;
     private eventSubscriptions: Array<() => void> = [];
 
-    constructor(props: TProps, options: ComponentOptions<TState> = {}) {
+    constructor(props: TProps, options: ComponentOptions<TState>) {
         this.props = props;
-        this.state = options.initialState ?? ({} as TState);
+        this.state = options.initialState;
         this.element = document.createElement('div');
 
         if (options.className) {
@@ -53,7 +54,6 @@ export abstract class Component<TState = unknown, TProps = unknown> {
      */
     protected rerender(): void {
         const parent = this.element.parentNode;
-        const nextSibling = this.element.nextSibling;
 
         // Clean up old element
         this.cleanup();
@@ -63,11 +63,7 @@ export abstract class Component<TState = unknown, TProps = unknown> {
 
         // Replace in DOM if mounted
         if (parent) {
-            if (nextSibling) {
-                parent.insertBefore(newElement, nextSibling);
-            } else {
-                parent.appendChild(newElement);
-            }
+            parent.replaceChild(newElement, this.element);
         }
 
         this.element = newElement;
@@ -96,7 +92,9 @@ export abstract class Component<TState = unknown, TProps = unknown> {
      * Mount component to a container
      */
     mount(container: HTMLElement): void {
-        container.appendChild(this.element);
+        const newElement = this.render();
+        this.element = newElement;
+        container.appendChild(newElement);
     }
 
     /**
@@ -143,8 +141,6 @@ export function createElement(
     Object.entries(attrs).forEach(([key, value]) => {
         if (key === 'className') {
             el.className = value;
-        } else if (key.startsWith('data-')) {
-            el.dataset[key.slice(5)] = value;
         } else {
             el.setAttribute(key, value);
         }

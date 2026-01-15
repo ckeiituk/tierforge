@@ -3,34 +3,30 @@
  */
 
 import { Component, createElement } from './Component';
+import { setDragPayload } from '@/core/dragPayload';
 import type { Item } from '@/types';
 
 export interface ItemCardProps {
     item: Item;
     containerId: string;
     isSelected?: boolean;
-    isDragging?: boolean;
 }
 
-interface ItemCardState {
-    isHovered: boolean;
-}
-
-export class ItemCard extends Component<ItemCardState, ItemCardProps> {
+export class ItemCard extends Component<Record<string, never>, ItemCardProps> {
     constructor(props: ItemCardProps) {
         super(props, {
-            initialState: { isHovered: false },
+            initialState: {},
             className: 'item-card',
         });
     }
 
     render(): HTMLElement {
-        const { item, isSelected, isDragging } = this.props;
-        const { isHovered } = this.state;
+        const { item } = this.props;
 
         const card = createElement('div', {
             className: this.getClassName(),
             'data-item-id': item.id,
+            'data-container-id': this.props.containerId,
         });
 
         // Item icon
@@ -60,8 +56,6 @@ export class ItemCard extends Component<ItemCardState, ItemCardProps> {
         const classes = ['item-card'];
 
         if (this.props.isSelected) classes.push('item-card--selected');
-        if (this.props.isDragging) classes.push('item-card--dragging');
-        if (this.state.isHovered) classes.push('item-card--hovered');
 
         return classes.join(' ');
     }
@@ -69,21 +63,19 @@ export class ItemCard extends Component<ItemCardState, ItemCardProps> {
     private setupEventHandlers(card: HTMLElement): void {
         // Hover for tooltip
         card.addEventListener('mouseenter', () => {
-            this.setState({ isHovered: true });
             this.emit({
                 type: 'ITEM_HOVERED',
                 itemId: this.props.item.id,
                 element: card,
-            } as any); // TODO: Add ITEM_HOVERED to AppEvent type
+            });
         });
 
         card.addEventListener('mouseleave', () => {
-            this.setState({ isHovered: false });
-            this.emit({ type: 'ITEM_UNHOVERED' } as any);
+            this.emit({ type: 'ITEM_UNHOVERED', itemId: this.props.item.id });
         });
 
         // Click for selection
-        card.addEventListener('click', (e) => {
+        card.addEventListener('click', (e: MouseEvent) => {
             const multiSelect = e.ctrlKey || e.metaKey;
             const rangeSelect = e.shiftKey;
 
@@ -92,15 +84,21 @@ export class ItemCard extends Component<ItemCardState, ItemCardProps> {
                 itemId: this.props.item.id,
                 multiSelect,
                 rangeSelect,
-            } as any);
+            });
         });
 
         // Drag start
         card.setAttribute('draggable', 'true');
 
-        card.addEventListener('dragstart', (e) => {
+        card.addEventListener('dragstart', (e: DragEvent) => {
+            card.classList.add('item-card--dragging');
+            document.body.classList.add('is-dragging');
+
             if (e.dataTransfer) {
-                e.dataTransfer.setData('text/plain', this.props.item.id);
+                setDragPayload(e.dataTransfer, {
+                    itemId: this.props.item.id,
+                    fromTier: this.props.containerId,
+                });
                 e.dataTransfer.effectAllowed = 'move';
             }
 
@@ -108,11 +106,13 @@ export class ItemCard extends Component<ItemCardState, ItemCardProps> {
                 type: 'DRAG_START',
                 itemId: this.props.item.id,
                 containerId: this.props.containerId,
-            } as any);
+            });
         });
 
         card.addEventListener('dragend', () => {
-            this.emit({ type: 'DRAG_END' } as any);
+            card.classList.remove('item-card--dragging');
+            document.body.classList.remove('is-dragging');
+            this.emit({ type: 'DRAG_END', itemId: this.props.item.id });
         });
     }
 }

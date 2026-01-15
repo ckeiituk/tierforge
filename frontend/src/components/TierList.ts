@@ -4,28 +4,26 @@
 
 import { Component, createElement } from './Component';
 import { TierRow } from './TierRow';
-import type { Item, TierList as TierListType, Tier } from '@/types';
+import type { Item, TierList as TierListType } from '@/types';
 
 export interface TierListProps {
     tierList: TierListType | null;
     items: Map<string, Item>;
+    selectedItems: Set<string>;
 }
 
-interface TierListState {
-    // Empty for now, could add loading state
-}
-
-export class TierList extends Component<TierListState, TierListProps> {
+export class TierList extends Component<Record<string, never>, TierListProps> {
     private tierRows: TierRow[] = [];
 
     constructor(props: TierListProps) {
         super(props, {
+            initialState: {},
             className: 'tier-list',
         });
     }
 
     render(): HTMLElement {
-        const { tierList, items } = this.props;
+        const { tierList, items, selectedItems } = this.props;
 
         const container = createElement('div', {
             className: 'tier-list',
@@ -47,6 +45,7 @@ export class TierList extends Component<TierListState, TierListProps> {
                 items,
                 index,
                 totalTiers: tierList.tiers.length,
+                selectedItems,
             });
             this.tierRows.push(row);
             container.appendChild(row.render());
@@ -66,7 +65,7 @@ export class TierList extends Component<TierListState, TierListProps> {
         }, ['+ Add Tier']);
 
         btn.addEventListener('click', () => {
-            this.emit({ type: 'TIER_ADD_REQUESTED' } as any);
+            this.emit({ type: 'TIER_ADD_REQUESTED' });
         });
 
         return btn;

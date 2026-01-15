@@ -4,34 +4,40 @@
 
 import { Component, createElement } from './Component';
 import { ItemCard } from './ItemCard';
+import { getDragPayload } from '@/core/dragPayload';
 import type { Item } from '@/types';
 
 export interface SidebarProps {
     items: Item[];
     searchQuery: string;
+    selectedItems: Set<string>;
 }
 
 interface SidebarState {
     isDropTarget: boolean;
-    localSearchQuery: string;
+    searchQuery: string;
 }
 
 export class Sidebar extends Component<SidebarState, SidebarProps> {
     private itemComponents: ItemCard[] = [];
+    private itemsContainer: HTMLElement | null = null;
 
     constructor(props: SidebarProps) {
         super(props, {
             initialState: {
                 isDropTarget: false,
-                localSearchQuery: props.searchQuery,
+                searchQuery: props.searchQuery,
             },
             className: 'sidebar',
         });
     }
 
     render(): HTMLElement {
-        const { items } = this.props;
-        const { isDropTarget, localSearchQuery } = this.state;
+        const { isDropTarget } = this.state;
+
+        if (this.props.searchQuery !== this.state.searchQuery) {
+            this.state.searchQuery = this.props.searchQuery;
+        }
 
         const sidebar = createElement('aside', {
             className: `sidebar ${isDropTarget ? 'sidebar--drop-target' : ''}`,
@@ -72,7 +78,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
     }
 
     private renderSearch(): HTMLElement {
-        const { localSearchQuery } = this.state;
+        const { searchQuery } = this.state;
 
         const searchContainer = createElement('div', {
             className: 'sidebar__search',
@@ -82,12 +88,13 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         input.type = 'search';
         input.placeholder = 'Search...';
         input.className = 'sidebar__search-input';
-        input.value = localSearchQuery;
+        input.value = searchQuery;
 
-        input.addEventListener('input', (e) => {
+        input.addEventListener('input', (e: Event) => {
             const query = (e.target as HTMLInputElement).value;
-            this.setState({ localSearchQuery: query });
-            this.emit({ type: 'SEARCH_CHANGED', query } as any);
+            this.state.searchQuery = query;
+            this.emit({ type: 'SEARCH_CHANGED', query });
+            this.refreshItems();
         });
 
         searchContainer.appendChild(input);
@@ -95,21 +102,22 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
     }
 
     private renderItems(): HTMLElement {
-        const { items } = this.props;
-        const { localSearchQuery } = this.state;
+        const { items, selectedItems } = this.props;
+        const { searchQuery } = this.state;
 
         const container = createElement('div', {
             className: 'sidebar__items',
         });
+        this.itemsContainer = container;
 
         // Clean up old components
         this.itemComponents.forEach(c => c.destroy());
         this.itemComponents = [];
 
         // Filter items
-        const filteredItems = localSearchQuery
+        const filteredItems = searchQuery
             ? items.filter(item =>
-                item.name.toLowerCase().includes(localSearchQuery.toLowerCase())
+                item.name.toLowerCase().includes(searchQuery.toLowerCase())
             )
             : items;
 
@@ -118,6 +126,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
             const card = new ItemCard({
                 item,
                 containerId: 'unranked',
+                isSelected: selectedItems.has(item.id),
             });
             this.itemComponents.push(card);
             container.appendChild(card.render());
@@ -130,33 +139,31 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
     }
 
     private setupDropHandlers(container: HTMLElement): void {
-        container.addEventListener('dragover', (e) => {
+        container.addEventListener('dragover', (e: DragEvent) => {
             e.preventDefault();
             if (e.dataTransfer) {
                 e.dataTransfer.dropEffect = 'move';
             }
-            if (!this.state.isDropTarget) {
-                this.setState({ isDropTarget: true });
+            this.setDropTarget(true);
+        });
+
+        container.addEventListener('dragleave', (e: DragEvent) => {
+            const relatedTarget = e.relatedTarget as Node | null;
+            if (!relatedTarget || !container.contains(relatedTarget)) {
+                this.setDropTarget(false);
             }
         });
 
-        container.addEventListener('dragleave', (e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!container.contains(relatedTarget)) {
-                this.setState({ isDropTarget: false });
-            }
-        });
-
-        container.addEventListener('drop', (e) => {
+        container.addEventListener('drop', (e: DragEvent) => {
             e.preventDefault();
-            this.setState({ isDropTarget: false });
+            this.setDropTarget(false);
 
-            const itemId = e.dataTransfer?.getData('text/plain');
-            if (itemId) {
+            const payload = getDragPayload(e.dataTransfer || null);
+            if (payload) {
                 this.emit({
                     type: 'ITEM_MOVED',
-                    itemId,
-                    fromTier: 'unknown',
+                    itemId: payload.itemId,
+                    fromTier: payload.fromTier,
                     toTier: 'unranked',
                     position: 0,
                 });
@@ -164,8 +171,42 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         });
     }
 
+    private refreshItems(): void {
+        const container = this.itemsContainer;
+        if (!container) return;
+        container.innerHTML = '';
+        this.itemComponents.forEach(c => c.destroy());
+        this.itemComponents = [];
+
+        const { items, selectedItems } = this.props;
+        const { searchQuery } = this.state;
+
+        const filteredItems = searchQuery
+            ? items.filter(item =>
+                item.name.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+            : items;
+
+        filteredItems.forEach(item => {
+            const card = new ItemCard({
+                item,
+                containerId: 'unranked',
+                isSelected: selectedItems.has(item.id),
+            });
+            this.itemComponents.push(card);
+            container.appendChild(card.render());
+        });
+    }
+
+    private setDropTarget(isDropTarget: boolean): void {
+        if (this.state.isDropTarget === isDropTarget) return;
+        this.state.isDropTarget = isDropTarget;
+        this.element.classList.toggle('sidebar--drop-target', isDropTarget);
+    }
+
     protected cleanup(): void {
         this.itemComponents.forEach(c => c.destroy());
         this.itemComponents = [];
+        this.itemsContainer = null;
     }
 }

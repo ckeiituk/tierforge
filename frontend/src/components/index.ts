@@ -9,3 +9,4 @@ export { TierRow } from './TierRow';
 export { TierList } from './TierList';
 export { Header } from './Header';
 export { Sidebar } from './Sidebar';
+export { Tooltip } from './Tooltip';

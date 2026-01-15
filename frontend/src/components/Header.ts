@@ -64,6 +64,7 @@ export class Header extends Component<HeaderState, HeaderProps> {
 
         const btn = createElement('button', {
             className: 'game-switcher__btn',
+            'aria-expanded': isGameMenuOpen ? 'true' : 'false',
         });
 
         const name = createElement('span', {
@@ -113,13 +114,13 @@ export class Header extends Component<HeaderState, HeaderProps> {
 
         // Close on outside click
         setTimeout(() => {
-            const closeHandler = (e: MouseEvent) => {
+            const closeHandler = (e: PointerEvent) => {
                 if (!dropdown.contains(e.target as Node)) {
                     this.setState({ isGameMenuOpen: false });
-                    document.removeEventListener('click', closeHandler);
+                    document.removeEventListener('pointerdown', closeHandler);
                 }
             };
-            document.addEventListener('click', closeHandler);
+            document.addEventListener('pointerdown', closeHandler);
         }, 0);
 
         return dropdown;
@@ -140,7 +141,7 @@ export class Header extends Component<HeaderState, HeaderProps> {
             }, [sheet.name]);
 
             tab.addEventListener('click', () => {
-                this.emit({ type: 'SHEET_CHANGED', sheet });
+                this.emit({ type: 'SHEET_CHANGE_REQUESTED', sheet });
             });
 
             tabs.appendChild(tab);
@@ -169,6 +170,7 @@ export class Header extends Component<HeaderState, HeaderProps> {
         undoBtn.addEventListener('click', () => {
             if (canUndo) this.emit({ type: 'UNDO' });
         });
+        undoBtn.toggleAttribute('disabled', !canUndo);
 
         // Redo button
         const redoBtn = createElement('button', {
@@ -179,6 +181,7 @@ export class Header extends Component<HeaderState, HeaderProps> {
         redoBtn.addEventListener('click', () => {
             if (canRedo) this.emit({ type: 'REDO' });
         });
+        redoBtn.toggleAttribute('disabled', !canRedo);
 
         // Share button
         const shareBtn = createElement('button', {
@@ -186,12 +189,12 @@ export class Header extends Component<HeaderState, HeaderProps> {
         }, ['Share']);
 
         shareBtn.addEventListener('click', async () => {
-            if (shareCode) {
-                const url = `${window.location.origin}?s=${shareCode}`;
-                await navigator.clipboard.writeText(url);
-                alert('Link copied to clipboard!');
-            }
+            if (!shareCode) return;
+            const url = `${window.location.origin}?s=${shareCode}`;
+            await navigator.clipboard.writeText(url);
+            alert('Link copied to clipboard!');
         });
+        shareBtn.toggleAttribute('disabled', !shareCode);
 
         actions.appendChild(undoBtn);
         actions.appendChild(redoBtn);
