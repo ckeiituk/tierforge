@@ -379,7 +379,7 @@ body {
     display: flex;
     background: var(--color-bg-secondary);
     border-radius: var(--radius-lg);
-    overflow: hidden;
+    overflow: visible;
     border: 1px solid var(--color-border);
     min-height: calc(var(--item-size) + var(--space-md) * 2);
 }
