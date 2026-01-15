@@ -458,7 +458,8 @@ body {
 }
 
 .tier-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 44px var(--tier-label-width) 1fr;
     background: var(--color-bg-secondary);
     border-radius: var(--radius-lg);
     overflow: visible;
@@ -497,19 +498,17 @@ body {
 }
 
 .tier-row__actions {
-    position: absolute;
-    left: var(--space-xs);
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    opacity: 0;
-    transition: opacity var(--transition-fast), transform var(--transition-fast);
-    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: var(--space-xs);
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
 }
 
-.tier-row__label:hover .tier-row__actions,
+.tier-row:hover .tier-row__actions,
 .tier-row__actions:focus-within {
     opacity: 1;
 }

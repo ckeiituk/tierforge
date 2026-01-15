@@ -34,6 +34,9 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             'data-tier-id': tier.id,
         });
 
+        const actions = this.renderActions();
+        row.appendChild(actions);
+
         // Tier label
         const label = this.renderLabel();
         row.appendChild(label);
@@ -53,8 +56,6 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             className: 'tier-row__label',
         });
         label.style.backgroundColor = tier.color;
-
-        label.appendChild(this.renderActions());
 
         // Editable name
         const name = createElement('span', {
