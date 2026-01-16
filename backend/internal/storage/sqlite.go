@@ -151,6 +151,14 @@ func (s *Store) CreateGame(g *models.Game) error {
 	_, err := s.db.Exec(`
 		INSERT INTO games (id, name, description, icon_url, item_schema, filters, default_tiers, sheets)
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+		ON CONFLICT(id) DO UPDATE SET
+			name = excluded.name,
+			description = excluded.description,
+			icon_url = excluded.icon_url,
+			item_schema = excluded.item_schema,
+			filters = excluded.filters,
+			default_tiers = excluded.default_tiers,
+			sheets = excluded.sheets
 	`, g.ID, g.Name, g.Description, g.IconURL, itemSchema, filters, defaultTiers, sheets)
 	return err
 }
