@@ -32,7 +32,6 @@ interface HeaderState {
 const DOS2_SCHOOL_LABELS: Record<string, string> = {
     'Аэротеургия': 'Aerotheurge',
     'Геомантия': 'Geomancer',
-    'Гидрософия': 'Hydrosophist',
     'Гидрософистика': 'Hydrosophist',
     'Пирокинетика': 'Pyrokinetic',
     'Некромантия': 'Necromancer',
@@ -41,9 +40,8 @@ const DOS2_SCHOOL_LABELS: Record<string, string> = {
     'Искусство убийства': 'Scoundrel',
     'Мастерство охоты': 'Huntsman',
     'Военное дело': 'Warfare',
-    'Источник': 'Source',
     'Магия истока': 'Source',
-    'Особые навыки': 'Special',
+    'Особые навыки': 'Special Skills',
 };
 
 const getFilterOptionLabel = (filter: FilterConfig, option: string): string => {

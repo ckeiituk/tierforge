@@ -37,20 +37,21 @@
         {
             "id": "school",
             "name": "School",
-            "field": "school",
+            "field": "primary_school",
             "type": "multiselect",
             "options": [
-                "Aerotheurge",
-                "Geomancer",
-                "Hydrosophist",
-                "Pyrokinetic",
-                "Necromancer",
-                "Summoning",
-                "Polymorph",
-                "Scoundrel",
-                "Huntsman",
-                "Warfare",
-                "Source"
+                "Аэротеургия",
+                "Геомантия",
+                "Гидрософистика",
+                "Пирокинетика",
+                "Некромантия",
+                "Призывание",
+                "Превращение",
+                "Искусство убийства",
+                "Мастерство охоты",
+                "Военное дело",
+                "Магия истока",
+                "Особые навыки"
             ]
         },
         {
