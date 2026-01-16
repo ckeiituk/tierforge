@@ -66,22 +66,14 @@ export class TierEngineV2 {
     private stateUnsubscribe: (() => void) | null = null;
     private keydownHandler: ((e: KeyboardEvent) => void) | null = null;
     private scrollHandler: (() => void) | null = null;
-    private sidebarToggle: HTMLButtonElement | null = null;
-    private sidebarToggleCount: HTMLElement | null = null;
-    private sidebarOverlay: HTMLElement | null = null;
-    private isSidebarOpen = true;
 
     private isLoading = true;
     private errorMessage: string | null = null;
     private layoutMounted = false;
     private presetState: TierListPresetState = createEmptyPresetState();
-    private readonly handleSidebarClose = (): void => {
-        this.setSidebarOpen(false);
-    };
 
     constructor(config: TierEngineConfig) {
         this.container = config.container;
-        this.initSidebarState();
         this.renderLoading();
         this.setupEventListeners();
         this.setupKeyboardShortcuts();
@@ -463,10 +455,6 @@ export class TierEngineV2 {
                 eventBus.emit({ type: 'SAVE_REQUESTED' });
             }
 
-            if (e.key === 'Escape' && this.isSidebarOpen && this.isCompactLayout()) {
-                e.preventDefault();
-                this.setSidebarOpen(false);
-            }
         };
 
         document.addEventListener('keydown', this.keydownHandler);
@@ -554,8 +542,6 @@ export class TierEngineV2 {
         this.sidebarComponent = new Sidebar(sidebarProps);
         this.container.appendChild(this.sidebarComponent.render());
 
-        this.mountSidebarControls(view, availableFilters);
-
         if (!this.tooltipComponent) {
             this.tooltipComponent = new Tooltip({
                 item: null,
@@ -583,8 +569,6 @@ export class TierEngineV2 {
         if (this.sidebarComponent) {
             this.sidebarComponent.updateProps(this.getSidebarProps(view, availableFilters));
         }
-
-        this.updateSidebarControls(view, availableFilters);
         this.scheduleHeaderHeightSync();
     }
 
@@ -628,8 +612,7 @@ export class TierEngineV2 {
             items: this.getUnrankedItems(view, availableFilters),
             searchQuery: stateManager.getState().searchQuery,
             selectedItems: view.selectedItems,
-            isOpen: this.isSidebarOpen,
-            onClose: this.handleSidebarClose,
+            isOpen: true,
         };
     }
 
@@ -777,7 +760,6 @@ export class TierEngineV2 {
         this.headerComponent?.destroy();
         this.tierListComponent?.destroy();
         this.sidebarComponent?.destroy();
-        this.cleanupSidebarControls();
 
         this.headerComponent = null;
         this.tierListComponent = null;
@@ -856,102 +838,6 @@ export class TierEngineV2 {
             window.removeEventListener('scroll', this.scrollHandler, true);
             this.scrollHandler = null;
         }
-    }
-
-    private initSidebarState(): void {
-        if (typeof window === 'undefined') {
-            this.isSidebarOpen = true;
-            return;
-        }
-        this.isSidebarOpen = !window.matchMedia('(max-width: 1024px)').matches;
-    }
-
-    private isCompactLayout(): boolean {
-        return typeof window !== 'undefined' && window.matchMedia('(max-width: 1024px)').matches;
-    }
-
-    private setSidebarOpen(isOpen: boolean): void {
-        if (this.isSidebarOpen === isOpen) return;
-        this.isSidebarOpen = isOpen;
-        if (this.sidebarComponent) {
-            this.sidebarComponent.updateProps({ isOpen });
-        }
-        this.updateSidebarDom();
-    }
-
-    private toggleSidebar(): void {
-        this.setSidebarOpen(!this.isSidebarOpen);
-    }
-
-    private mountSidebarControls(view: ViewModel, availableFilters: FilterConfig[]): void {
-        this.cleanupSidebarControls();
-
-        const overlay = document.createElement('div');
-        overlay.className = 'sidebar-overlay';
-        overlay.setAttribute('aria-hidden', this.isSidebarOpen ? 'false' : 'true');
-        overlay.addEventListener('click', () => {
-            this.setSidebarOpen(false);
-        });
-        this.sidebarOverlay = overlay;
-
-        const toggle = document.createElement('button');
-        toggle.className = 'sidebar-toggle';
-        toggle.type = 'button';
-        toggle.setAttribute('aria-label', 'Toggle unranked items');
-        toggle.setAttribute('aria-controls', 'tierforge-sidebar');
-        toggle.setAttribute('aria-expanded', this.isSidebarOpen ? 'true' : 'false');
-        toggle.addEventListener('click', () => {
-            this.toggleSidebar();
-        });
-
-        const label = document.createElement('span');
-        label.className = 'sidebar-toggle-label';
-        label.textContent = 'Unranked';
-
-        const count = document.createElement('span');
-        count.className = 'sidebar-toggle-count';
-        count.textContent = String(this.getUnrankedItems(view, availableFilters).length);
-
-        toggle.appendChild(label);
-        toggle.appendChild(count);
-
-        this.sidebarToggle = toggle;
-        this.sidebarToggleCount = count;
-
-        document.body.appendChild(overlay);
-        document.body.appendChild(toggle);
-
-        this.updateSidebarDom();
-    }
-
-    private updateSidebarControls(view: ViewModel, availableFilters: FilterConfig[]): void {
-        if (this.sidebarToggleCount) {
-            this.sidebarToggleCount.textContent = String(this.getUnrankedItems(view, availableFilters).length);
-        }
-        this.updateSidebarDom();
-    }
-
-    private updateSidebarDom(): void {
-        document.body.classList.toggle('sidebar-open', this.isSidebarOpen);
-        if (this.sidebarOverlay) {
-            this.sidebarOverlay.setAttribute('aria-hidden', this.isSidebarOpen ? 'false' : 'true');
-        }
-        if (this.sidebarToggle) {
-            this.sidebarToggle.setAttribute('aria-expanded', this.isSidebarOpen ? 'true' : 'false');
-        }
-    }
-
-    private cleanupSidebarControls(): void {
-        if (this.sidebarToggle) {
-            this.sidebarToggle.remove();
-            this.sidebarToggle = null;
-        }
-        if (this.sidebarOverlay) {
-            this.sidebarOverlay.remove();
-            this.sidebarOverlay = null;
-        }
-        this.sidebarToggleCount = null;
-        document.body.classList.remove('sidebar-open');
     }
 
     private scheduleHeaderHeightSync(): void {
