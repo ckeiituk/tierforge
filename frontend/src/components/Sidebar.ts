@@ -70,9 +70,6 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         // Search
         body.appendChild(this.renderSearch());
 
-        // Meta info
-        body.appendChild(this.renderMeta());
-
         // Items
         body.appendChild(this.renderItems());
 
@@ -82,34 +79,11 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         return sidebar;
     }
 
-    private renderMeta(): HTMLElement {
-        const { items } = this.props;
-        const { searchQuery } = this.state;
-
-        const meta = createElement('div', {
-            className: 'sidebar-meta',
-        });
-
-        const label = createElement('span', {}, ['Not in tier list']);
-
-        const filteredCount = searchQuery
-            ? items.filter(item =>
-                item.name.toLowerCase().includes(searchQuery.toLowerCase())
-            ).length
-            : items.length;
-
-        const count = createElement('span', {
-            className: 'sidebar-meta-count',
-        }, [filteredCount.toString()]);
-
-        meta.appendChild(label);
-        meta.appendChild(count);
-
-        return meta;
-    }
-
     private renderHeader(): HTMLElement {
         const { items } = this.props;
+        const filteredItems = this.filterItems(items, this.state.searchQuery);
+        const filteredCount = filteredItems.length;
+        const totalCount = items.length;
 
         const header = createElement('div', {
             className: 'sidebar__header sidebar-header',
@@ -124,17 +98,18 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
             className: 'sidebar__title',
         }, ['Unranked']);
 
-        const subtitle = createElement('p', {
-            className: 'sidebar__subtitle',
-        }, ['Waiting to be placed']);
-
         titleSection.appendChild(title);
-        titleSection.appendChild(subtitle);
 
         // Count badge
         const count = createElement('span', {
             className: 'sidebar__count sidebar-count',
-        }, [items.length.toString()]);
+            title: filteredCount === totalCount
+                ? `${totalCount} items`
+                : `Showing ${filteredCount} of ${totalCount}`,
+            'aria-label': filteredCount === totalCount
+                ? `${totalCount} items`
+                : `Showing ${filteredCount} of ${totalCount}`,
+        }, [filteredCount.toString()]);
 
         const controls = createElement('div', {
             className: 'sidebar__controls',
@@ -170,7 +145,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         });
 
         const label = createElement('label', {
-            className: 'sidebar-tools-label',
+            className: 'sidebar-tools-label sr-only',
             for: this.searchInputId,
         }, ['Find item']);
 
@@ -210,11 +185,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         this.itemComponents = [];
 
         // Filter items
-        const filteredItems = searchQuery
-            ? items.filter(item =>
-                item.name.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-            : items;
+        const filteredItems = this.filterItems(items, searchQuery);
 
         // Empty state
         if (filteredItems.length === 0) {
@@ -284,11 +255,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         const { items, selectedItems } = this.props;
         const { searchQuery } = this.state;
 
-        const filteredItems = searchQuery
-            ? items.filter(item =>
-                item.name.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-            : items;
+        const filteredItems = this.filterItems(items, searchQuery);
 
         if (filteredItems.length === 0) {
             const empty = createElement('div', {
@@ -312,6 +279,12 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         if (this.state.isDropTarget === isDropTarget) return;
         this.state.isDropTarget = isDropTarget;
         this.element.classList.toggle('sidebar--drop-target', isDropTarget);
+    }
+
+    private filterItems(items: Item[], query: string): Item[] {
+        const normalized = query.trim().toLowerCase();
+        if (!normalized) return items;
+        return items.filter((item) => item.name.toLowerCase().includes(normalized));
     }
 
     protected cleanup(): void {
