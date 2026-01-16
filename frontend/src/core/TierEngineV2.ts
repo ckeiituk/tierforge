@@ -1,5 +1,6 @@
 import type {
     AppState,
+    AppEvent,
     FilterConfig,
     Game,
     Item,
@@ -15,7 +16,7 @@ import * as api from '@/api/client';
 import { Header, TierList as TierListComponent, Sidebar, Tooltip } from '@/components';
 import { autoSave } from './AutoSave';
 import { createEmptyPresetState, loadPresetState, savePresetState } from './presetStorage';
-import { matchesActiveFilters } from './itemFilters';
+import { extractTierLevel, matchesActiveFilters } from './itemFilters';
 
 export interface TierEngineConfig {
     container: HTMLElement;
@@ -71,6 +72,7 @@ export class TierEngineV2 {
     private errorMessage: string | null = null;
     private layoutMounted = false;
     private presetState: TierListPresetState = createEmptyPresetState();
+    private isDragging = false;
 
     constructor(config: TierEngineConfig) {
         this.container = config.container;
@@ -431,6 +433,21 @@ export class TierEngineV2 {
             })
         );
 
+        this.eventUnsubscribes.push(
+            eventBus.on('DRAG_START', (event: Extract<AppEvent, { type: 'DRAG_START' }>) => {
+                void event;
+                this.isDragging = true;
+                this.hideTooltip();
+            })
+        );
+
+        this.eventUnsubscribes.push(
+            eventBus.on('DRAG_END', (event: Extract<AppEvent, { type: 'DRAG_END' }>) => {
+                void event;
+                this.isDragging = false;
+            })
+        );
+
         this.scrollHandler = () => this.hideTooltip();
         window.addEventListener('scroll', this.scrollHandler, true);
     }
@@ -623,21 +640,30 @@ export class TierEngineV2 {
         const items = Array.from(view.items.values());
         const hasItems = items.length > 0;
         const suppressedFilterIds = new Set<string>(['ap']);
+        const gameId = view.game?.id;
+        const sheetId = view.sheet?.id;
 
-        const available = baseFilters.filter((filter) => {
+        if (gameId === 'dos2' && sheetId && sheetId !== 'skills') {
+            suppressedFilterIds.add('school');
+        }
+
+        const available = baseFilters.filter((filter: FilterConfig) => {
             if (suppressedFilterIds.has(filter.id)) return false;
             if (!hasItems) return true;
             return this.hasFilterData(filter, items);
         });
 
-        const hasLevelFilter = available.some((filter) => filter.id === 'level');
+        const hasLevelFilter = available.some((filter: FilterConfig) => filter.id === 'level');
         if (!hasLevelFilter) {
-            const levelValues = this.collectFilterValues(items, 'level');
+            const levelValues =
+                gameId === 'dos2' && sheetId === 'skills'
+                    ? this.collectTierLevelValues(items)
+                    : this.collectFilterValues(items, 'level');
             if (levelValues.length > 0) {
                 available.push({
                     id: 'level',
                     name: 'Spell Level',
-                    field: 'level',
+                    field: gameId === 'dos2' && sheetId === 'skills' ? 'tier' : 'level',
                     type: 'multiselect',
                     options: this.sortLevelOptions(levelValues),
                 });
@@ -658,9 +684,21 @@ export class TierEngineV2 {
 
     private collectFilterValues(items: Item[], field: string): string[] {
         const result = new Set<string>();
-        items.forEach((item) => {
+        items.forEach((item: Item) => {
             const values = this.normalizeFilterValue(item.data[field]);
-            values.forEach((value) => result.add(value));
+            values.forEach((value: string) => result.add(value));
+        });
+        return Array.from(result);
+    }
+
+    private collectTierLevelValues(items: Item[]): string[] {
+        const result = new Set<string>();
+        items.forEach((item: Item) => {
+            const values = this.normalizeFilterValue(item.data.tier);
+            values.forEach((value: string) => {
+                const level = extractTierLevel(value);
+                if (level) result.add(level);
+            });
         });
         return Array.from(result);
     }
@@ -711,6 +749,10 @@ export class TierEngineV2 {
 
     private showTooltip(itemId: string, anchorElement: HTMLElement): void {
         if (!this.tooltipComponent) return;
+        if (this.isDragging || document.body.classList.contains('is-dragging')) {
+            this.hideTooltip();
+            return;
+        }
 
         const state = stateManager.getState();
         const item = state.items.get(itemId) || null;
