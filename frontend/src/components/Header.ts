@@ -3,7 +3,7 @@
  */
 
 import { Component, createElement } from './Component';
-import type { Game, SheetConfig, TierListPreset } from '@/types';
+import type { FilterConfig, Game, SheetConfig, TierListPreset } from '@/types';
 
 export interface HeaderProps {
     game: Game | null;
@@ -15,6 +15,7 @@ export interface HeaderProps {
     presets?: TierListPreset[];
     activePresetId?: string | null;
     activeFilters?: Record<string, string[]>;
+    filters?: FilterConfig[];
 }
 
 type SaveStatus = 'idle' | 'saving' | 'saved' | 'error';
@@ -181,7 +182,6 @@ export class Header extends Component<HeaderState, HeaderProps> {
             className: 'header__left',
         });
 
-        left.appendChild(this.renderBrand());
         left.appendChild(this.renderGameSwitcher());
         const tabs = createElement('div', { className: 'header__tabs' });
         tabs.appendChild(this.renderSheetTabs());
@@ -196,19 +196,6 @@ export class Header extends Component<HeaderState, HeaderProps> {
         left.appendChild(tabs);
 
         return left;
-    }
-
-    private renderBrand(): HTMLElement {
-        const brand = createElement('div', {
-            className: 'header__brand',
-        });
-
-        const title = createElement('h1', {
-            className: 'header-title',
-        }, ['TierForge']);
-
-        brand.appendChild(title);
-        return brand;
     }
 
     private renderGameSwitcher(): HTMLElement {
@@ -443,7 +430,7 @@ export class Header extends Component<HeaderState, HeaderProps> {
     }
 
     private renderFilters(): HTMLElement | null {
-        const filters = this.props.game?.filters ?? [];
+        const filters = this.props.filters ?? [];
         if (filters.length === 0) return null;
 
         const activeFilters = this.props.activeFilters ?? {};
@@ -565,10 +552,6 @@ export class Header extends Component<HeaderState, HeaderProps> {
             className: 'header__right',
         });
 
-        const actions = createElement('div', {
-            className: 'header__actions',
-        });
-
         const status = this.renderStatusMessage();
         if (status) {
             const statusContainer = createElement('div', {
@@ -578,8 +561,12 @@ export class Header extends Component<HeaderState, HeaderProps> {
                 'aria-atomic': 'true',
             });
             statusContainer.appendChild(status);
-            actions.appendChild(statusContainer);
+            right.appendChild(statusContainer);
         }
+
+        const actions = createElement('div', {
+            className: 'header__actions',
+        });
 
         // Undo button
         const undoBtn = createElement('button', {

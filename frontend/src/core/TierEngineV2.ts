@@ -1,5 +1,6 @@
 import type {
     AppState,
+    FilterConfig,
     Game,
     Item,
     SheetConfig,
@@ -536,7 +537,8 @@ export class TierEngineV2 {
         this.resetLayout();
         this.container.innerHTML = '';
 
-        const headerProps = this.getHeaderProps(view);
+        const availableFilters = this.getAvailableFilters(view);
+        const headerProps = this.getHeaderProps(view, availableFilters);
         this.headerComponent = new Header(headerProps);
         this.container.appendChild(this.headerComponent.render());
 
@@ -544,15 +546,15 @@ export class TierEngineV2 {
         main.className = 'tierforge-main';
         this.container.appendChild(main);
 
-        const tierListProps = this.getTierListProps(view);
+        const tierListProps = this.getTierListProps(view, availableFilters);
         this.tierListComponent = new TierListComponent(tierListProps);
         main.appendChild(this.tierListComponent.render());
 
-        const sidebarProps = this.getSidebarProps(view);
+        const sidebarProps = this.getSidebarProps(view, availableFilters);
         this.sidebarComponent = new Sidebar(sidebarProps);
         this.container.appendChild(this.sidebarComponent.render());
 
-        this.mountSidebarControls(view);
+        this.mountSidebarControls(view, availableFilters);
 
         if (!this.tooltipComponent) {
             this.tooltipComponent = new Tooltip({
@@ -569,23 +571,27 @@ export class TierEngineV2 {
     }
 
     private updateComponents(view: ViewModel): void {
+        const availableFilters = this.getAvailableFilters(view);
         if (this.headerComponent) {
-            this.headerComponent.updateProps(this.getHeaderProps(view));
+            this.headerComponent.updateProps(this.getHeaderProps(view, availableFilters));
         }
 
         if (this.tierListComponent) {
-            this.tierListComponent.updateProps(this.getTierListProps(view));
+            this.tierListComponent.updateProps(this.getTierListProps(view, availableFilters));
         }
 
         if (this.sidebarComponent) {
-            this.sidebarComponent.updateProps(this.getSidebarProps(view));
+            this.sidebarComponent.updateProps(this.getSidebarProps(view, availableFilters));
         }
 
-        this.updateSidebarControls(view);
+        this.updateSidebarControls(view, availableFilters);
         this.scheduleHeaderHeightSync();
     }
 
-    private getHeaderProps(view: ViewModel): ConstructorParameters<typeof Header>[0] {
+    private getHeaderProps(
+        view: ViewModel,
+        availableFilters: FilterConfig[]
+    ): ConstructorParameters<typeof Header>[0] {
         return {
             game: view.game,
             games: this.games,
@@ -596,23 +602,30 @@ export class TierEngineV2 {
             presets: view.presets,
             activePresetId: view.activePresetId,
             activeFilters: view.filters,
+            filters: availableFilters,
         };
     }
 
-    private getTierListProps(view: ViewModel): ConstructorParameters<typeof TierListComponent>[0] {
+    private getTierListProps(
+        view: ViewModel,
+        availableFilters: FilterConfig[]
+    ): ConstructorParameters<typeof TierListComponent>[0] {
         return {
             tierList: view.tierList,
             items: view.items,
             selectedItems: view.selectedItems,
             searchQuery: view.searchQuery,
-            filters: view.game?.filters ?? [],
+            filters: availableFilters,
             activeFilters: view.filters,
         };
     }
 
-    private getSidebarProps(view: ViewModel): ConstructorParameters<typeof Sidebar>[0] {
+    private getSidebarProps(
+        view: ViewModel,
+        availableFilters: FilterConfig[]
+    ): ConstructorParameters<typeof Sidebar>[0] {
         return {
-            items: this.getUnrankedItems(view),
+            items: this.getUnrankedItems(view, availableFilters),
             searchQuery: stateManager.getState().searchQuery,
             selectedItems: view.selectedItems,
             isOpen: this.isSidebarOpen,
@@ -620,13 +633,94 @@ export class TierEngineV2 {
         };
     }
 
-    private getUnrankedItems(view: ViewModel): Item[] {
+    private getAvailableFilters(view: ViewModel): FilterConfig[] {
+        const baseFilters = view.game?.filters ?? [];
+        if (baseFilters.length === 0) return [];
+
+        const items = Array.from(view.items.values());
+        const hasItems = items.length > 0;
+        const suppressedFilterIds = new Set<string>(['ap']);
+
+        const available = baseFilters.filter((filter) => {
+            if (suppressedFilterIds.has(filter.id)) return false;
+            if (!hasItems) return true;
+            return this.hasFilterData(filter, items);
+        });
+
+        const hasLevelFilter = available.some((filter) => filter.id === 'level');
+        if (!hasLevelFilter) {
+            const levelValues = this.collectFilterValues(items, 'level');
+            if (levelValues.length > 0) {
+                available.push({
+                    id: 'level',
+                    name: 'Spell Level',
+                    field: 'level',
+                    type: 'multiselect',
+                    options: this.sortLevelOptions(levelValues),
+                });
+            }
+        }
+
+        return available;
+    }
+
+    private hasFilterData(filter: FilterConfig, items: Item[]): boolean {
+        const values = this.collectFilterValues(items, filter.field);
+        if (values.length === 0) return false;
+        if (filter.type === 'toggle') {
+            return values.includes('true');
+        }
+        return true;
+    }
+
+    private collectFilterValues(items: Item[], field: string): string[] {
+        const result = new Set<string>();
+        items.forEach((item) => {
+            const values = this.normalizeFilterValue(item.data[field]);
+            values.forEach((value) => result.add(value));
+        });
+        return Array.from(result);
+    }
+
+    private normalizeFilterValue(value: unknown): string[] {
+        if (typeof value === 'string') return [value];
+        if (typeof value === 'number') return [String(value)];
+        if (typeof value === 'boolean') return [value ? 'true' : 'false'];
+        if (Array.isArray(value)) {
+            return value.filter((entry): entry is string => typeof entry === 'string');
+        }
+        return [];
+    }
+
+    private sortLevelOptions(options: string[]): string[] {
+        return options
+            .map((value) => value.trim())
+            .filter((value) => value.length > 0)
+            .sort((a, b) => {
+                const aLower = a.toLowerCase();
+                const bLower = b.toLowerCase();
+                const aIsCantrip = aLower === 'cantrip';
+                const bIsCantrip = bLower === 'cantrip';
+                if (aIsCantrip && !bIsCantrip) return -1;
+                if (bIsCantrip && !aIsCantrip) return 1;
+
+                const aNum = Number.parseFloat(a);
+                const bNum = Number.parseFloat(b);
+                const aIsNumber = Number.isFinite(aNum);
+                const bIsNumber = Number.isFinite(bNum);
+                if (aIsNumber && bIsNumber) return aNum - bNum;
+                if (aIsNumber) return -1;
+                if (bIsNumber) return 1;
+                return a.localeCompare(b);
+            });
+    }
+
+    private getUnrankedItems(view: ViewModel, availableFilters: FilterConfig[]): Item[] {
         const result: Item[] = [];
-        const filters = view.game?.filters ?? [];
         view.unrankedItems.forEach((itemId) => {
             const item = view.items.get(itemId);
             if (!item) return;
-            if (!matchesActiveFilters(item, filters, view.filters)) return;
+            if (!matchesActiveFilters(item, availableFilters, view.filters)) return;
             result.push(item);
         });
         return result;
@@ -789,7 +883,7 @@ export class TierEngineV2 {
         this.setSidebarOpen(!this.isSidebarOpen);
     }
 
-    private mountSidebarControls(view: ViewModel): void {
+    private mountSidebarControls(view: ViewModel, availableFilters: FilterConfig[]): void {
         this.cleanupSidebarControls();
 
         const overlay = document.createElement('div');
@@ -816,7 +910,7 @@ export class TierEngineV2 {
 
         const count = document.createElement('span');
         count.className = 'sidebar-toggle-count';
-        count.textContent = String(this.getUnrankedItems(view).length);
+        count.textContent = String(this.getUnrankedItems(view, availableFilters).length);
 
         toggle.appendChild(label);
         toggle.appendChild(count);
@@ -830,9 +924,9 @@ export class TierEngineV2 {
         this.updateSidebarDom();
     }
 
-    private updateSidebarControls(view: ViewModel): void {
+    private updateSidebarControls(view: ViewModel, availableFilters: FilterConfig[]): void {
         if (this.sidebarToggleCount) {
-            this.sidebarToggleCount.textContent = String(this.getUnrankedItems(view).length);
+            this.sidebarToggleCount.textContent = String(this.getUnrankedItems(view, availableFilters).length);
         }
         this.updateSidebarDom();
     }
