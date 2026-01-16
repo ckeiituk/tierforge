@@ -29,6 +29,28 @@ interface HeaderState {
     toastTone: ToastTone;
 }
 
+const DOS2_SCHOOL_LABELS: Record<string, string> = {
+    'Аэротеургия': 'Aerotheurge',
+    'Геомантия': 'Geomancer',
+    'Гидрософия': 'Hydrosophist',
+    'Гидрософистика': 'Hydrosophist',
+    'Пирокинетика': 'Pyrokinetic',
+    'Некромантия': 'Necromancer',
+    'Призывание': 'Summoning',
+    'Превращение': 'Polymorph',
+    'Искусство убийства': 'Scoundrel',
+    'Мастерство охоты': 'Huntsman',
+    'Военное дело': 'Warfare',
+    'Источник': 'Source',
+    'Магия истока': 'Source',
+    'Особые навыки': 'Special',
+};
+
+const getFilterOptionLabel = (filter: FilterConfig, option: string): string => {
+    if (filter.id !== 'school') return option;
+    return DOS2_SCHOOL_LABELS[option] ?? option;
+};
+
 export class Header extends Component<HeaderState, HeaderProps> {
     private editingPresetDraft: string | null = null;
     private saveStatusTimeoutId: number | null = null;
@@ -479,7 +501,8 @@ export class Header extends Component<HeaderState, HeaderProps> {
 
             options.forEach((option: string) => {
                 const value = filter.type === 'toggle' && filter.options.length === 0 ? 'true' : option;
-                const labelText = filter.type === 'toggle' && filter.options.length === 0 ? 'Yes' : option;
+                const optionLabel = filter.type === 'toggle' && filter.options.length === 0 ? 'Yes' : option;
+                const labelText = getFilterOptionLabel(filter, optionLabel);
                 const isActive = activeValues.includes(value);
                 const button = createElement('button', {
                     className: `filter-chip ${isActive ? 'filter-chip--active' : ''}`,
