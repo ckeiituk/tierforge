@@ -11,25 +11,37 @@ export interface SidebarProps {
     items: Item[];
     searchQuery: string;
     selectedItems: Set<string>;
+    isOpen: boolean;
+    onClose?: () => void;
 }
 
 interface SidebarState {
     isDropTarget: boolean;
     searchQuery: string;
+    isOpen: boolean;
 }
 
 export class Sidebar extends Component<SidebarState, SidebarProps> {
+    private static nextId = 0;
     private itemComponents: ItemCard[] = [];
     private itemsContainer: HTMLElement | null = null;
+    private readonly searchInputId: string;
+    private readonly itemsContainerId: string;
 
     constructor(props: SidebarProps) {
         super(props, {
             initialState: {
                 isDropTarget: false,
                 searchQuery: props.searchQuery,
+                isOpen: props.isOpen ?? true,
             },
             className: 'sidebar',
         });
+
+        const instanceId = Sidebar.nextId;
+        Sidebar.nextId += 1;
+        this.searchInputId = `sidebar-search-${instanceId}`;
+        this.itemsContainerId = `sidebar-items-${instanceId}`;
     }
 
     render(): HTMLElement {
@@ -39,40 +51,112 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
             this.state.searchQuery = this.props.searchQuery;
         }
 
+        const isOpen = this.props.isOpen ?? this.state.isOpen;
         const sidebar = createElement('aside', {
-            className: `sidebar ${isDropTarget ? 'sidebar--drop-target' : ''}`,
+            className: `sidebar ${isOpen ? 'sidebar--open' : ''} ${isDropTarget ? 'sidebar--drop-target' : ''}`,
+            id: 'tierforge-sidebar',
+            'aria-label': 'Unranked items',
+            'aria-hidden': isOpen ? 'false' : 'true',
         });
 
         // Header
         sidebar.appendChild(this.renderHeader());
 
+        // Body contains search and items
+        const body = createElement('div', {
+            className: 'sidebar-body',
+        });
+
         // Search
-        sidebar.appendChild(this.renderSearch());
+        body.appendChild(this.renderSearch());
+
+        // Meta info
+        body.appendChild(this.renderMeta());
 
         // Items
-        sidebar.appendChild(this.renderItems());
+        body.appendChild(this.renderItems());
+
+        sidebar.appendChild(body);
 
         this.element = sidebar;
         return sidebar;
+    }
+
+    private renderMeta(): HTMLElement {
+        const { items } = this.props;
+        const { searchQuery } = this.state;
+
+        const meta = createElement('div', {
+            className: 'sidebar-meta',
+        });
+
+        const label = createElement('span', {}, ['Not in tier list']);
+
+        const filteredCount = searchQuery
+            ? items.filter(item =>
+                item.name.toLowerCase().includes(searchQuery.toLowerCase())
+            ).length
+            : items.length;
+
+        const count = createElement('span', {
+            className: 'sidebar-meta-count',
+        }, [filteredCount.toString()]);
+
+        meta.appendChild(label);
+        meta.appendChild(count);
+
+        return meta;
     }
 
     private renderHeader(): HTMLElement {
         const { items } = this.props;
 
         const header = createElement('div', {
-            className: 'sidebar__header',
+            className: 'sidebar__header sidebar-header',
+        });
+
+        // Title section
+        const titleSection = createElement('div', {
+            className: 'sidebar-title',
         });
 
         const title = createElement('h2', {
             className: 'sidebar__title',
         }, ['Unranked']);
 
+        const subtitle = createElement('p', {
+            className: 'sidebar__subtitle',
+        }, ['Waiting to be placed']);
+
+        titleSection.appendChild(title);
+        titleSection.appendChild(subtitle);
+
+        // Count badge
         const count = createElement('span', {
-            className: 'sidebar__count',
+            className: 'sidebar__count sidebar-count',
         }, [items.length.toString()]);
 
-        header.appendChild(title);
-        header.appendChild(count);
+        const controls = createElement('div', {
+            className: 'sidebar__controls',
+        });
+        controls.appendChild(count);
+
+        if (this.props.onClose) {
+            const closeButton = createElement('button', {
+                className: 'sidebar-close',
+                type: 'button',
+                title: 'Close sidebar',
+                'aria-label': 'Close sidebar',
+            }, ['x']);
+            closeButton.addEventListener('click', (event: MouseEvent) => {
+                event.preventDefault();
+                this.props.onClose?.();
+            });
+            controls.appendChild(closeButton);
+        }
+
+        header.appendChild(titleSection);
+        header.appendChild(controls);
 
         return header;
     }
@@ -81,14 +165,22 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         const { searchQuery } = this.state;
 
         const searchContainer = createElement('div', {
-            className: 'sidebar__search',
+            className: 'sidebar-tools',
+            role: 'search',
         });
+
+        const label = createElement('label', {
+            className: 'sidebar-tools-label',
+            for: this.searchInputId,
+        }, ['Find item']);
 
         const input = document.createElement('input');
         input.type = 'search';
-        input.placeholder = 'Search...';
+        input.placeholder = 'Search unranked...';
         input.className = 'sidebar__search-input';
         input.value = searchQuery;
+        input.id = this.searchInputId;
+        input.setAttribute('aria-controls', this.itemsContainerId);
 
         input.addEventListener('input', (e: Event) => {
             const query = (e.target as HTMLInputElement).value;
@@ -97,6 +189,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
             this.refreshItems();
         });
 
+        searchContainer.appendChild(label);
         searchContainer.appendChild(input);
         return searchContainer;
     }
@@ -106,7 +199,9 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         const { searchQuery } = this.state;
 
         const container = createElement('div', {
-            className: 'sidebar__items',
+            className: 'sidebar__items sidebar-items',
+            id: this.itemsContainerId,
+            role: 'list',
         });
         this.itemsContainer = container;
 
@@ -121,16 +216,24 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
             )
             : items;
 
-        // Create item cards
-        filteredItems.forEach(item => {
-            const card = new ItemCard({
-                item,
-                containerId: 'unranked',
-                isSelected: selectedItems.has(item.id),
+        // Empty state
+        if (filteredItems.length === 0) {
+            const empty = createElement('div', {
+                className: 'sidebar-empty',
+            }, [searchQuery ? 'No items match your search' : 'All items have been ranked!']);
+            container.appendChild(empty);
+        } else {
+            // Create item cards
+            filteredItems.forEach(item => {
+                const card = new ItemCard({
+                    item,
+                    containerId: 'unranked',
+                    isSelected: selectedItems.has(item.id),
+                });
+                this.itemComponents.push(card);
+                container.appendChild(card.render());
             });
-            this.itemComponents.push(card);
-            container.appendChild(card.render());
-        });
+        }
 
         // Drop handlers
         this.setupDropHandlers(container);
@@ -187,15 +290,22 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
             )
             : items;
 
-        filteredItems.forEach(item => {
-            const card = new ItemCard({
-                item,
-                containerId: 'unranked',
-                isSelected: selectedItems.has(item.id),
+        if (filteredItems.length === 0) {
+            const empty = createElement('div', {
+                className: 'sidebar-empty',
+            }, [searchQuery ? 'No items match your search' : 'All items have been ranked!']);
+            container.appendChild(empty);
+        } else {
+            filteredItems.forEach(item => {
+                const card = new ItemCard({
+                    item,
+                    containerId: 'unranked',
+                    isSelected: selectedItems.has(item.id),
+                });
+                this.itemComponents.push(card);
+                container.appendChild(card.render());
             });
-            this.itemComponents.push(card);
-            container.appendChild(card.render());
-        });
+        }
     }
 
     private setDropTarget(isDropTarget: boolean): void {
