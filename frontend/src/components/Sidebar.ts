@@ -25,6 +25,8 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
     private static nextId = 0;
     private itemComponents: ItemCard[] = [];
     private itemsContainer: HTMLElement | null = null;
+    private searchInput: HTMLInputElement | null = null;
+    private countElement: HTMLElement | null = null;
     private readonly searchInputId: string;
     private readonly itemsContainerId: string;
 
@@ -79,6 +81,39 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         return sidebar;
     }
 
+    updateProps(newProps: Partial<SidebarProps>): void {
+        const prevProps = this.props;
+        this.props = { ...this.props, ...newProps };
+
+        const shouldRerender = !this.element.isConnected || !this.itemsContainer || !this.searchInput || !this.countElement;
+        const closeControlChanged = Boolean(prevProps.onClose) !== Boolean(this.props.onClose);
+
+        if (shouldRerender || closeControlChanged) {
+            this.rerender();
+            return;
+        }
+
+        const prevOpen = prevProps.isOpen ?? true;
+        const nextOpen = this.props.isOpen ?? true;
+        if (prevOpen !== nextOpen) {
+            this.state.isOpen = nextOpen;
+            this.element.classList.toggle('sidebar--open', nextOpen);
+            this.element.setAttribute('aria-hidden', nextOpen ? 'false' : 'true');
+        }
+
+        const searchChanged = prevProps.searchQuery !== this.props.searchQuery;
+        if (searchChanged) {
+            this.state.searchQuery = this.props.searchQuery;
+            this.updateSearchValue();
+        }
+
+        const itemsChanged = prevProps.items !== this.props.items;
+        const selectionChanged = prevProps.selectedItems !== this.props.selectedItems;
+        if (itemsChanged || selectionChanged || searchChanged) {
+            this.refreshItems();
+        }
+    }
+
     private renderHeader(): HTMLElement {
         const { items } = this.props;
         const filteredItems = this.filterItems(items, this.state.searchQuery);
@@ -110,6 +145,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
                 ? `${totalCount} items`
                 : `Showing ${filteredCount} of ${totalCount}`,
         }, [filteredCount.toString()]);
+        this.countElement = count;
 
         const controls = createElement('div', {
             className: 'sidebar__controls',
@@ -156,12 +192,12 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         input.value = searchQuery;
         input.id = this.searchInputId;
         input.setAttribute('aria-controls', this.itemsContainerId);
+        this.searchInput = input;
 
         input.addEventListener('input', (e: Event) => {
             const query = (e.target as HTMLInputElement).value;
             this.state.searchQuery = query;
             this.emit({ type: 'SEARCH_CHANGED', query });
-            this.refreshItems();
         });
 
         searchContainer.appendChild(label);
@@ -273,6 +309,7 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
                 container.appendChild(card.render());
             });
         }
+        this.updateHeaderCount();
     }
 
     private setDropTarget(isDropTarget: boolean): void {
@@ -287,9 +324,41 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
         return items.filter((item) => item.name.toLowerCase().includes(normalized));
     }
 
+    private updateHeaderCount(): void {
+        const count = this.countElement;
+        if (!count) return;
+        const filteredItems = this.filterItems(this.props.items, this.state.searchQuery);
+        const filteredCount = filteredItems.length;
+        const totalCount = this.props.items.length;
+        const label = filteredCount === totalCount
+            ? `${totalCount} items`
+            : `Showing ${filteredCount} of ${totalCount}`;
+        count.textContent = filteredCount.toString();
+        count.setAttribute('title', label);
+        count.setAttribute('aria-label', label);
+    }
+
+    private updateSearchValue(): void {
+        const input = this.searchInput;
+        if (!input) return;
+        if (input.value === this.state.searchQuery) return;
+        const isFocused = document.activeElement === input;
+        const selectionStart = input.selectionStart;
+        const selectionEnd = input.selectionEnd;
+        input.value = this.state.searchQuery;
+        if (isFocused && selectionStart !== null && selectionEnd !== null) {
+            const nextValue = input.value;
+            const nextStart = Math.min(selectionStart, nextValue.length);
+            const nextEnd = Math.min(selectionEnd, nextValue.length);
+            input.setSelectionRange(nextStart, nextEnd);
+        }
+    }
+
     protected cleanup(): void {
         this.itemComponents.forEach(c => c.destroy());
         this.itemComponents = [];
         this.itemsContainer = null;
+        this.searchInput = null;
+        this.countElement = null;
     }
 }
