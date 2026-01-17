@@ -34,6 +34,11 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	s.router.ServeHTTP(w, r)
 }
 
+// Router returns the underlying chi.Router for additional route configuration
+func (s *Server) Router() chi.Router {
+	return s.router
+}
+
 func (s *Server) setupMiddleware() {
 	s.router.Use(middleware.Logger)
 	s.router.Use(middleware.Recoverer)

@@ -26,18 +26,18 @@ func main() {
 	}
 	defer store.Close()
 
-	// Create router
-	r := api.New(store)
+	// Create server
+	s := api.New(store)
 
 	// Serve frontend static files (for production deployment)
 	workDir, _ := os.Getwd()
 	filesDir := http.Dir(filepath.Join(workDir, "../frontend/dist"))
-	FileServer(r, "/", filesDir)
+	FileServer(s.Router(), "/", filesDir)
 
 	log.Printf("🚀 TierForge API starting on http://localhost:%s", *port)
 	log.Printf("📦 Database: %s", *dbPath)
 
-	if err := http.ListenAndServe(":"+*port, r); err != nil {
+	if err := http.ListenAndServe(":"+*port, s); err != nil {
 		log.Fatalf("Server failed: %v", err)
 	}
 }
