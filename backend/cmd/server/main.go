@@ -11,6 +11,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/meur/tierforge/internal/api"
 	"github.com/meur/tierforge/internal/storage"
+	"golang.org/x/net/http2"
+	"golang.org/x/net/http2/h2c"
 )
 
 func main() {
@@ -37,7 +39,11 @@ func main() {
 	log.Printf("🚀 TierForge API starting on http://localhost:%s", *port)
 	log.Printf("📦 Database: %s", *dbPath)
 
-	if err := http.ListenAndServe(":"+*port, s); err != nil {
+	// Wrap with h2c for HTTP/2 cleartext support (Xray fallback compatibility)
+	h2s := &http2.Server{}
+	handler := h2c.NewHandler(s, h2s)
+
+	if err := http.ListenAndServe(":"+*port, handler); err != nil {
 		log.Fatalf("Server failed: %v", err)
 	}
 }
