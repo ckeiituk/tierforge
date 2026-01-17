@@ -615,6 +615,30 @@ export class Header extends Component<HeaderState, HeaderProps> {
         });
         redoBtn.toggleAttribute('disabled', !canRedo);
 
+        // Export button
+        const exportBtn = createElement('button', {
+            className: 'btn btn--ghost',
+            title: 'Export preset as JSON',
+            type: 'button',
+            'aria-label': 'Export',
+        }, ['📥 Export']);
+
+        exportBtn.addEventListener('click', () => {
+            this.emit({ type: 'PRESET_EXPORT_REQUESTED' });
+        });
+
+        // Import button
+        const importBtn = createElement('button', {
+            className: 'btn btn--ghost',
+            title: 'Import preset from JSON',
+            type: 'button',
+            'aria-label': 'Import',
+        }, ['📤 Import']);
+
+        importBtn.addEventListener('click', () => {
+            this.handleImportClick();
+        });
+
         // Share button
         const shareBtn = createElement('button', {
             className: 'btn btn--primary',
@@ -636,11 +660,47 @@ export class Header extends Component<HeaderState, HeaderProps> {
 
         actions.appendChild(undoBtn);
         actions.appendChild(redoBtn);
+        actions.appendChild(exportBtn);
+        actions.appendChild(importBtn);
         actions.appendChild(shareBtn);
         right.appendChild(actions);
 
         return right;
     }
+
+    private handleImportClick(): void {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.json,application/json';
+        input.style.display = 'none';
+
+        input.addEventListener('change', () => {
+            const file = input.files?.[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const content = e.target?.result as string;
+                    const data = JSON.parse(content);
+                    this.emit({ type: 'PRESET_IMPORT_REQUESTED', data });
+                    this.showToast('Preset imported!', 'success');
+                } catch (err) {
+                    console.error('Import failed:', err);
+                    this.showToast('Invalid JSON file', 'error');
+                }
+            };
+            reader.onerror = () => {
+                this.showToast('Failed to read file', 'error');
+            };
+            reader.readAsText(file);
+        });
+
+        document.body.appendChild(input);
+        input.click();
+        document.body.removeChild(input);
+    }
+
     private renderStatusMessage(): HTMLElement | null {
         const { saveStatus, toastMessage, toastTone } = this.state;
         if (toastMessage) {

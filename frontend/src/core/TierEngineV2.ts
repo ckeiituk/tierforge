@@ -384,6 +384,69 @@ export class TierEngineV2 {
         eventBus.emit({ type: 'TIERLIST_LOADED', tierList: created });
     }
 
+    private exportPreset(): void {
+        const state = stateManager.getState();
+        const tierList = state.tierList;
+        if (!tierList) return;
+
+        const exportData = {
+            version: 1,
+            exportedAt: new Date().toISOString(),
+            game_id: tierList.game_id,
+            sheet_id: tierList.sheet_id,
+            name: tierList.name,
+            tiers: tierList.tiers,
+        };
+
+        const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `tierforge-${tierList.name.replace(/[^a-zA-Z0-9]/g, '_')}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    private async importPreset(data: unknown): Promise<void> {
+        if (!data || typeof data !== 'object') {
+            console.error('Invalid import data');
+            return;
+        }
+
+        const importData = data as {
+            name?: string;
+            tiers?: Array<{ name: string; color: string; items: string[] }>;
+        };
+
+        if (!importData.tiers || !Array.isArray(importData.tiers)) {
+            console.error('Invalid tier list format');
+            return;
+        }
+
+        // Create a new preset with the imported data
+        const tierList = await this.createTierListForSheet(importData.name || this.getNextPresetName());
+        if (!tierList) return;
+
+        // Apply the imported tiers
+        const importedTiers = importData.tiers.map((tier, index) => ({
+            id: `tier-${Date.now()}-${index}`,
+            name: tier.name,
+            color: tier.color,
+            order: index,
+            items: tier.items || [],
+        }));
+
+        tierList.tiers = importedTiers;
+
+        this.updatePresetStateFromTierList(tierList, true);
+        eventBus.emit({ type: 'TIERLIST_LOADED', tierList });
+
+        // Trigger save
+        eventBus.emit({ type: 'SAVE_REQUESTED' });
+    }
+
     private setupEventListeners(): void {
         this.eventUnsubscribes.push(
             eventBus.on('SHEET_CHANGE_REQUESTED', (event) => {
@@ -412,6 +475,18 @@ export class TierEngineV2 {
         this.eventUnsubscribes.push(
             eventBus.on('PRESET_RENAME_REQUESTED', (event) => {
                 void this.renamePreset(event.presetId, event.name);
+            })
+        );
+
+        this.eventUnsubscribes.push(
+            eventBus.on('PRESET_EXPORT_REQUESTED', () => {
+                this.exportPreset();
+            })
+        );
+
+        this.eventUnsubscribes.push(
+            eventBus.on('PRESET_IMPORT_REQUESTED', (event) => {
+                void this.importPreset(event.data);
             })
         );
 

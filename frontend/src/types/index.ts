@@ -156,6 +156,8 @@ export type AppEvent =
     | { type: 'PRESET_CREATE_REQUESTED' }
     | { type: 'PRESET_DELETE_REQUESTED'; presetId: string }
     | { type: 'PRESET_RENAME_REQUESTED'; presetId: string; name: string }
+    | { type: 'PRESET_EXPORT_REQUESTED' }
+    | { type: 'PRESET_IMPORT_REQUESTED'; data: unknown }
     | { type: 'TIERLIST_RENAMED'; tierListId: string; name: string }
     | { type: 'FILTER_CHANGED'; filterId: string; values: string[] }
     | { type: 'SEARCH_CHANGED'; query: string }
