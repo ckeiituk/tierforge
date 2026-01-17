@@ -674,9 +674,18 @@ export class Header extends Component<HeaderState, HeaderProps> {
         input.accept = '.json,application/json';
         input.style.display = 'none';
 
+        const cleanup = () => {
+            if (input.parentNode) {
+                input.parentNode.removeChild(input);
+            }
+        };
+
         input.addEventListener('change', () => {
             const file = input.files?.[0];
-            if (!file) return;
+            if (!file) {
+                cleanup();
+                return;
+            }
 
             const reader = new FileReader();
             reader.onload = (e) => {
@@ -689,16 +698,23 @@ export class Header extends Component<HeaderState, HeaderProps> {
                     console.error('Import failed:', err);
                     this.showToast('Invalid JSON file', 'error');
                 }
+                cleanup();
             };
             reader.onerror = () => {
                 this.showToast('Failed to read file', 'error');
+                cleanup();
             };
             reader.readAsText(file);
         });
 
+        // Handle cancel (blur event fires when dialog closes without selection)
+        input.addEventListener('blur', () => {
+            // Small delay to allow change event to fire first
+            setTimeout(cleanup, 100);
+        });
+
         document.body.appendChild(input);
         input.click();
-        document.body.removeChild(input);
     }
 
     private renderStatusMessage(): HTMLElement | null {
