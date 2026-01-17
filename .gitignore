@@ -6,7 +6,8 @@ vendor/
 dist/
 build/
 *.exe
-server
+/server
+/backend/tierforge
 
 # Database
 *.db
