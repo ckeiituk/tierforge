@@ -61,6 +61,9 @@ export class ItemCard extends Component<Record<string, never>, ItemCardProps> {
         // Event handlers
         this.setupEventHandlers(card);
 
+        // Apply combo border if applicable
+        this.applyComboBorder(card, item);
+
         this.element = card;
         return card;
     }
@@ -100,6 +103,8 @@ export class ItemCard extends Component<Record<string, never>, ItemCardProps> {
             this.nameElement.textContent = item.name;
         }
 
+        // Update combo border
+        this.applyComboBorder(this.element, item);
     }
 
     private getClassName(): string {
@@ -110,6 +115,45 @@ export class ItemCard extends Component<Record<string, never>, ItemCardProps> {
         if (this.props.isHighlighted) classes.push('item-card--highlighted');
 
         return classes.join(' ');
+    }
+
+    // School colors for combo skills (secondary school border)
+    private static SCHOOL_COLORS: Record<string, string> = {
+        "Аэротеургия": "#7478DC",
+        "Геомантия": "#AA895B",
+        "Гидрософистика": "#579CCA",
+        "Пирокинетика": "#C76537",
+        "Некромантия": "#9A5085",
+        "Превращение": "#FFB811",
+        "Призывание": "#9440B3",
+        "Мастерство охоты": "#5A9646",
+        "Искусство убийства": "#566C6C",
+        "Военное дело": "#A11919",
+        "Магия Истока": "#6EB09D",
+        "Особые навыки": "#922db3", // Keep existing for special
+    };
+
+    private applyComboBorder(card: HTMLElement, item: Item): void {
+        const data = item.data as Record<string, unknown>;
+        // Check for is_combo flag or just presence of secondary_school
+        if (data.is_combo || data.secondary_school) {
+            const secondary = data.secondary_school as string;
+            const color = ItemCard.SCHOOL_COLORS[secondary];
+            if (color) {
+                card.style.borderColor = color;
+                card.style.borderWidth = "2px";
+                card.style.borderStyle = "solid";
+            } else {
+                card.style.borderColor = "";
+                card.style.borderWidth = "";
+                card.style.borderStyle = "";
+            }
+        } else {
+            // Reset if not combo (important for recycling)
+            card.style.borderColor = "";
+            card.style.borderWidth = "";
+            card.style.borderStyle = "";
+        }
     }
 
     private setupEventHandlers(card: HTMLElement): void {
@@ -208,10 +252,15 @@ export class ItemCard extends Component<Record<string, never>, ItemCardProps> {
             });
         });
 
-        card.addEventListener('dragend', () => {
+        card.addEventListener('dragend', (e: DragEvent) => {
             card.classList.remove('item-card--dragging');
             document.body.classList.remove('is-dragging');
-            this.emit({ type: 'DRAG_END', itemId: this.props.item.id });
+            this.emit({
+                type: 'DRAG_END',
+                itemId: this.props.item.id,
+                clientX: e.clientX,
+                clientY: e.clientY,
+            });
         });
     }
 

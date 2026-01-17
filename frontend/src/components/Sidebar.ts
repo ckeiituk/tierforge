@@ -5,6 +5,7 @@
 import { Component, createElement } from './Component';
 import { ItemCard } from './ItemCard';
 import { getDragPayload } from '@/core/dragPayload';
+import { matchesSearchQuery } from '@/core/itemFilters';
 import type { Item } from '@/types';
 
 export interface SidebarProps {
@@ -319,9 +320,8 @@ export class Sidebar extends Component<SidebarState, SidebarProps> {
     }
 
     private filterItems(items: Item[], query: string): Item[] {
-        const normalized = query.trim().toLowerCase();
-        if (!normalized) return items;
-        return items.filter((item) => item.name.toLowerCase().includes(normalized));
+        if (!query.trim()) return items;
+        return items.filter((item) => matchesSearchQuery(item, query));
     }
 
     private updateHeaderCount(): void {

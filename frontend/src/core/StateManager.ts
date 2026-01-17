@@ -109,6 +109,13 @@ class StateManager {
                 stateChanged = true;
                 break;
 
+            case 'TIERLIST_RENAMED':
+                if (this.state.tierList && this.state.tierList.id === event.tierListId) {
+                    this.state.tierList = { ...this.state.tierList, name: event.name };
+                    stateChanged = true;
+                }
+                break;
+
             case 'ITEM_MOVED':
                 stateChanged = this.moveItem(event.itemId, event.fromTier, event.toTier, event.position);
                 break;
@@ -151,7 +158,10 @@ class StateManager {
                 break;
 
             case 'FILTER_CHANGED':
-                this.state.filters[event.filterId] = event.values;
+                this.state.filters = {
+                    ...this.state.filters,
+                    [event.filterId]: event.values,
+                };
                 stateChanged = true;
                 break;
 

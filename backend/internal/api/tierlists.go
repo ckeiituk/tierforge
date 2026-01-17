@@ -113,3 +113,25 @@ func (s *Server) handleGetTierListByCode(w http.ResponseWriter, r *http.Request)
 
 	respondJSON(w, http.StatusOK, tierList)
 }
+
+// handleDeleteTierList deletes a tier list by ID
+func (s *Server) handleDeleteTierList(w http.ResponseWriter, r *http.Request) {
+	id := chi.URLParam(r, "id")
+
+	existing, err := s.store.GetTierList(id)
+	if err != nil {
+		respondError(w, http.StatusInternalServerError, "Failed to fetch tier list")
+		return
+	}
+	if existing == nil {
+		respondError(w, http.StatusNotFound, "Tier list not found")
+		return
+	}
+
+	if err := s.store.DeleteTierList(id); err != nil {
+		respondError(w, http.StatusInternalServerError, "Failed to delete tier list")
+		return
+	}
+
+	respondJSON(w, http.StatusOK, map[string]string{"status": "deleted"})
+}

@@ -73,7 +73,8 @@ export class TierRow extends Component<Record<string, never>, TierRowProps> {
             };
         });
 
-        this.on('DRAG_END', () => {
+        this.on('DRAG_END', (event) => {
+            void event;
             this.setDropTarget(false);
             this.clearDropPlaceholder();
             this.itemDragState = null;

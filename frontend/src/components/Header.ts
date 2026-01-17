@@ -40,7 +40,7 @@ const DOS2_SCHOOL_LABELS: Record<string, string> = {
     'Искусство убийства': 'Scoundrel',
     'Мастерство охоты': 'Huntsman',
     'Военное дело': 'Warfare',
-    'Магия истока': 'Source',
+    'Магия Истока': 'Source',
     'Особые навыки': 'Special Skills',
 };
 

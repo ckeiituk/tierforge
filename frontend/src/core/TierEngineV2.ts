@@ -443,8 +443,8 @@ export class TierEngineV2 {
 
         this.eventUnsubscribes.push(
             eventBus.on('DRAG_END', (event: Extract<AppEvent, { type: 'DRAG_END' }>) => {
-                void event;
                 this.isDragging = false;
+                this.maybeShowTooltipAtPoint(event.clientX, event.clientY);
             })
         );
 
@@ -745,6 +745,22 @@ export class TierEngineV2 {
             result.push(item);
         });
         return result;
+    }
+
+    private maybeShowTooltipAtPoint(clientX: number, clientY: number): void {
+        if (!this.tooltipComponent) return;
+        if (clientX === 0 && clientY === 0) return;
+
+        const element = document.elementFromPoint(clientX, clientY);
+        if (!(element instanceof HTMLElement)) return;
+
+        const card = element.closest<HTMLElement>('.item-card');
+        if (!card) return;
+
+        const itemId = card.dataset.itemId;
+        if (!itemId) return;
+
+        this.showTooltip(itemId, card);
     }
 
     private showTooltip(itemId: string, anchorElement: HTMLElement): void {

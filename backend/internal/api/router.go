@@ -59,6 +59,7 @@ func (s *Server) setupRoutes() {
 		r.Post("/tierlists", s.handleCreateTierList)
 		r.Get("/tierlists/{id}", s.handleGetTierList)
 		r.Put("/tierlists/{id}", s.handleUpdateTierList)
+		r.Delete("/tierlists/{id}", s.handleDeleteTierList)
 
 		// Share links
 		r.Get("/s/{code}", s.handleGetTierListByCode)

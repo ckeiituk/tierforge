@@ -10,6 +10,9 @@ export interface GameAdapter {
     /** Render tooltip content for an item */
     renderTooltip(item: Item): HTMLElement;
 
+    /** Resolve wiki URL for an item */
+    getWikiUrl?(item: Item, locale?: 'ru' | 'en'): string | null;
+
     /** Get category icon URL */
     getCategoryIcon(category: string): string | null;
 

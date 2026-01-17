@@ -65,6 +65,12 @@ export async function updateTierList(id: string, data: TierListUpdate): Promise<
     });
 }
 
+export async function deleteTierList(id: string): Promise<void> {
+    await request<{ status: string }>(`/tierlists/${id}`, {
+        method: 'DELETE',
+    });
+}
+
 export async function getTierListByCode(code: string): Promise<TierList> {
     return request<TierList>(`/s/${code}`);
 }

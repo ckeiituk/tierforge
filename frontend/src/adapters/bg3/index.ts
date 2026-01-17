@@ -55,7 +55,7 @@ const bg3Adapter: GameAdapter = {
 
         tooltip.innerHTML = `
       <div class="tooltip-header">
-        <img src="${item.icon}" alt="" class="tooltip-icon" />
+        <img src="${item.icon}" alt="" class="tooltip-icon" referrerpolicy="no-referrer" />
         <div class="tooltip-titles">
           <h3 class="tooltip-name">${item.name}</h3>
           ${data.school ? `

@@ -41,3 +41,13 @@ coverage/
 tmp/
 temp/
 *.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data backups
+*.bak
+*_enriched.json

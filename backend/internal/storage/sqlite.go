@@ -165,6 +165,12 @@ func (s *Store) CreateGame(g *models.Game) error {
 
 // --- Items ---
 
+// DeleteItemsByGame deletes all items for a specific game
+func (s *Store) DeleteItemsByGame(gameID string) error {
+	_, err := s.db.Exec("DELETE FROM items WHERE game_id = ?", gameID)
+	return err
+}
+
 // GetItems returns items for a game, optionally filtered by sheet
 func (s *Store) GetItems(gameID, sheetID string) ([]models.Item, error) {
 	var rows *sql.Rows
@@ -208,6 +214,17 @@ func (s *Store) CreateItem(item *models.Item) error {
 		INSERT INTO items (id, game_id, sheet_id, name, name_ru, icon, category, data)
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?)
 	`, item.ID, item.GameID, item.SheetID, item.Name, item.NameRu, item.Icon, item.Category, data)
+	return err
+}
+
+// UpdateItem updates an existing item.
+func (s *Store) UpdateItem(item *models.Item) error {
+	data, _ := json.Marshal(item.Data)
+	_, err := s.db.Exec(`
+		UPDATE items
+		SET game_id = ?, sheet_id = ?, name = ?, name_ru = ?, icon = ?, category = ?, data = ?
+		WHERE id = ?
+	`, item.GameID, item.SheetID, item.Name, item.NameRu, item.Icon, item.Category, data, item.ID)
 	return err
 }
 
@@ -350,6 +367,12 @@ func (s *Store) UpdateTierList(id string, update *models.TierListUpdate) error {
 		stringJoin(sets, ", "))
 
 	_, err := s.db.Exec(query, args...)
+	return err
+}
+
+// DeleteTierList deletes a tier list by ID
+func (s *Store) DeleteTierList(id string) error {
+	_, err := s.db.Exec(`DELETE FROM tierlists WHERE id = ?`, id)
 	return err
 }
 

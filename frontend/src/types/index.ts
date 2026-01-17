@@ -92,6 +92,16 @@ export interface TierListUpdate {
     is_public?: boolean;
 }
 
+export interface TierListPreset {
+    id: string;
+    name: string;
+}
+
+export interface TierListPresetState {
+    activeId: string | null;
+    presets: TierListPreset[];
+}
+
 // --- UI State ---
 
 export interface AppState {
@@ -127,8 +137,11 @@ export type AppEvent =
     | { type: 'ITEM_CLICKED'; itemId: string; multiSelect: boolean; rangeSelect: boolean }
     | { type: 'ITEM_HOVERED'; itemId: string; element: HTMLElement }
     | { type: 'ITEM_UNHOVERED'; itemId: string }
-    | { type: 'DRAG_START'; itemId: string; containerId: string }
-    | { type: 'DRAG_END'; itemId: string }
+    | { type: 'DRAG_START'; itemId: string; containerId: string; startClientX: number; startClientY: number }
+    | { type: 'DRAG_END'; itemId: string; clientX: number; clientY: number }
+    | { type: 'autosave:start' }
+    | { type: 'autosave:success' }
+    | { type: 'autosave:error'; error: unknown }
     | { type: 'TIER_ADD_REQUESTED' }
     | { type: 'TIER_ADDED'; tier: Tier }
     | { type: 'TIER_REMOVED'; tierId: string }
@@ -139,6 +152,11 @@ export type AppEvent =
     | { type: 'TIER_REORDER_PREVIEW'; tierId: string; position: 'before' | 'after' }
     | { type: 'TIER_REORDER_PREVIEW_CLEARED' }
     | { type: 'TIERS_REORDERED'; tierIds: string[] }
+    | { type: 'PRESET_SWITCH_REQUESTED'; presetId: string }
+    | { type: 'PRESET_CREATE_REQUESTED' }
+    | { type: 'PRESET_DELETE_REQUESTED'; presetId: string }
+    | { type: 'PRESET_RENAME_REQUESTED'; presetId: string; name: string }
+    | { type: 'TIERLIST_RENAMED'; tierListId: string; name: string }
     | { type: 'FILTER_CHANGED'; filterId: string; values: string[] }
     | { type: 'SEARCH_CHANGED'; query: string }
     | { type: 'UNDO' }

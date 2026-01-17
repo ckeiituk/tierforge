@@ -1,0 +1,2198 @@
+{
+  "meta": {
+    "source": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8_%D0%B2_Original_Sin_2",
+    "note": "Automatically scraped from Divinity Fandom Wiki (ru)"
+  },
+  "schools": {
+    "Аэротеургия": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D1%8D%D1%80%D0%BE%D1%82%D0%B5%D1%83%D1%80%D0%B3%D0%B8%D1%8F_%D0%B2_Original_Sin_2",
+      "en_name": "Aerotheurge",
+      "spells": {
+        "Electric Discharge": {
+          "ru_name": "Электрический разряд",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B7%D1%80%D1%8F%D0%B4",
+          "en_name": "Electric Discharge",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Electric%20Discharge",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Electric_Discharge.png"
+        },
+        "Shocking Touch": {
+          "ru_name": "Электрическое касание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B0%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Shocking Touch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Shocking%20Touch",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Shocking_Touch.png"
+        },
+        "Blinding Radiance": {
+          "ru_name": "Ослепляющее излучение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%81%D0%BB%D0%B5%D0%BF%D0%BB%D1%8F%D1%8E%D1%89%D0%B5%D0%B5_%D0%B8%D0%B7%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Blinding Radiance",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Blinding%20Radiance",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Blinding_Radiance.png"
+        },
+        "Касание вакуума": {
+          "ru_name": "Касание вакуума",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B0%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2%D0%B0%D0%BA%D1%83%D1%83%D0%BC%D0%B0",
+          "en_name": "Vacuum Touch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Vacuum%20Touch",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Vacuum_Touch.png"
+        },
+        "Испарение": {
+          "ru_name": "Испарение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%98%D1%81%D0%BF%D0%B0%D1%80%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Vaporize",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Vaporize",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Vaporize.png"
+        },
+        "Дыхательный пузырь": {
+          "ru_name": "Дыхательный пузырь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D1%8B%D1%85%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C",
+          "en_name": "Breathing Bubble",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Breathing%20Bubble",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Breathing_Bubble.png"
+        },
+        "Дымовая завеса": {
+          "ru_name": "Дымовая завеса",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D1%8B%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B7%D0%B0%D0%B2%D0%B5%D1%81%D0%B0_%D0%B2_Original_Sin_2",
+          "en_name": "Smoke Cover",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Smoke%20Cover",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Smoke_Cover.png"
+        },
+        "Изменчивый бриз": {
+          "ru_name": "Изменчивый бриз",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%98%D0%B7%D0%BC%D0%B5%D0%BD%D1%87%D0%B8%D0%B2%D1%8B%D0%B9_%D0%B1%D1%80%D0%B8%D0%B7",
+          "en_name": "Erratic Wisp",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Erratic%20Wisp",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Erratic_Wisp.png"
+        },
+        "Uncanny Evasion": {
+          "ru_name": "Необьяснимое уклонение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B5%D0%BE%D0%B1%D1%8C%D1%8F%D1%81%D0%BD%D0%B8%D0%BC%D0%BE%D0%B5_%D1%83%D0%BA%D0%BB%D0%BE%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Uncanny Evasion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Uncanny%20Evasion",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Uncanny_Evasion.png"
+        },
+        "Dazing Bolt": {
+          "ru_name": "Ошеломляющий разряд",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%88%D0%B5%D0%BB%D0%BE%D0%BC%D0%BB%D1%8F%D1%8E%D1%89%D0%B8%D0%B9_%D1%80%D0%B0%D0%B7%D1%80%D1%8F%D0%B4",
+          "en_name": "Dazing Bolt",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Dazing%20Bolt",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Dazing_Bolt.png"
+        },
+        "Teleportation": {
+          "ru_name": "Телепортация",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A2%D0%B5%D0%BB%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F_%D0%B2_Original_Sin_2",
+          "en_name": "Teleportation",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Teleportation",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Teleportation.png"
+        },
+        "Apportation": {
+          "ru_name": "Аппорт",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D0%BF%D0%BF%D0%BE%D1%80%D1%82",
+          "en_name": "Apportation",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Apportation",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Apportation.png"
+        },
+        "Nether Swap": {
+          "ru_name": "Рокировка",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2_Original_Sin_2",
+          "en_name": "Nether Swap",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Nether%20Swap",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Nether_Swap.png"
+        },
+        "Pressure Spike": {
+          "ru_name": "Скачок давления",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BA%D0%B0%D1%87%D0%BE%D0%BA_%D0%B4%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F",
+          "en_name": "Pressure Spike",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Pressure%20Spike",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Pressure_Spike.png"
+        },
+        "Chain Lightning": {
+          "ru_name": "Цепная молния",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A6%D0%B5%D0%BF%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%BB%D0%BD%D0%B8%D1%8F_%D0%B2_Original_Sin_2",
+          "en_name": "Chain Lightning",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Chain%20Lightning",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Chain_Lightning.png"
+        },
+        "Аура вакуума": {
+          "ru_name": "Аура вакуума",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D1%83%D1%80%D0%B0_%D0%B2%D0%B0%D0%BA%D1%83%D1%83%D0%BC%D0%B0",
+          "en_name": "Vacuum Aura",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Vacuum%20Aura",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Vacuum_Aura.png"
+        },
+        "Массовые дыхательные пузыри": {
+          "ru_name": "Массовые дыхательные пузыри",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B4%D1%8B%D1%85%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D0%B8",
+          "en_name": "Mass Breathing Bubbles",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mass%20Breathing%20Bubbles",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mass_Breathing_Bubbles.png"
+        },
+        "Благословенное облако дыма": {
+          "ru_name": "Благословенное облако дыма",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%BE_%D0%B4%D1%8B%D0%BC%D0%B0",
+          "en_name": "Blessed Smoke Cloud",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Blessed%20Smoke%20Cloud",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Blessed_Smoke_Cloud.png"
+        },
+        "Аура уклонения": {
+          "ru_name": "Аура уклонения",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D1%83%D1%80%D0%B0_%D1%83%D0%BA%D0%BB%D0%BE%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F",
+          "en_name": "Evasive Aura",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Evasive%20Aura",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Аэротеургия",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Evasive_Aura.png"
+        },
+        "Closed Circuit": {
+          "ru_name": "Замкнутая цепь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D0%BC%D0%BA%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%86%D0%B5%D0%BF%D1%8C",
+          "en_name": "Closed Circuit",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Closed%20Circuit",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Closed_Circuit.png"
+        },
+        "Tornado": {
+          "ru_name": "Торнадо",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A2%D0%BE%D1%80%D0%BD%D0%B0%D0%B4%D0%BE_%D0%B2_Original_Sin_2",
+          "en_name": "Tornado",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Tornado",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Tornado.png"
+        },
+        "Superconductor": {
+          "ru_name": "Сверхпроводник",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%B2%D0%B5%D1%80%D1%85%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA",
+          "en_name": "Superconductor",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Superconductor",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Superconductor.png"
+        },
+        "Thunderstorm": {
+          "ru_name": "Буря молний",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D1%83%D1%80%D1%8F_%D0%BC%D0%BE%D0%BB%D0%BD%D0%B8%D0%B9",
+          "en_name": "Thunderstorm",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Thunderstorm",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Thunderstorm.png"
+        },
+        "Favourable Wind": {
+          "ru_name": "Попутный ветер",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D0%BF%D1%83%D1%82%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B5%D1%82%D0%B5%D1%80",
+          "en_name": "Favourable Wind",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Favourable%20Wind",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Favourable_Wind.png"
+        }
+      }
+    },
+    "Военное дело": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_Original_Sin_2",
+      "en_name": "Warfare",
+      "spells": {
+        "Рикошетящий щит": {
+          "ru_name": "Рикошетящий щит",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%B8%D0%BA%D0%BE%D1%88%D0%B5%D1%82%D1%8F%D1%89%D0%B8%D0%B9_%D1%89%D0%B8%D1%82",
+          "en_name": "Bouncing Shield",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Bouncing%20Shield",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Bouncing_Shield.png"
+        },
+        "Таран": {
+          "ru_name": "Таран",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A2%D0%B0%D1%80%D0%B0%D0%BD_%D0%B2_Original_Sin_2",
+          "en_name": "Battering Ram",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Battering%20Ram",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Battering_Ram.png"
+        },
+        "Сокрушающий удар": {
+          "ru_name": "Сокрушающий удар",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BE%D0%BA%D1%80%D1%83%D1%88%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D1%83%D0%B4%D0%B0%D1%80",
+          "en_name": "Battle Stomp",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Battle%20Stomp",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Battle_Stomp.png"
+        },
+        "Калечащий удар": {
+          "ru_name": "Калечащий удар",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B0%D0%BB%D0%B5%D1%87%D0%B0%D1%89%D0%B8%D0%B9_%D1%83%D0%B4%D0%B0%D1%80_%D0%B2_Original_Sin_2",
+          "en_name": "Crippling Blow",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Crippling%20Blow",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Crippling_Blow.png"
+        },
+        "Ярость": {
+          "ru_name": "Ярость",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AF%D1%80%D0%BE%D1%81%D1%82%D1%8C_%D0%B2_Original_Sin_2",
+          "en_name": "Enrage",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Enrage",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Enrage.png"
+        },
+        "Провокация": {
+          "ru_name": "Провокация",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%BE%D0%B2%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D1%8F",
+          "en_name": "Provoke",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Provoke",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Provoke.png"
+        },
+        "Смерч": {
+          "ru_name": "Смерч",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BC%D0%B5%D1%80%D1%87_%D0%B2_Original_Sin_2",
+          "en_name": "Whirlwind",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Whirlwind",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Whirlwind.png"
+        },
+        "Блиц-атака": {
+          "ru_name": "Блиц-атака",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D0%BB%D0%B8%D1%86-%D0%B0%D1%82%D0%B0%D0%BA%D0%B0",
+          "en_name": "Blitz Attack",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Blitz%20Attack",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Blitz_Attack.png"
+        },
+        "Отражающий барьер": {
+          "ru_name": "Отражающий барьер",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%82%D1%80%D0%B0%D0%B6%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D0%B1%D0%B0%D1%80%D1%8C%D0%B5%D1%80",
+          "en_name": "Deflective Barrier",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Deflective%20Barrier",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Deflective_Barrier.png"
+        },
+        "Прыжок феникса": {
+          "ru_name": "Прыжок феникса",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D1%8B%D0%B6%D0%BE%D0%BA_%D1%84%D0%B5%D0%BD%D0%B8%D0%BA%D1%81%D0%B0",
+          "en_name": "Phoenix Dive",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Phoenix%20Dive",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Phoenix_Dive.png"
+        },
+        "Гуща битвы": {
+          "ru_name": "Гуща битвы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%93%D1%83%D1%89%D0%B0_%D0%B1%D0%B8%D1%82%D0%B2%D1%8B",
+          "en_name": "Thick of the Fight",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Thick%20of%20the%20Fight",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Thick_of_the_Fight.png"
+        },
+        "Шквал ударов": {
+          "ru_name": "Шквал ударов",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A8%D0%BA%D0%B2%D0%B0%D0%BB_%D1%83%D0%B4%D0%B0%D1%80%D0%BE%D0%B2_%D0%B2_Original_Sin_2",
+          "en_name": "Onslaught",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Onslaught",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Onslaught.png"
+        },
+        "Вызов": {
+          "ru_name": "Вызов",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2",
+          "en_name": "Challenge",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Challenge",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Challenge.png"
+        },
+        "Ангел-хранитель": {
+          "ru_name": "Ангел-хранитель",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D0%BD%D0%B3%D0%B5%D0%BB-%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C",
+          "en_name": "Guardian Angel",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Guardian%20Angel",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Guardian_Angel.png"
+        },
+        "Преодоление": {
+          "ru_name": "Преодоление",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B5%D0%BE%D0%B4%D0%BE%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Overpower",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Overpower",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Overpower.png"
+        }
+      }
+    },
+    "Геомантия": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%93%D0%B5%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%8F_%D0%B2_Original_Sin_2",
+      "en_name": "Geomancer",
+      "spells": {
+        "Каменная броня": {
+          "ru_name": "Каменная броня",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D0%B1%D1%80%D0%BE%D0%BD%D1%8F_%D0%B2_Original_Sin_2",
+          "en_name": "Reactive Armour",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Reactive%20Armour",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Reactive_Armour.png"
+        },
+        "Загрязнение": {
+          "ru_name": "Загрязнение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D0%B3%D1%80%D1%8F%D0%B7%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Contamination",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Contamination",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Contamination.png"
+        },
+        "Каменный удар": {
+          "ru_name": "Каменный удар",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%83%D0%B4%D0%B0%D1%80",
+          "en_name": "Fossil Strike",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Fossil%20Strike",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Fossil_Strike.png"
+        },
+        "Отравленный дротик": {
+          "ru_name": "Отравленный дротик",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%82%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D1%80%D0%BE%D1%82%D0%B8%D0%BA",
+          "en_name": "Poison Dart",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Poison%20Dart",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Poison_Dart.png"
+        },
+        "Превращение в нефть": {
+          "ru_name": "Превращение в нефть",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B5%D0%B2%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_%D0%BD%D0%B5%D1%84%D1%82%D1%8C",
+          "en_name": "Turn to Oil",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Turn%20to%20Oil",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Turn_to_Oil.png"
+        },
+        "Отравленная сталь": {
+          "ru_name": "Отравленная сталь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%82%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D0%BB%D1%8C",
+          "en_name": "Venom Coating",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Venom%20Coating",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Venom_Coating.png"
+        },
+        "Масляный панцирь": {
+          "ru_name": "Масляный панцирь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D0%BD%D1%86%D0%B8%D1%80%D1%8C",
+          "en_name": "Oily Carapace",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Oily%20Carapace",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Oily_Carapace.png"
+        },
+        "Едкое касание": {
+          "ru_name": "Едкое касание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%95%D0%B4%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B0%D1%81%D0%B0%D0%BD%D0%B8%D0%B5",
+          "en_name": "Corrosive Touch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Corrosive%20Touch",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Corrosive_Touch.png"
+        },
+        "Бросок песка": {
+          "ru_name": "Бросок песка",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D1%80%D0%BE%D1%81%D0%BE%D0%BA_%D0%BF%D0%B5%D1%81%D0%BA%D0%B0",
+          "en_name": "Throw Dust",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Throw%20Dust",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Throw_Dust.png"
+        },
+        "Исцеление металла": {
+          "ru_name": "Исцеление металла",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%98%D1%81%D1%86%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B0",
+          "en_name": "Mend Metal",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mend%20Metal",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mend_Metal.png"
+        },
+        "Пронзание": {
+          "ru_name": "Пронзание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%BE%D0%BD%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5",
+          "en_name": "Impalement",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Impalement",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Impalement.png"
+        },
+        "Дрожь земли": {
+          "ru_name": "Дрожь земли",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D1%80%D0%BE%D0%B6%D1%8C_%D0%B7%D0%B5%D0%BC%D0%BB%D0%B8",
+          "en_name": "Worm Tremor",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Worm%20Tremor",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Worm_Tremor.png"
+        },
+        "Активная броня": {
+          "ru_name": "Активная броня",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F_%D0%B1%D1%80%D0%BE%D0%BD%D1%8F",
+          "en_name": "Fortify",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Fortify",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Fortify.png"
+        },
+        "Землетрясение": {
+          "ru_name": "Землетрясение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B5%D0%BC%D0%BB%D0%B5%D1%82%D1%80%D1%8F%D1%81%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Earthquake",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Earthquake",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Earthquake.png"
+        },
+        "Ядовитая волна": {
+          "ru_name": "Ядовитая волна",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AF%D0%B4%D0%BE%D0%B2%D0%B8%D1%82%D0%B0%D1%8F_%D0%B2%D0%BE%D0%BB%D0%BD%D0%B0",
+          "en_name": "Poison Wave",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Poison%20Wave",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Poison_Wave.png"
+        },
+        "Вызов пушкоцвета": {
+          "ru_name": "Вызов пушкоцвета",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2_%D0%BF%D1%83%D1%88%D0%BA%D0%BE%D1%86%D0%B2%D0%B5%D1%82%D0%B0",
+          "en_name": "Summon Artillery Plant",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Artillery%20Plant",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Artillery_Plant.png"
+        },
+        "Взрыв праха": {
+          "ru_name": "Взрыв праха",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B7%D1%80%D1%8B%D0%B2_%D0%BF%D1%80%D0%B0%D1%85%D0%B0",
+          "en_name": "Dust Blast",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Dust%20Blast",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Dust_Blast.png"
+        },
+        "Едкие брызги": {
+          "ru_name": "Едкие брызги",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%95%D0%B4%D0%BA%D0%B8%D0%B5_%D0%B1%D1%80%D1%8B%D0%B7%D0%B3%D0%B8",
+          "en_name": "Corrosive Spray",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Corrosive%20Spray",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Corrosive_Spray.png"
+        },
+        "Ядовитая аура": {
+          "ru_name": "Ядовитая аура",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AF%D0%B4%D0%BE%D0%B2%D0%B8%D1%82%D0%B0%D1%8F_%D0%B0%D1%83%D1%80%D0%B0",
+          "en_name": "Venomous Aura",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Venomous%20Aura",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Venomous_Aura.png"
+        },
+        "Массовый масляный панцирь": {
+          "ru_name": "Массовый масляный панцирь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BC%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D0%BD%D1%86%D0%B8%D1%80%D1%8C",
+          "en_name": "Mass Oily Carapace",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mass%20Oily%20Carapace",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Геомантия",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mass_Oily_Carapace.png"
+        },
+        "Кислотные споры": {
+          "ru_name": "Кислотные споры",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B8%D1%81%D0%BB%D0%BE%D1%82%D0%BD%D1%8B%D0%B5_%D1%81%D0%BF%D0%BE%D1%80%D1%8B",
+          "en_name": "Acid Spores",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Acid%20Spores",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Acid_Spores.png"
+        },
+        "Вытягивание яда": {
+          "ru_name": "Вытягивание яда",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%8B%D1%82%D1%8F%D0%B3%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%8F%D0%B4%D0%B0",
+          "en_name": "Siphon Poison",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Siphon%20Poison",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Siphon_Poison.png"
+        },
+        "Живая стена": {
+          "ru_name": "Живая стена",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%96%D0%B8%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D0%B5%D0%BD%D0%B0",
+          "en_name": "Living Wall",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Living%20Wall",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Living_Wall.png"
+        },
+        "Каменный выброс": {
+          "ru_name": "Каменный выброс",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D1%8B%D0%B1%D1%80%D0%BE%D1%81",
+          "en_name": "Pyroclastic Eruption",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Pyroclastic%20Eruption",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Pyroclastic_Eruption.png"
+        }
+      }
+    },
+    "Гидрософистика": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%93%D0%B8%D0%B4%D1%80%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0_%D0%B2_Original_Sin_2",
+      "en_name": "Hydrosophist",
+      "spells": {
+        "Доспех мороза": {
+          "ru_name": "Доспех мороза",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D0%BE%D1%81%D0%BF%D0%B5%D1%85_%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B0",
+          "en_name": "Armour of Frost",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Armour%20of%20Frost",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Armour_of_Frost.png"
+        },
+        "Дождь": {
+          "ru_name": "Дождь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D0%BE%D0%B6%D0%B4%D1%8C_%D0%B2_Original_Sin_2",
+          "en_name": "Rain",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Rain",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Rain.png"
+        },
+        "Град": {
+          "ru_name": "Град",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%93%D1%80%D0%B0%D0%B4_%D0%B2_Original_Sin_2",
+          "en_name": "Hail Strike",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Hail%20Strike",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Hail_Strike.png"
+        },
+        "Восстановление": {
+          "ru_name": "Восстановление",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Restoration",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Restoration",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Restoration.png"
+        },
+        "Криотерапия": {
+          "ru_name": "Криотерапия",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%80%D0%B8%D0%BE%D1%82%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%D1%8F",
+          "en_name": "Cryotherapy",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Cryotherapy",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Cryotherapy.png"
+        },
+        "Исцеляющие слезы": {
+          "ru_name": "Исцеляющие слезы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%98%D1%81%D1%86%D0%B5%D0%BB%D1%8F%D1%8E%D1%89%D0%B8%D0%B5_%D1%81%D0%BB%D0%B5%D0%B7%D1%8B",
+          "en_name": "Healing Tears",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Healing%20Tears",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Healing_Tears.png"
+        },
+        "Жажда вампира": {
+          "ru_name": "Жажда вампира",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%96%D0%B0%D0%B6%D0%B4%D0%B0_%D0%B2%D0%B0%D0%BC%D0%BF%D0%B8%D1%80%D0%B0",
+          "en_name": "Vampiric Hunger",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Vampiric%20Hunger",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Vampiric_Hunger.png"
+        },
+        "Очищение ран": {
+          "ru_name": "Очищение ран",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%87%D0%B8%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%80%D0%B0%D0%BD",
+          "en_name": "Cleanse Wounds",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Cleanse%20Wounds",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Cleanse_Wounds.png"
+        },
+        "Успокаивающий холод": {
+          "ru_name": "Успокаивающий холод",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A3%D1%81%D0%BF%D0%BE%D0%BA%D0%B0%D0%B8%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D1%85%D0%BE%D0%BB%D0%BE%D0%B4",
+          "en_name": "Soothing Cold",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Soothing%20Cold",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Soothing_Cold.png"
+        },
+        "Ледяной веер": {
+          "ru_name": "Ледяной веер",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9B%D0%B5%D0%B4%D1%8F%D0%BD%D0%BE%D0%B9_%D0%B2%D0%B5%D0%B5%D1%80",
+          "en_name": "Ice Fan",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ice%20Fan",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ice_Fan.png"
+        },
+        "Взрыв стужи": {
+          "ru_name": "Взрыв стужи",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B7%D1%80%D1%8B%D0%B2_%D1%81%D1%82%D1%83%D0%B6%D0%B8",
+          "en_name": "Winter Blast",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Winter%20Blast",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Winter_Blast.png"
+        },
+        "Ритуал исцеления": {
+          "ru_name": "Ритуал исцеления",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%B8%D1%82%D1%83%D0%B0%D0%BB_%D0%B8%D1%81%D1%86%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F",
+          "en_name": "Healing Ritual",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Healing%20Ritual",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Healing_Ritual.png"
+        },
+        "Криогенный стазис": {
+          "ru_name": "Криогенный стазис",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%80%D0%B8%D0%BE%D0%B3%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B0%D0%B7%D0%B8%D1%81",
+          "en_name": "Cryogenic Stasis",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Cryogenic%20Stasis",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Cryogenic_Stasis.png"
+        },
+        "Всеобщее охлаждение": {
+          "ru_name": "Всеобщее охлаждение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%81%D0%B5%D0%BE%D0%B1%D1%89%D0%B5%D0%B5_%D0%BE%D1%85%D0%BB%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Global Cooling",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Global%20Cooling",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Global_Cooling.png"
+        },
+        "Волшебный стежок": {
+          "ru_name": "Волшебный стежок",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BE%D0%BB%D1%88%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B5%D0%B6%D0%BE%D0%BA",
+          "en_name": "Arcane Stitch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Arcane%20Stitch",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Arcane_Stitch.png"
+        },
+        "Массовое очищение ран": {
+          "ru_name": "Массовое очищение ран",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%B5_%D0%BE%D1%87%D0%B8%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%80%D0%B0%D0%BD",
+          "en_name": "Mass Cleanse Wounds",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mass%20Cleanse%20Wounds",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mass_Cleanse_Wounds.png"
+        },
+        "Массовая криотерапия": {
+          "ru_name": "Массовая криотерапия",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BA%D1%80%D0%B8%D0%BE%D1%82%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%D1%8F",
+          "en_name": "Mass Cryotherapy",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mass%20Cryotherapy",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mass_Cryotherapy.png"
+        },
+        "Аура жажды вампира": {
+          "ru_name": "Аура жажды вампира",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D1%83%D1%80%D0%B0_%D0%B6%D0%B0%D0%B6%D0%B4%D1%8B_%D0%B2%D0%B0%D0%BC%D0%BF%D0%B8%D1%80%D0%B0",
+          "en_name": "Vampiric Hunger Aura",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Vampiric%20Hunger%20Aura",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Гидрософистика",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Vampiric_Hunger_Aura.png"
+        },
+        "Паровое копье": {
+          "ru_name": "Паровое копье",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B0%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_%D0%BA%D0%BE%D0%BF%D1%8C%D0%B5",
+          "en_name": "Steam Lance",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Steam%20Lance",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Steam_Lance.png"
+        },
+        "Глубокая заморозка": {
+          "ru_name": "Глубокая заморозка",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%93%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%BA%D0%B0",
+          "en_name": "Deep Freeze",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Deep%20Freeze",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Deep_Freeze.png"
+        },
+        "Пролом льда": {
+          "ru_name": "Пролом льда",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%BE%D0%BB%D0%BE%D0%BC_%D0%BB%D1%8C%D0%B4%D0%B0",
+          "en_name": "Ice Breaker",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ice%20Breaker",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ice_Breaker.png"
+        },
+        "Разрушительный град": {
+          "ru_name": "Разрушительный град",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%B0%D0%B7%D1%80%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D0%B4",
+          "en_name": "Hail Storm",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Hail%20Storm",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Hail_Storm.png"
+        }
+      }
+    },
+    "Искусство убийства": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%BE_%D1%83%D0%B1%D0%B8%D0%B9%D1%81%D1%82%D0%B2%D0%B0_%D0%B2_Original_Sin_2",
+      "en_name": "Scoundrel",
+      "spells": {
+        "Хлороформ": {
+          "ru_name": "Хлороформ",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A5%D0%BB%D0%BE%D1%80%D0%BE%D1%84%D0%BE%D1%80%D0%BC",
+          "en_name": "Chloroform",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Chloroform",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Chloroform.png"
+        },
+        "Метательный нож": {
+          "ru_name": "Метательный нож",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B5%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BD%D0%BE%D0%B6",
+          "en_name": "Throwing Knife",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Throwing%20Knife",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Throwing_Knife.png"
+        },
+        "Грязный прием": {
+          "ru_name": "Грязный прием",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%93%D1%80%D1%8F%D0%B7%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D0%B8%D0%B5%D0%BC",
+          "en_name": "Backlash",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Backlash",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Backlash.png"
+        },
+        "Адреналин": {
+          "ru_name": "Адреналин",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D0%B4%D1%80%D0%B5%D0%BD%D0%B0%D0%BB%D0%B8%D0%BD",
+          "en_name": "Adrenaline",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Adrenaline",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Adrenaline.png"
+        },
+        "Разрыв сухожилия": {
+          "ru_name": "Разрыв сухожилия",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%B0%D0%B7%D1%80%D1%8B%D0%B2_%D1%81%D1%83%D1%85%D0%BE%D0%B6%D0%B8%D0%BB%D0%B8%D1%8F",
+          "en_name": "Rupture Tendons",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Rupture%20Tendons",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Rupture_Tendons.png"
+        },
+        "Зазубренный нож": {
+          "ru_name": "Зазубренный нож",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D0%B7%D1%83%D0%B1%D1%80%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BD%D0%BE%D0%B6",
+          "en_name": "Sawtooth Knife",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Sawtooth%20Knife",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Sawtooth_Knife.png"
+        },
+        "Плащ и кинжал": {
+          "ru_name": "Плащ и кинжал",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BB%D0%B0%D1%89_%D0%B8_%D0%BA%D0%B8%D0%BD%D0%B6%D0%B0%D0%BB_%D0%B2_Original_Sin_2",
+          "en_name": "Cloak and Dagger",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Cloak%20and%20Dagger",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Cloak_and_Dagger.png"
+        },
+        "Сонные руки": {
+          "ru_name": "Сонные руки",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D1%80%D1%83%D0%BA%D0%B8",
+          "en_name": "Sleeping Arms",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Sleeping%20Arms",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Sleeping_Arms.png"
+        },
+        "Приказ о молчании": {
+          "ru_name": "Приказ о молчании",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%BA%D0%B0%D0%B7_%D0%BE_%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D0%B8",
+          "en_name": "Gag Order",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Gag%20Order",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Gag_Order.png"
+        },
+        "Порченый клинок": {
+          "ru_name": "Порченый клинок",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%80%D1%87%D0%B5%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BB%D0%B8%D0%BD%D0%BE%D0%BA",
+          "en_name": "Corrupted Blade",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Corrupted%20Blade",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Corrupted_Blade.png"
+        },
+        "Веер ножей": {
+          "ru_name": "Веер ножей",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B5%D0%B5%D1%80_%D0%BD%D0%BE%D0%B6%D0%B5%D0%B9",
+          "en_name": "Fan of Knives",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Fan%20of%20Knives",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Fan_of_Knives.png"
+        },
+        "Клинки наголо": {
+          "ru_name": "Клинки наголо",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8_%D0%BD%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE_%D0%B2_Original_Sin_2",
+          "en_name": "Daggers Drawn",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Daggers%20Drawn",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Daggers_Drawn.png"
+        },
+        "Заводная игрушка": {
+          "ru_name": "Заводная игрушка",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B8%D0%B3%D1%80%D1%83%D1%88%D0%BA%D0%B0_%D0%B2_Original_Sin_2",
+          "en_name": "Wind-Up Toy",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Wind-Up%20Toy",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Wind-Up_Toy.png"
+        },
+        "Ужасающая жестокость": {
+          "ru_name": "Ужасающая жестокость",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A3%D0%B6%D0%B0%D1%81%D0%B0%D1%8E%D1%89%D0%B0%D1%8F_%D0%B6%D0%B5%D1%81%D1%82%D0%BE%D0%BA%D0%BE%D1%81%D1%82%D1%8C",
+          "en_name": "Terrifying Cruelty",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Terrifying%20Cruelty",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Terrifying_Cruelty.png"
+        },
+        "Добивающий удар": {
+          "ru_name": "Добивающий удар",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D0%BE%D0%B1%D0%B8%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D1%83%D0%B4%D0%B0%D1%80_%D0%B2_Original_Sin_2",
+          "en_name": "Mortal Blow",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mortal%20Blow",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Искусство убийства",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mortal_Blow.png"
+        }
+      }
+    },
+    "Мастерство охоты": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE_%D0%BE%D1%85%D0%BE%D1%82%D1%8B_%D0%B2_Original_Sin_2",
+      "en_name": "Huntsman",
+      "spells": {
+        "Первая помощь": {
+          "ru_name": "Первая помощь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B5%D1%80%D0%B2%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C_%D0%B2_Original_Sin_2",
+          "en_name": "First Aid",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/First%20Aid",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/First_Aid.png"
+        },
+        "Пригвоздить": {
+          "ru_name": "Пригвоздить",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B3%D0%B2%D0%BE%D0%B7%D0%B4%D0%B8%D1%82%D1%8C",
+          "en_name": "Pin Down",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Pin%20Down",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Pin_Down.png"
+        },
+        "Рикошет": {
+          "ru_name": "Рикошет",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%B8%D0%BA%D0%BE%D1%88%D0%B5%D1%82_%D0%B2_Original_Sin_2",
+          "en_name": "Ricochet",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ricochet",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ricochet.png"
+        },
+        "Стрелы стихий": {
+          "ru_name": "Стрелы стихий",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8B_%D1%81%D1%82%D0%B8%D1%85%D0%B8%D0%B9",
+          "en_name": "Elemental Arrowheads",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Elemental%20Arrowheads",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Elemental_Arrowheads.png"
+        },
+        "Залп": {
+          "ru_name": "Залп",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D0%BB%D0%BF_%D0%B2_Original_Sin_2",
+          "en_name": "Barrage",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Barrage",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Barrage.png"
+        },
+        "Тактический отход": {
+          "ru_name": "Тактический отход",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A2%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BE%D1%82%D1%85%D0%BE%D0%B4_%D0%B2_Original_Sin_2",
+          "en_name": "Tactical Retreat",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Tactical%20Retreat",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Tactical_Retreat.png"
+        },
+        "Стрела с небес": {
+          "ru_name": "Стрела с небес",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%B0_%D1%81_%D0%BD%D0%B5%D0%B1%D0%B5%D1%81",
+          "en_name": "Sky Shot",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Sky%20Shot",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Sky_Shot.png"
+        },
+        "Пушечный выстрел": {
+          "ru_name": "Пушечный выстрел",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%83%D1%88%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D0%B2%D1%8B%D1%81%D1%82%D1%80%D0%B5%D0%BB",
+          "en_name": "Ballistic Shot",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ballistic%20Shot",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ballistic_Shot.png"
+        },
+        "Клык снайпера": {
+          "ru_name": "Клык снайпера",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%BB%D1%8B%D0%BA_%D1%81%D0%BD%D0%B0%D0%B9%D0%BF%D0%B5%D1%80%D0%B0",
+          "en_name": "Marksman's Fang",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Marksman%27s%20Fang",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Marksmans_Fang.png"
+        },
+        "Ответный выстрел": {
+          "ru_name": "Ответный выстрел",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%82%D0%B2%D0%B5%D1%82%D0%BD%D1%8B%D0%B9_%D0%B2%D1%8B%D1%81%D1%82%D1%80%D0%B5%D0%BB",
+          "en_name": "Reactive Shot",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Reactive%20Shot",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Reactive_Shot.png"
+        },
+        "Вихрь стрел": {
+          "ru_name": "Вихрь стрел",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B8%D1%85%D1%80%D1%8C_%D1%81%D1%82%D1%80%D0%B5%D0%BB_%D0%B2_Original_Sin_2",
+          "en_name": "Arrow Spray",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Arrow%20Spray",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Arrow_Spray.png"
+        },
+        "Дальнозоркость": {
+          "ru_name": "Дальнозоркость",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B7%D0%BE%D1%80%D0%BA%D0%BE%D1%81%D1%82%D1%8C",
+          "en_name": "Farsight",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Farsight",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Farsight.png"
+        },
+        "Меткий выстрел": {
+          "ru_name": "Меткий выстрел",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B5%D1%82%D0%BA%D0%B8%D0%B9_%D0%B2%D1%8B%D1%81%D1%82%D1%80%D0%B5%D0%BB",
+          "en_name": "Assassinate",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Assassinate",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Assassinate.png"
+        },
+        "Метка снайпера": {
+          "ru_name": "Метка снайпера",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B5%D1%82%D0%BA%D0%B0_%D1%81%D0%BD%D0%B0%D0%B9%D0%BF%D0%B5%D1%80%D0%B0",
+          "en_name": "Glitter Dust",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Glitter%20Dust",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Glitter_Dust.png"
+        },
+        "Буря стрел": {
+          "ru_name": "Буря стрел",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D1%83%D1%80%D1%8F_%D1%81%D1%82%D1%80%D0%B5%D0%BB",
+          "en_name": "Arrow Storm",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Arrow%20Storm",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Мастерство охоты",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Arrow_Storm.png"
+        }
+      }
+    },
+    "Некромантия": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B5%D0%BA%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%8F_%D0%B2_Original_Sin_2",
+      "en_name": "Necromancer",
+      "spells": {
+        "Рой москитов": {
+          "ru_name": "Рой москитов",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%BE%D0%B9_%D0%BC%D0%BE%D1%81%D0%BA%D0%B8%D1%82%D0%BE%D0%B2",
+          "en_name": "Mosquito Swarm",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mosquito%20Swarm",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mosquito_Swarm.png"
+        },
+        "Decaying Touch": {
+          "ru_name": "Порча",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%80%D1%87%D0%B0_%D0%B2_Original_Sin_2",
+          "en_name": "Decaying Touch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Decaying%20Touch",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Decaying_Touch.png"
+        },
+        "Raise Bloated Corpse": {
+          "ru_name": "Поднять вздувшийся труп",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C_%D0%B2%D0%B7%D0%B4%D1%83%D0%B2%D1%88%D0%B8%D0%B9%D1%81%D1%8F_%D1%82%D1%80%D1%83%D0%BF",
+          "en_name": "Raise Bloated Corpse",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Raise%20Bloated%20Corpse",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Raise_Bloated_Corpse.png"
+        },
+        "Blood Sucker": {
+          "ru_name": "Кровосос",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%80%D0%BE%D0%B2%D0%BE%D1%81%D0%BE%D1%81",
+          "en_name": "Blood Sucker",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Blood%20Sucker",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Blood_Sucker.png"
+        },
+        "Shackles of Pain": {
+          "ru_name": "Оковы боли",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%BA%D0%BE%D0%B2%D1%8B_%D0%B1%D0%BE%D0%BB%D0%B8_%D0%B2_Original_Sin_2",
+          "en_name": "Shackles of Pain",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Shackles%20of%20Pain",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Shackles_of_Pain.png"
+        },
+        "Death Wish": {
+          "ru_name": "Желание смерти",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%96%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D0%B5_%D1%81%D0%BC%D0%B5%D1%80%D1%82%D0%B8",
+          "en_name": "Death Wish",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Death%20Wish",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Death_Wish.png"
+        },
+        "Infect": {
+          "ru_name": "Заражение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Infect",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Infect",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Infect.png"
+        },
+        "Кровавый дождь": {
+          "ru_name": "Кровавый дождь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%80%D0%BE%D0%B2%D0%B0%D0%B2%D1%8B%D0%B9_%D0%B4%D0%BE%D0%B6%D0%B4%D1%8C",
+          "en_name": "Raining Blood",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Raining%20Blood",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Некромантия",
+          "is_combo": true,
+          "secondary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Raining_Blood.png"
+        },
+        "Living on the Edge": {
+          "ru_name": "Жизнь на грани",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%96%D0%B8%D0%B7%D0%BD%D1%8C_%D0%BD%D0%B0_%D0%B3%D1%80%D0%B0%D0%BD%D0%B8",
+          "en_name": "Living on the Edge",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Living%20on%20the%20Edge",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Living_on_the_Edge.png"
+        },
+        "Raise Bone Widow": {
+          "ru_name": "Костяная вдова",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D0%B0%D1%8F_%D0%B2%D0%B4%D0%BE%D0%B2%D0%B0",
+          "en_name": "Raise Bone Widow",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Raise%20Bone%20Widow",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Raise_Bone_Widow.png"
+        },
+        "Bone Cage": {
+          "ru_name": "Костяная клетка",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BB%D0%B5%D1%82%D0%BA%D0%B0",
+          "en_name": "Bone Cage",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Bone%20Cage",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Bone_Cage.png"
+        },
+        "Black Shroud": {
+          "ru_name": "Черная пелена",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BF%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0",
+          "en_name": "Black Shroud",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Black%20Shroud",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Black_Shroud.png"
+        },
+        "Кровавая буря": {
+          "ru_name": "Кровавая буря",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%80%D0%BE%D0%B2%D0%B0%D0%B2%D0%B0%D1%8F_%D0%B1%D1%83%D1%80%D1%8F",
+          "en_name": "Blood Storm",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Blood%20Storm",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Некромантия",
+          "is_combo": true,
+          "secondary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Blood_Storm.png"
+        },
+        "Grasp of the Starved": {
+          "ru_name": "Кровавый голод",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%80%D0%BE%D0%B2%D0%B0%D0%B2%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%BE%D0%B4",
+          "en_name": "Grasp of the Starved",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Grasp%20of%20the%20Starved",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Grasp_of_the_Starved.png"
+        },
+        "Silencing Stare": {
+          "ru_name": "Взгляд онемения",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B7%D0%B3%D0%BB%D1%8F%D0%B4_%D0%BE%D0%BD%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%D1%8F",
+          "en_name": "Silencing Stare",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Silencing%20Stare",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Silencing_Stare.png"
+        },
+        "Last Rites": {
+          "ru_name": "Самопожертвование",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%B0%D0%BC%D0%BE%D0%BF%D0%BE%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
+          "en_name": "Last Rites",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Last%20Rites",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Last_Rites.png"
+        },
+        "Totems of the Necromancer": {
+          "ru_name": "Тотемы некроманта",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A2%D0%BE%D1%82%D0%B5%D0%BC%D1%8B_%D0%BD%D0%B5%D0%BA%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B0",
+          "en_name": "Totems of the Necromancer",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Totems%20of%20the%20Necromancer",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Некромантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Totems_of_the_Necromancer.png"
+        }
+      }
+    },
+    "Пирокинетика": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B8%D1%80%D0%BE%D0%BA%D0%B8%D0%BD%D0%B5%D1%82%D0%B8%D0%BA%D0%B0_%D0%B2_Original_Sin_2",
+      "en_name": "Pyrokinetic",
+      "spells": {
+        "Ускорение": {
+          "ru_name": "Ускорение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Haste",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Haste",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Haste.png"
+        },
+        "Спокойствие духа": {
+          "ru_name": "Спокойствие духа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BF%D0%BE%D0%BA%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B5_%D0%B4%D1%83%D1%85%D0%B0",
+          "en_name": "Peace of Mind",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Peace%20of%20Mind",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Peace_of_Mind.png"
+        },
+        "Пылающие кинжалы": {
+          "ru_name": "Пылающие кинжалы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%8B%D0%BB%D0%B0%D1%8E%D1%89%D0%B8%D0%B5_%D0%BA%D0%B8%D0%BD%D0%B6%D0%B0%D0%BB%D1%8B",
+          "en_name": "Searing Daggers",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Searing%20Daggers",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Searing_Daggers.png"
+        },
+        "Возгорание": {
+          "ru_name": "Возгорание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BE%D0%B7%D0%B3%D0%BE%D1%80%D0%B0%D0%BD%D0%B8%D0%B5",
+          "en_name": "Ignition",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ignition",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ignition.png"
+        },
+        "Саботаж": {
+          "ru_name": "Саботаж",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B6",
+          "en_name": "Sabotage",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Sabotage",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Sabotage.png"
+        },
+        "Поджог крови": {
+          "ru_name": "Поджог крови",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D0%B4%D0%B6%D0%BE%D0%B3_%D0%BA%D1%80%D0%BE%D0%B2%D0%B8",
+          "en_name": "Bleed Fire",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Bleed%20Fire",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Превращение",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Bleed_Fire.png"
+        },
+        "Огниво": {
+          "ru_name": "Огниво",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%B3%D0%BD%D0%B8%D0%B2%D0%BE",
+          "en_name": "Sparking Swings",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Sparking%20Swings",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Sparking_Swings.png"
+        },
+        "Взрыв трупа": {
+          "ru_name": "Взрыв трупа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B7%D1%80%D1%8B%D0%B2_%D1%82%D1%80%D1%83%D0%BF%D0%B0",
+          "en_name": "Corpse Explosion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Corpse%20Explosion",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Некромантия",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Corpse_Explosion.png"
+        },
+        "Бросить взрывную ловушку": {
+          "ru_name": "Бросить взрывную ловушку",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C_%D0%B2%D0%B7%D1%80%D1%8B%D0%B2%D0%BD%D1%83%D1%8E_%D0%BB%D0%BE%D0%B2%D1%83%D1%88%D0%BA%D1%83",
+          "en_name": "Throw Explosive Trap",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Throw%20Explosive%20Trap",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Throw_Explosive_Trap.png"
+        },
+        "Самовозгорание": {
+          "ru_name": "Самовозгорание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%B0%D0%BC%D0%BE%D0%B2%D0%BE%D0%B7%D0%B3%D0%BE%D1%80%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Spontaneous Combustion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Spontaneous%20Combustion",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Spontaneous_Combustion.png"
+        },
+        "Огненный шар": {
+          "ru_name": "Огненный шар",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%88%D0%B0%D1%80_%D0%B2_Original_Sin_2",
+          "en_name": "Fireball",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Fireball",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Fireball.png"
+        },
+        "Сверхновая": {
+          "ru_name": "Сверхновая",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F",
+          "en_name": "Supernova",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Supernova",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Supernova.png"
+        },
+        "Огненный хлыст": {
+          "ru_name": "Огненный хлыст",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%85%D0%BB%D1%8B%D1%81%D1%82",
+          "en_name": "Fire Whip",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Fire%20Whip",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Fire_Whip.png"
+        },
+        "Лазерный луч": {
+          "ru_name": "Лазерный луч",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D0%BB%D1%83%D1%87",
+          "en_name": "Laser Ray",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Laser%20Ray",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Laser_Ray.png"
+        },
+        "Языки пламени": {
+          "ru_name": "Языки пламени",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AF%D0%B7%D1%8B%D0%BA%D0%B8_%D0%BF%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D0%B8",
+          "en_name": "Flaming Tongues",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Flaming%20Tongues",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Flaming_Tongues.png"
+        },
+        "Призыв огненного слизня": {
+          "ru_name": "Призыв огненного слизня",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D0%BE%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D1%81%D0%BB%D0%B8%D0%B7%D0%BD%D1%8F",
+          "en_name": "Summon Fire Slug",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Fire%20Slug",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Fire_Slug.png"
+        },
+        "Массовый взрыв трупов": {
+          "ru_name": "Массовый взрыв трупов",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B2%D0%B7%D1%80%D1%8B%D0%B2_%D1%82%D1%80%D1%83%D0%BF%D0%BE%D0%B2",
+          "en_name": "Mass Corpse Explosion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mass%20Corpse%20Explosion",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Некромантия",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mass_Corpse_Explosion.png"
+        },
+        "Массовый саботаж": {
+          "ru_name": "Массовый саботаж",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D1%8B%D0%B9_%D1%81%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B6",
+          "en_name": "Mass Sabotage",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Mass%20Sabotage",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Искусство убийства",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Mass_Sabotage.png"
+        },
+        "Владыка искр": {
+          "ru_name": "Владыка искр",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BB%D0%B0%D0%B4%D1%8B%D0%BA%D0%B0_%D0%B8%D1%81%D0%BA%D1%80",
+          "en_name": "Master of Sparks",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Master%20of%20Sparks",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Военное дело",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Master_of_Sparks.png"
+        },
+        "Массовое размещение ловушек": {
+          "ru_name": "Массовое размещение ловушек",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%B5_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D0%BE%D0%B2%D1%83%D1%88%D0%B5%D0%BA",
+          "en_name": "Deploy Mass Traps",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Deploy%20Mass%20Traps",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Пирокинетика",
+          "is_combo": true,
+          "secondary_school": "Мастерство охоты",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Deploy_Mass_Traps.png"
+        },
+        "Эпидемия огня": {
+          "ru_name": "Эпидемия огня",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AD%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F_%D0%BE%D0%B3%D0%BD%D1%8F",
+          "en_name": "Epidemic of Fire",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Epidemic%20of%20Fire",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Epidemic_of_Fire.png"
+        },
+        "Огненное клеймо": {
+          "ru_name": "Огненное клеймо",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BA%D0%BB%D0%B5%D0%B9%D0%BC%D0%BE",
+          "en_name": "Firebrand",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Firebrand",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Firebrand.png"
+        },
+        "Огненное извержение": {
+          "ru_name": "Огненное извержение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B8%D0%B7%D0%B2%D0%B5%D1%80%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Flaming Crescendo",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Flaming%20Crescendo",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Flaming_Crescendo.png"
+        },
+        "Метеоритный дождь": {
+          "ru_name": "Метеоритный дождь",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B5%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%82%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%B6%D0%B4%D1%8C_%D0%B2_Original_Sin_2",
+          "en_name": "Meteor Shower",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Meteor%20Shower",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Пирокинетика",
+          "icon": "https://divinity originalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Meteor_Shower.png"
+        }
+      }
+    },
+    "Превращение": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B5%D0%B2%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+      "en_name": "Polymorph",
+      "spells": {
+        "Tentacle Lash": {
+          "ru_name": "Удар щупальцами",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A3%D0%B4%D0%B0%D1%80_%D1%89%D1%83%D0%BF%D0%B0%D0%BB%D1%8C%D1%86%D0%B0%D0%BC%D0%B8",
+          "en_name": "Tentacle Lash",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Tentacle%20Lash",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-12-18.png"
+        },
+        "Chameleon Cloak": {
+          "ru_name": "Покров хамелеона",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2_%D1%85%D0%B0%D0%BC%D0%B5%D0%BB%D0%B5%D0%BE%D0%BD%D0%B0",
+          "en_name": "Chameleon Cloak",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Chameleon%20Cloak",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-9-25.png"
+        },
+        "Chicken Claw": {
+          "ru_name": "Куриная лапа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D1%83%D1%80%D0%B8%D0%BD%D0%B0%D1%8F_%D0%BB%D0%B0%D0%BF%D0%B0",
+          "en_name": "Chicken Claw",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Chicken%20Claw",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-12-14.png"
+        },
+        "Бычьи рога": {
+          "ru_name": "Бычьи рога",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%91%D1%8B%D1%87%D1%8C%D0%B8_%D1%80%D0%BE%D0%B3%D0%B0",
+          "en_name": "Bull Horns",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Bull%20Horns",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-12-17.png"
+        },
+        "Стальное сердце": {
+          "ru_name": "Стальное сердце",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5",
+          "en_name": "Heart of Steel",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Heart%20of%20Steel",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-12-16.png"
+        },
+        "Spread Your Wings": {
+          "ru_name": "Взмах крыльев",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%B7%D0%BC%D0%B0%D1%85_%D0%BA%D1%80%D1%8B%D0%BB%D1%8C%D0%B5%D0%B2",
+          "en_name": "Spread Your Wings",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Spread%20Your%20Wings",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-12-12.png"
+        },
+        "Summon Oily Blob": {
+          "ru_name": "Призыв нефтяной капли",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D0%BD%D0%B5%D1%84%D1%82%D1%8F%D0%BD%D0%BE%D0%B9_%D0%BA%D0%B0%D0%BF%D0%BB%D0%B8",
+          "en_name": "Summon Oily Blob",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Oily%20Blob",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-15-3.png"
+        },
+        "Terrain Transmutation": {
+          "ru_name": "Преображение поверхности",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
+          "en_name": "Terrain Transmutation",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Terrain%20Transmutation",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph_terrain_transmutation-icon.png"
+        },
+        "Spider Legs": {
+          "ru_name": "Паучьи ноги",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B0%D1%83%D1%87%D1%8C%D0%B8_%D0%BD%D0%BE%D0%B3%D0%B8",
+          "en_name": "Spider Legs",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Spider%20Legs",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-16-2.png"
+        },
+        "Skin Graft": {
+          "ru_name": "Пересадка кожи",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D1%81%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BA%D0%BE%D0%B6%D0%B8",
+          "en_name": "Skin Graft",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Skin%20Graft",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-12-13.png"
+        },
+        "Кожа медузы": {
+          "ru_name": "Кожа медузы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%BE%D0%B6%D0%B0_%D0%BC%D0%B5%D0%B4%D1%83%D0%B7%D1%8B",
+          "en_name": "Jellyfish Skin",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Jellyfish%20Skin",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "is_combo": true,
+          "secondary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/aerotheurge-16-12.png"
+        },
+        "Icy Skin": {
+          "ru_name": "Ледяная кожа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9B%D0%B5%D0%B4%D1%8F%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D0%B6%D0%B0",
+          "en_name": "Icy Skin",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Icy%20Skin",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "is_combo": true,
+          "secondary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/hydrosophist-16-21.png"
+        },
+        "Ядовитая кожа": {
+          "ru_name": "Ядовитая кожа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AF%D0%B4%D0%BE%D0%B2%D0%B8%D1%82%D0%B0%D1%8F_%D0%BA%D0%BE%D0%B6%D0%B0_%D0%B2_Original_Sin_2",
+          "en_name": "Poisonous Skin",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Poisonous%20Skin",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "is_combo": true,
+          "secondary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/geomancer-17-8.png"
+        },
+        "Пылающая кожа": {
+          "ru_name": "Пылающая кожа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%8B%D0%BB%D0%B0%D1%8E%D1%89%D0%B0%D1%8F_%D0%BA%D0%BE%D0%B6%D0%B0",
+          "en_name": "Flaming Skin",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Flaming%20Skin",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "is_combo": true,
+          "secondary_school": "Пирокинетика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/pyrokinetic-15-15.png"
+        },
+        "Forced Exchange": {
+          "ru_name": "Насильственный обмен",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD",
+          "en_name": "Forced Exchange",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Forced%20Exchange",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph_forced_exchange-icon.png"
+        },
+        "Flay Skin": {
+          "ru_name": "Содранная кожа",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BE%D0%B4%D1%80%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D0%B6%D0%B0",
+          "en_name": "Flay Skin",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Flay%20Skin",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-16-3.png"
+        },
+        "Equalise": {
+          "ru_name": "Уравнивание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A3%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5",
+          "en_name": "Equalise",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Equalise",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph_equalise-icon.png"
+        },
+        "Apotheosis": {
+          "ru_name": "Апофеоз",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%90%D0%BF%D0%BE%D1%84%D0%B5%D0%BE%D0%B7",
+          "en_name": "Apotheosis",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Apotheosis",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph_apothesis-icon.png"
+        },
+        "Medusa Head": {
+          "ru_name": "Голова Медузы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/Голова_медузы",
+          "en_name": "Medusa Head",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Medusa%20Head",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-15-21.png"
+        }
+      }
+    },
+    "Призывание": {
+      "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+      "en_name": "Summoning",
+      "spells": {
+        "Призыв инкарната": {
+          "ru_name": "Призыв инкарната",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D0%B8%D0%BD%D0%BA%D0%B0%D1%80%D0%BD%D0%B0%D1%82%D0%B0",
+          "en_name": "Conjure Incarnate",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Conjure%20Incarnate",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Conjure_Incarnate.png"
+        },
+        "Насыщение зоркости": {
+          "ru_name": "Насыщение зоркости",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%BE%D1%80%D0%BA%D0%BE%D1%81%D1%82%D0%B8",
+          "en_name": "Farsight Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Farsight%20Infusion",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Farsight_Infusion.png"
+        },
+        "Молния измерений": {
+          "ru_name": "Молния измерений",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%BE%D0%BB%D0%BD%D0%B8%D1%8F_%D0%B8%D0%B7%D0%BC%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D0%B9",
+          "en_name": "Dimensional Bolt",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Dimensional%20Bolt",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Dimensional_Bolt.png"
+        },
+        "Тотем стихий": {
+          "ru_name": "Тотем стихий",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A2%D0%BE%D1%82%D0%B5%D0%BC_%D1%81%D1%82%D0%B8%D1%85%D0%B8%D0%B9",
+          "en_name": "Elemental Totem",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Elemental%20Totem",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Elemental_Totem.png"
+        },
+        "Насыщение огнем": {
+          "ru_name": "Насыщение огнем",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B3%D0%BD%D0%B5%D0%BC",
+          "en_name": "Fire Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Fire%20Infusion",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Пирокинетика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Fire_Infusion.png"
+        },
+        "Насыщение ядом": {
+          "ru_name": "Насыщение ядом",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%8F%D0%B4%D0%BE%D0%BC",
+          "en_name": "Poison Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Poison%20Infusion",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Poison_Infusion.png"
+        },
+        "Насыщение электричеством": {
+          "ru_name": "Насыщение электричеством",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC",
+          "en_name": "Electric Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Electric%20Infusion",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Electric_Infusion.png"
+        },
+        "Насыщение водой": {
+          "ru_name": "Насыщение водой",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2%D0%BE%D0%B4%D0%BE%D0%B9",
+          "en_name": "Water Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Water%20Infusion",
+          "tier": "Стартовые (ур. 1+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Water_Infusion.png"
+        },
+        "Насыщение силы": {
+          "ru_name": "Насыщение силы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B8%D0%BB%D1%8B",
+          "en_name": "Power Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Power%20Infusion",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Power_Infusion.png"
+        },
+        "Перегрузка": {
+          "ru_name": "Перегрузка",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0",
+          "en_name": "Supercharger",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Supercharger",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Supercharger.png"
+        },
+        "Созывающий клич": {
+          "ru_name": "Созывающий клич",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%BE%D0%B7%D1%8B%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B8%D1%87",
+          "en_name": "Rallying Cry",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Rallying%20Cry",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Rallying_Cry.png"
+        },
+        "Насыщение тени": {
+          "ru_name": "Насыщение тени",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%82%D0%B5%D0%BD%D0%B8",
+          "en_name": "Shadow Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Shadow%20Infusion",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Shadow_Infusion.png"
+        },
+        "Порабощение разума": {
+          "ru_name": "Порабощение разума",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%80%D0%B0%D0%B1%D0%BE%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D1%80%D0%B0%D0%B7%D1%83%D0%BC%D0%B0",
+          "en_name": "Dominate Mind",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Dominate%20Mind",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Dominate_Mind.png"
+        },
+        "Вторая половина": {
+          "ru_name": "Вторая половина",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%82%D0%BE%D1%80%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0",
+          "en_name": "Soul Mate",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Soul%20Mate",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Soul_Mate.png"
+        },
+        "Дверь в вечность": {
+          "ru_name": "Дверь в вечность",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D0%B2%D0%B5%D1%80%D1%8C_%D0%B2_%D0%B2%D0%B5%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C",
+          "en_name": "Door to Eternity",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Door%20to%20Eternity",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Door_to_Eternity.png"
+        },
+        "Насыщение некропламенем": {
+          "ru_name": "Насыщение некропламенем",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B5%D0%BA%D1%80%D0%BE%D0%BF%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D0%B5%D0%BC",
+          "en_name": "Necrofire Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Necrofire%20Infusion",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Пирокинетика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Necrofire_Infusion.png"
+        },
+        "Насыщение кислотой": {
+          "ru_name": "Насыщение кислотой",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BA%D0%B8%D1%81%D0%BB%D0%BE%D1%82%D0%BE%D0%B9",
+          "en_name": "Acid Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Acid%20Infusion",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Геомантия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Acid_Infusion.png"
+        },
+        "Насыщение проклятым электричеством": {
+          "ru_name": "Насыщение проклятым электричеством",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D1%8B%D0%BC_%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC",
+          "en_name": "Cursed Electric Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Cursed%20Electric%20Infusion",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Аэротеургия",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Cursed_Electric_Infusion.png"
+        },
+        "Насыщение льдом": {
+          "ru_name": "Насыщение льдом",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D1%8C%D0%B4%D0%BE%D0%BC",
+          "en_name": "Ice Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ice%20Infusion",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Призывание",
+          "is_combo": true,
+          "secondary_school": "Гидрософистика",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ice_Infusion.png"
+        },
+        "Межмировые врата": {
+          "ru_name": "Межмировые врата",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9C%D0%B5%D0%B6%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B2%D1%80%D0%B0%D1%82%D0%B0",
+          "en_name": "Planar Gateway",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Planar%20Gateway",
+          "tier": "Мастер (ур. 12+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Planar_Gateway.png"
+        },
+        "Насыщение искажения": {
+          "ru_name": "Насыщение искажения",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9D%D0%B0%D1%81%D1%8B%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8%D1%81%D0%BA%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F",
+          "en_name": "Warp Infusion",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Warp%20Infusion",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Warp_Infusion.png"
+        },
+        "Каннибализм": {
+          "ru_name": "Каннибализм",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9A%D0%B0%D0%BD%D0%BD%D0%B8%D0%B1%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC",
+          "en_name": "Cannibalize",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Cannibalize",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Cannibalize.png"
+        },
+        "Эфирная буря": {
+          "ru_name": "Эфирная буря",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%AD%D1%84%D0%B8%D1%80%D0%BD%D0%B0%D1%8F_%D0%B1%D1%83%D1%80%D1%8F",
+          "en_name": "Ethereal Storm",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Ethereal%20Storm",
+          "tier": "Эксперт (ур. 16+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Ethereal_Storm.png"
+        },
+        "Вызов кота-питомца": {
+          "ru_name": "Вызов кота-питомца",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2_%D0%BA%D0%BE%D1%82%D0%B0-%D0%BF%D0%B8%D1%82%D0%BE%D0%BC%D1%86%D0%B0",
+          "en_name": "Summon Cat Familiar",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Cat%20Familiar",
+          "tier": "Навыки, не привязанные к уровню",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Cat_Familiar.png"
+        },
+        "Призыв кондора": {
+          "ru_name": "Призыв кондора",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D0%BA%D0%BE%D0%BD%D0%B4%D0%BE%D1%80%D0%B0",
+          "en_name": "Summon Condor",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Condor",
+          "tier": "Навыки, не привязанные к уровню",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Condor.png"
+        },
+        "Управление исчадием пустоты": {
+          "ru_name": "Управление исчадием пустоты",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8%D1%81%D1%87%D0%B0%D0%B4%D0%B8%D0%B5%D0%BC_%D0%BF%D1%83%D1%81%D1%82%D0%BE%D1%82%D1%8B",
+          "en_name": "Charm Voidwoken",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Charm%20Voidwoken",
+          "tier": "Навыки, не привязанные к уровню",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Charm_Voidwoken.png"
+        },
+        "Призыв внутреннего демона": {
+          "ru_name": "Призыв внутреннего демона",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B5%D0%B3%D0%BE_%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0",
+          "en_name": "Summon Inner Demon",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Inner%20Demon",
+          "tier": "Навыки, не привязанные к уровню",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Inner_Demon.png"
+        },
+        "Вызов дракончика": {
+          "ru_name": "Вызов дракончика",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2_%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D1%87%D0%B8%D0%BA%D0%B0",
+          "en_name": "Summon Dragonling",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Dragonling",
+          "tier": "Навыки, не привязанные к уровню",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Dragonling.png"
+        }
+      }
+    },
+    "Особые навыки": {
+      "en_name": "Special",
+      "spells": {
+        "Enhanced Edition": {
+          "ru_name": "Особые навыки в Original Sin",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%81%D0%BE%D0%B1%D1%8B%D0%B5_%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8_%D0%B2_Original_Sin",
+          "en_name": "Enhanced Edition",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Enhanced%20Edition",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки"
+        },
+        "Sucker Punch": {
+          "ru_name": "Внезапный удар",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BD%D0%B5%D0%B7%D0%B0%D0%BF%D0%BD%D1%8B%D0%B9_%D1%83%D0%B4%D0%B0%D1%80",
+          "en_name": "Sucker Punch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Sucker%20Punch",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Sucker_Punch.png"
+        },
+        "All In": {
+          "ru_name": "Все сразу",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D1%81%D0%B5_%D1%81%D1%80%D0%B0%D0%B7%D1%83",
+          "en_name": "All In",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/All%20In",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки"
+        },
+        "Flurry": {
+          "ru_name": "Серия ударов",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A1%D0%B5%D1%80%D0%B8%D1%8F_%D1%83%D0%B4%D0%B0%D1%80%D0%BE%D0%B2",
+          "en_name": "Flurry",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Flurry",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки"
+        },
+        "Staff of Magus": {
+          "ru_name": "Посох мага",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D1%81%D0%BE%D1%85_%D0%BC%D0%B0%D0%B3%D0%B0_%D0%B2_Original_Sin_2",
+          "en_name": "Staff of Magus",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Staff%20of%20Magus",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Staff_of_Magus.png"
+        },
+        "Shields Up": {
+          "ru_name": "Поднять щиты",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C_%D1%89%D0%B8%D1%82%D1%8B",
+          "en_name": "Shields Up",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Shields%20Up",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки"
+        },
+        "Petrifying Touch": {
+          "ru_name": "Окаменяющее касание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8F%D1%8E%D1%89%D0%B5%D0%B5_%D0%BA%D0%B0%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Petrifying Touch",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Petrifying%20Touch",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Petrifying_Touch.png"
+        },
+        "Play Dead": {
+          "ru_name": "Притвориться мертвым",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D1%8C%D1%81%D1%8F_%D0%BC%D0%B5%D1%80%D1%82%D0%B2%D1%8B%D0%BC",
+          "en_name": "Play Dead",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Play%20Dead",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Play_Dead.png"
+        },
+        "Encourage": {
+          "ru_name": "Воодушевление",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BE%D0%BE%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Original_Sin_2",
+          "en_name": "Encourage",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Encourage",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Encourage.png"
+        },
+        "Dragon's Blaze": {
+          "ru_name": "Жар дракона",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%96%D0%B0%D1%80_%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0",
+          "en_name": "Dragon's Blaze",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Dragon%27s%20Blaze",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Dragon's_Blaze.png"
+        },
+        "Жертва плоти": {
+          "ru_name": "Жертва плоти",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%96%D0%B5%D1%80%D1%82%D0%B2%D0%B0_%D0%BF%D0%BB%D0%BE%D1%82%D0%B8",
+          "en_name": "Flesh Sacrifice",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Flesh%20Sacrifice",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Flesh_Sacrifice.png"
+        },
+        "Resurrect": {
+          "ru_name": "Возрождение",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%92%D0%BE%D0%B7%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5",
+          "en_name": "Resurrect",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Resurrect",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки"
+        },
+        "Dome of Protection": {
+          "ru_name": "Защитный купол",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D1%83%D0%BF%D0%BE%D0%BB",
+          "en_name": "Dome of Protection",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Dome%20of%20Protection",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Dome_of_Protection.png"
+        },
+        "Deafening Shriek": {
+          "ru_name": "Оглушающий визг",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D0%B3%D0%BB%D1%83%D1%88%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D0%B2%D0%B8%D0%B7%D0%B3",
+          "en_name": "Deafening Shriek",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Deafening%20Shriek",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки"
+        },
+        "Break the Shackles": {
+          "ru_name": "Разбить оковы",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%A0%D0%B0%D0%B7%D0%B1%D0%B8%D1%82%D1%8C_%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B",
+          "en_name": "Break the Shackles",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Break%20the%20Shackles",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Break_the_Shackles.png"
+        },
+        "Demonic Stare": {
+          "ru_name": "Демонический взгляд",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%94%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%B7%D0%B3%D0%BB%D1%8F%D0%B4",
+          "en_name": "Demonic Stare",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Demonic%20Stare",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Demonic_Stare.png"
+        },
+        "Maddening Song": {
+          "ru_name": "Песня безумия",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D0%B5%D1%81%D0%BD%D1%8F_%D0%B1%D0%B5%D0%B7%D1%83%D0%BC%D0%B8%D1%8F",
+          "en_name": "Maddening Song",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Maddening%20Song",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Maddening_Song.png"
+        },
+        "Time Warp": {
+          "ru_name": "Искажение времени",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%98%D1%81%D0%BA%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8",
+          "en_name": "Time Warp",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Time%20Warp",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Time_Warp.png"
+        },
+        "Blinding Squall": {
+          "ru_name": "Ослепляющий шквал",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9E%D1%81%D0%BB%D0%B5%D0%BF%D0%BB%D1%8F%D1%8E%D1%89%D0%B8%D0%B9_%D1%88%D0%BA%D0%B2%D0%B0%D0%BB",
+          "en_name": "Blinding Squall",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Blinding%20Squall",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Blinding_Squall.png"
+        },
+        "Призыв волка души Ифана": {
+          "ru_name": "Призыв волка души Ифана",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D0%B2%D0%BE%D0%BB%D0%BA%D0%B0_%D0%B4%D1%83%D1%88%D0%B8_%D0%98%D1%84%D0%B0%D0%BD%D0%B0",
+          "en_name": "Summon Ifan's Soul Wolf",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Summon%20Ifan%27s%20Soul%20Wolf",
+          "tier": "Неизвестно",
+          "primary_school": "Особые навыки",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Ifan's_Soul_Wolf.png"
+        }
+      }
+    },
+    "Магия Истока": {
+      "spells": {
+        "Благословение": {
+          "en_name": "Bless",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Bless",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/bless.png",
+          "ru_name": "Благословение"
+        },
+        "Спиритизм": {
+          "en_name": "Spirit Vision",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Spirit+Vision",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/spirit_vision.png",
+          "ru_name": "Спиритизм"
+        },
+        "Вытягивание Истока": {
+          "en_name": "Source Vampirism",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Source+Vampirism",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/source_vampirism.png",
+          "ru_name": "Вытягивание Истока"
+        },
+        "Проклятье": {
+          "en_name": "Curse",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Curse",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/curse.png",
+          "ru_name": "Проклятье"
+        }
+      }
+    }
+  }
+}
