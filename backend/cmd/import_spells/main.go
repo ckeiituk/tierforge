@@ -77,6 +77,13 @@ func main() {
 				ItemFilter:  "",
 			},
 		},
+		DefaultTiers: []models.TierConfig{
+			{ID: "S", Name: "S", Color: "#FF7F7F", Order: 0},
+			{ID: "A", Name: "A", Color: "#FFBF7F", Order: 1},
+			{ID: "B", Name: "B", Color: "#FFFF7F", Order: 2},
+			{ID: "C", Name: "C", Color: "#7FFF7F", Order: 3},
+			{ID: "D", Name: "D", Color: "#7F7FFF", Order: 4},
+		},
 	}
 
 	if err := store.CreateGame(game); err != nil {
