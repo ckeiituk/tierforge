@@ -82,6 +82,8 @@ def main():
                     "Favourable Winds": "Favourable Wind",
                     "Reactive Armor": "Reactive Armour",
                     "Mass Breathing Bubble": "Mass Breathing Bubbles",
+                    "Soulmate": "Soul Mate",
+                    "Equalize": "Equalise",
                 }
                 alt_name = alt_names.get(skill_name)
                 if alt_name:
