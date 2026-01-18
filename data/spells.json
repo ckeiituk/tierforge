@@ -1710,6 +1710,15 @@
           "tier": "Адепт (ур. 8+)",
           "primary_school": "Превращение",
           "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/polymorph-15-21.png"
+        },
+        "Equalize": {
+          "ru_name": "Уравнивание",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/Equalize",
+          "en_name": "Equalize",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Equalize",
+          "tier": "Адепт (ур. 8+)",
+          "primary_school": "Превращение",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/equalize-skill.png"
         }
       }
     },
@@ -1984,6 +1993,15 @@
           "tier": "Навыки, не привязанные к уровню",
           "primary_school": "Призывание",
           "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/Summon_Dragonling.png"
+        },
+        "Soul Mate": {
+          "ru_name": "Родственные души",
+          "ru_url": "https://divinity.fandom.com/ru/wiki/Soul_Mate",
+          "en_name": "Soul Mate",
+          "en_url": "https://divinityoriginalsin2.wiki.fextralife.com/Soul+Mate",
+          "tier": "Новичок (ур. 4+)",
+          "primary_school": "Призывание",
+          "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/soul_mate-skill.png"
         }
       }
     },

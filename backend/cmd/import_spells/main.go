@@ -63,6 +63,26 @@ func main() {
 	}
 	defer store.Close()
 
+	// Ensure the game exists to satisfy Foreign Key constraints
+	game := &models.Game{
+		ID:          "dos2",
+		Name:        "Divinity: Original Sin 2",
+		Description: "Skills from Divinity: Original Sin 2",
+		IconURL:     "placeholder.png",
+		Sheets: []models.SheetConfig{
+			{
+				ID:          "skills",
+				Name:        "Skills",
+				Description: "All skills and spells",
+				ItemFilter:  "",
+			},
+		},
+	}
+
+	if err := store.CreateGame(game); err != nil {
+		log.Fatalf("Failed to create game record: %v", err)
+	}
+
 	var allItems []models.Item
 	schoolCount := 0
 	spellCount := 0
