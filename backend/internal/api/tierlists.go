@@ -1,6 +1,8 @@
 package api
 
 import (
+	"encoding/json"
+	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
@@ -42,7 +44,9 @@ func (s *Server) handleCreateTierList(w http.ResponseWriter, r *http.Request) {
 
 	tierList, err := s.store.CreateTierList(&req)
 	if err != nil {
-		respondError(w, http.StatusInternalServerError, "Failed to create tier list")
+		reqJSON, _ := json.Marshal(req)
+		log.Printf("ERROR: Failed to create tier list: %v. Request: %s", err, string(reqJSON))
+		respondError(w, http.StatusInternalServerError, "Failed to create tier list: "+err.Error())
 		return
 	}
 
