@@ -330,12 +330,12 @@ class StateManager {
     }
 
     private updateUnrankedItems(): void {
-        if (!this.state.tierList) {
+        if (!this.state.tierList || !this.state.tierList.tiers) {
             this.state.unrankedItems = Array.from(this.state.items.keys());
             return;
         }
 
-        const rankedIds = new Set(this.state.tierList.tiers.flatMap((t) => t.items));
+        const rankedIds = new Set(this.state.tierList.tiers.flatMap((t) => t.items || []));
         this.state.unrankedItems = Array.from(this.state.items.keys()).filter(
             (id) => !rankedIds.has(id)
         );
