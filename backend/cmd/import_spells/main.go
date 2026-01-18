@@ -63,32 +63,22 @@ func main() {
 	}
 	defer store.Close()
 
-	// Ensure the game exists to satisfy Foreign Key constraints
-	game := &models.Game{
-		ID:          "dos2",
-		Name:        "Divinity: Original Sin 2",
-		Description: "Skills from Divinity: Original Sin 2",
-		IconURL:     "placeholder.png",
-		Sheets: []models.SheetConfig{
-			{
-				ID:          "skills",
-				Name:        "Skills",
-				Description: "All skills and spells",
-				ItemFilter:  "",
-			},
-		},
-		DefaultTiers: []models.TierConfig{
-			{ID: "S", Name: "S", Color: "#FF7F7F", Order: 0},
-			{ID: "A", Name: "A", Color: "#FFBF7F", Order: 1},
-			{ID: "B", Name: "B", Color: "#FFFF7F", Order: 2},
-			{ID: "C", Name: "C", Color: "#7FFF7F", Order: 3},
-			{ID: "D", Name: "D", Color: "#7F7FFF", Order: 4},
-		},
+	// Load game configuration from seed file
+	seedPath := "seeds/dos2_game.json"
+	seedData, err := os.ReadFile(seedPath)
+	if err != nil {
+		log.Fatalf("Failed to read game seed file %s: %v", seedPath, err)
 	}
 
-	if err := store.CreateGame(game); err != nil {
+	var game models.Game
+	if err := json.Unmarshal(seedData, &game); err != nil {
+		log.Fatalf("Failed to parse game seed: %v", err)
+	}
+
+	if err := store.CreateGame(&game); err != nil {
 		log.Fatalf("Failed to create game record: %v", err)
 	}
+	fmt.Printf("Game '%s' created/updated.\n", game.Name)
 
 	var allItems []models.Item
 	schoolCount := 0
