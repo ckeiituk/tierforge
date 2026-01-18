@@ -63,30 +63,25 @@ Visit http://localhost:3000
 ### VPS Setup (Ubuntu/Debian)
 
 ```bash
-# 1. Install dependencies
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y git golang-go nodejs npm nginx python3-requests python3-bs4
-
-# 2. Clone repository
+# 1. Клонирование
 cd /var/www
 git clone https://github.com/ckeiituk/tierforge.git
 cd tierforge
 
-# 3. Build backend
+# 2. Сборка и импорт
 cd backend
 go build -o tierforge cmd/server/main.go
-
-# Initialize database (if needed)
 go run cmd/import_spells/main.go --db tierforge.db --spells ../data/spells.json
 go run cmd/update_infoboxes/main.go --db tierforge.db --infoboxes ../data/infoboxes.json
 
-# 4. Build frontend
+# 3. Фронтенд
 cd ../frontend
 npm install
-npm run build  # creates dist/
+npm run build
 
-# 5. Configure Nginx
-sudo nano /etc/nginx/sites-available/tierforge
+# 4. Права
+cd /var/www
+chown -R www-data:www-data tierforge
 ```
 
 **Nginx configuration** (`/etc/nginx/sites-available/tierforge`):
