@@ -13,6 +13,15 @@ import (
 	"github.com/meur/tierforge/internal/storage"
 )
 
+// ANSI color codes
+const (
+	colorReset  = "\033[0m"
+	colorRed    = "\033[31m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorCyan   = "\033[36m"
+)
+
 type SpellData struct {
 	RuName          string `json:"ru_name"`
 	EnName          string `json:"en_name"`
@@ -49,17 +58,17 @@ func main() {
 
 	data, err := os.ReadFile(*spellsPath)
 	if err != nil {
-		log.Fatalf("Failed to read spells: %v", err)
+		log.Fatalf("%s✗ Failed to read spells: %v%s", colorRed, err, colorReset)
 	}
 
 	var root SpellsRoot
 	if err := json.Unmarshal(data, &root); err != nil {
-		log.Fatalf("Failed to parse spells: %v", err)
+		log.Fatalf("%s✗ Failed to parse spells: %v%s", colorRed, err, colorReset)
 	}
 
 	store, err := storage.New(*dbPath)
 	if err != nil {
-		log.Fatalf("Failed to connect to database: %v", err)
+		log.Fatalf("%s✗ Failed to connect to database: %v%s", colorRed, err, colorReset)
 	}
 	defer store.Close()
 
@@ -67,18 +76,18 @@ func main() {
 	seedPath := "seeds/dos2_game.json"
 	seedData, err := os.ReadFile(seedPath)
 	if err != nil {
-		log.Fatalf("Failed to read game seed file %s: %v", seedPath, err)
+		log.Fatalf("%s✗ Failed to read game seed file %s: %v%s", colorRed, seedPath, err, colorReset)
 	}
 
 	var game models.Game
 	if err := json.Unmarshal(seedData, &game); err != nil {
-		log.Fatalf("Failed to parse game seed: %v", err)
+		log.Fatalf("%s✗ Failed to parse game seed: %v%s", colorRed, err, colorReset)
 	}
 
 	if err := store.CreateGame(&game); err != nil {
-		log.Fatalf("Failed to create game record: %v", err)
+		log.Fatalf("%s✗ Failed to create game record: %v%s", colorRed, err, colorReset)
 	}
-	fmt.Printf("Game '%s' created/updated.\n", game.Name)
+	fmt.Printf("%s🎮 Game '%s' created/updated.%s\n", colorCyan, game.Name, colorReset)
 
 	var allItems []models.Item
 	schoolCount := 0
@@ -166,16 +175,16 @@ func main() {
 	}
 
 	// Delete existing items for this game to prevent duplicates (since IDs might have changed)
-	fmt.Println("Cleaning up old items...")
+	fmt.Printf("%s🗑️  Cleaning up old items...%s\n", colorYellow, colorReset)
 	if err := store.DeleteItemsByGame("dos2"); err != nil {
-		log.Printf("Warning: failed to clean up items: %v", err)
+		log.Printf("%s⚠ Warning: failed to clean up items: %v%s", colorYellow, err, colorReset)
 	}
 
-	fmt.Printf("Importing %d spells from %d schools...\n", spellCount, schoolCount)
+	fmt.Printf("%s📥 Importing %d spells from %d schools...%s\n", colorCyan, spellCount, schoolCount, colorReset)
 
 	if err := store.BulkCreateItems(allItems); err != nil {
-		log.Fatalf("Failed to bulk create items: %v", err)
+		log.Fatalf("%s✗ Failed to bulk create items: %v%s", colorRed, err, colorReset)
 	}
 
-	fmt.Println("✓ Successfully imported all spells!")
+	fmt.Printf("%s✓ Successfully imported all spells!%s\n", colorGreen, colorReset)
 }
