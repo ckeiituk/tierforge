@@ -15,6 +15,15 @@ import (
 	"github.com/meur/tierforge/internal/storage"
 )
 
+// ANSI color codes
+const (
+	colorReset  = "\033[0m"
+	colorRed    = "\033[31m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorCyan   = "\033[36m"
+)
+
 const wikiBaseURL = "https://divinityoriginalsin2.wiki.fextralife.com/"
 
 var wikiAliases = map[string]string{
@@ -68,26 +77,26 @@ func main() {
 
 	raw, err := os.ReadFile(*talentsPath)
 	if err != nil {
-		log.Fatalf("Failed to read talents JSON: %v", err)
+		log.Fatalf("%s✗ Failed to read talents JSON: %v%s", colorRed, err, colorReset)
 	}
 
 	talents := map[string]talentEntry{}
 	if err := json.Unmarshal(raw, &talents); err != nil {
-		log.Fatalf("Failed to parse talents JSON: %v", err)
+		log.Fatalf("%s✗ Failed to parse talents JSON: %v%s", colorRed, err, colorReset)
 	}
 	if len(talents) == 0 {
-		log.Fatal("Talents JSON is empty")
+		log.Fatalf("%s✗ Talents JSON is empty%s", colorRed, colorReset)
 	}
 
 	store, err := storage.New(*dbPath)
 	if err != nil {
-		log.Fatalf("Failed to connect to database: %v", err)
+		log.Fatalf("%s✗ Failed to connect to database: %v%s", colorRed, err, colorReset)
 	}
 	defer store.Close()
 
 	existingItems, err := store.GetItems(*gameID, *sheetID)
 	if err != nil {
-		log.Fatalf("Failed to read existing items: %v", err)
+		log.Fatalf("%s✗ Failed to read existing items: %v%s", colorRed, err, colorReset)
 	}
 
 	existingByName := make(map[string]models.Item, len(existingItems))
@@ -162,8 +171,10 @@ func main() {
 	}
 
 	if duplicateNames > 0 {
-		log.Printf("Warning: %d duplicate name(s) found in existing items", duplicateNames)
+		log.Printf("%s⚠ Warning: %d duplicate name(s) found in existing items%s", colorYellow, duplicateNames, colorReset)
 	}
+
+	fmt.Printf("%s📦 Loaded %d talents from JSON%s\n", colorCyan, len(talents), colorReset)
 
 	if *dryRun {
 		log.Printf(
@@ -178,15 +189,8 @@ func main() {
 	}
 
 	if err := store.BulkCreateItems(items); err != nil {
-		log.Fatalf("Failed to import talents: %v", err)
+		log.Fatalf("%s✗ Failed to import talents: %v%s", colorRed, err, colorReset)
 	}
 
-	log.Printf(
-		"Imported %d talents (created %d, updated %d, skipped %d). Existing items: %d",
-		len(items),
-		created,
-		updated,
-		skipped,
-		len(existingItems),
-	)
+	fmt.Printf("%s✓ Imported %d talents (created %d, updated %d)%s\n", colorGreen, len(items), created, updated, colorReset)
 }

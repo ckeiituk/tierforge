@@ -1,0 +1,289 @@
+{
+  "Comeback Kid": {
+    "name": "Comeback Kid",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsComeBackKid.png",
+    "description": "20%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Comeback Kid</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsComeBackKid\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsComeBackKid.png\" title=\"talentsComeBackKid\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Once per combat, if an enemy lands a fatal blow, Comeback Kid will help you bounce back to life with \n       <span style=\"color: #ffff99;\"><strong>20%</strong></span> health. If you die and are resurrected in combat, Combat Kid will be available again. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Pet Pal": {
+    "name": "Pet Pal",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsPetPal.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Pet Pal</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsPetPal\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsPetPal.png\" title=\"talentsPetPal\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Enables you to talk to animals. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Far Out Man": {
+    "name": "Far Out Man",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsFarOutMan.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Far Out Man</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsFarOutMan\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsFarOutMan.png\" title=\"talentsFarOutMan\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Increase the range of skills and scrolls by 2m. Does not affect melee and touch-ranged skills. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Lone Wolf": {
+    "name": "Lone Wolf",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsLoneWolf.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Lone Wolf</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsLoneWolf\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsLoneWolf.png\" title=\"talentsLoneWolf\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Lone Wolf provides +2 Max AP, +2 Recovery AP, +30% Vitality, +60% Physical Armour, +60% Magic Armour, and doubles invested points in attributes - up to a maximum of 40- and combat abilities (except Polymorph ability) - up to a maximum of 10, while you are adventuring solo or with at most one companion. This bonus is temporarily removed while there are more than two members in the current party. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "The Pawn": {
+    "name": "The Pawn",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsThePawn.png",
+    "description": "1",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>The Pawn</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsThePawn\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsThePawn.png\" title=\"talentsThePawn\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Permits your character \n       <span style=\"color: #ffff99;\"><strong>1</strong></span> AP worth of free movement per turn. Incompatible with \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Executioner\" target=\"\" title=\"Divinity Original Sin 2 Executioner\">Executioner</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Elemental Affinity": {
+    "name": "Elemental Affinity",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsElementalAffinity.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Elemental Affinity</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsElementalAffinity\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsElementalAffinity.png\" title=\"talentsElementalAffinity\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Reduce AP cost of spells by one when the character is standing on a surface of the same element. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Glass Cannon": {
+    "name": "Glass Cannon",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsGlassCannon.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Glass Cannon</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsGlassCannon\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsGlassCannon.png\" title=\"talentsGlassCannon\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        You start every combat round with Maximum AP, but Magic and Physical Armour do not protect you from statuses. Incompatible with \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Lone+Wolf\" target=\"\" title=\"Divinity Original Sin 2 Lone Wolf\">Lone Wolf</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Opportunist": {
+    "name": "Opportunist",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsOpportunist.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Opportunist</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsOpportunist\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsOpportunist.png\" title=\"talentsOpportunist\" width=\"128\"/>\u00a0</td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives you the ability to perform attacks of opportunity. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Torturer": {
+    "name": "Torturer",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsTorturer.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Torturer</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsTorturer\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsTorturer.png\" title=\"talentsTorturer\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        With Torturer, certain statuses caused by you are no longer blocked by Magic or Physical Armour, and their duration is extended by one turn. Burning, Poisoned, Bleeding, Necrofire, Acid, Suffocating, Entangled, Death Wish, and Ruptured Tendons are affected by this talent. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Elemental Ranger": {
+    "name": "Elemental Ranger",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsElementalRanger.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Elemental Ranger</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsElementalRanger\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsElementalRanger.png\" title=\"talentsElementalRanger\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Arrows inflict bonus elemental damage depending on the surface your target is standing in. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Morning Person": {
+    "name": "Morning Person",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsMorningPerson.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Morning Person</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsMorningPerson\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsMorningPerson.png\" title=\"talentsMorningPerson\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        When resurrected, you resurrect to full health. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Bigger and Better": {
+    "name": "Bigger and Better",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsBiggerAndBetter.png",
+    "description": "2",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Bigger and Better</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsBiggerAndBetter\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsBiggerAndBetter.png\" title=\"talentsBiggerAndBetter\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Immediately grants you \n       <span style=\"color: #ffff99;\"><strong>2</strong></span> extra attribute points to spend. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "All Skilled Up": {
+    "name": "All Skilled Up",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsAllSkilledUp.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>All Skilled Up</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsAllSkilledUp\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsAllSkilledUp.png\" title=\"talentsAllSkilledUp\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        All Skilled Up immediately gives you 1 extra Combat Ability point and 1 extra Civil Ability point. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Stench": {
+    "name": "Stench",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsStench.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Stench</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsStench\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsStench.png\" title=\"talentsStench\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Decreases everyone's attitude towards you by 25, but melee combatants will find you less attractive. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Mnemonic": {
+    "name": "Mnemonic",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsMnemonic.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Mnemonic</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsMnemonic\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsMnemonic.png\" title=\"talentsMnemonic\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives you 3 extra points in your Memory attributes. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Executioner": {
+    "name": "Executioner",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsExecutioner.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Executioner</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsExecutioner\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsExecutioner.png\" title=\"talentsExecutioner\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Executioner gives you 2 extra Action Points after dealing a killing blow once per turn. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Hothead": {
+    "name": "Hothead",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsHothead.png",
+    "description": "10%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Hothead</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsHothead\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsHothead.png\" title=\"talentsHothead\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        While you are at maximum Vitality, Hothead grants you an extra \n       <span style=\"color: #ffff99;\"><strong>10%</strong></span> critical chance and \n       <span style=\"color: #ffff99;\"><strong>10%</strong></span> more accuracy. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Ice King": {
+    "name": "Ice King",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsIceKing.png",
+    "description": "+15%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Ice King</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsIceKing\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsIceKing.png\" title=\"talentsIceKing\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Grants\u00a0 \n       <span style=\"color: #ffff99;\"><strong>+15%</strong></span>\u00a0Water resistance and\u00a0 \n       <span style=\"color: #ffff99;\"><strong>+15%</strong></span>\u00a0fire weakness. Max water resistance is raised by\u00a0 \n       <span style=\"color: #ffff99;\"><strong>10</strong></span>.\u00a0Incompatible with \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Demon\" target=\"\" title=\"Divinity Original Sin 2 Demon\">Demon</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Demon": {
+    "name": "Demon",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsDemon.png",
+    "description": "15%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Demon</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsDemon\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsDemon.png\" title=\"talentsDemon\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gain \n       <span style=\"color: #ffff99;\"><strong>15%</strong></span> fire resistance and \n       <span style=\"color: #ffff99;\"><strong>15%</strong></span> water weakness. Max fire resistance also increases by \n       <span style=\"color: #ffff99;\"><strong>10</strong></span>. Cannot be used with \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Ice+King\" target=\"\" title=\"Divinity Original Sin 2 Ice King\">Ice King</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Guerilla": {
+    "name": "Guerilla",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsGuerilla.png",
+    "description": "40%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Guerilla</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsGuerilla\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsGuerilla.png\" title=\"talentsGuerilla\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        While sneaking, Guerilla increases attack damage by \n       <span style=\"color: #ffff99;\"><strong>40%</strong></span>. Also reduces cost of entering sneak mode by \n       <span style=\"color: #ffff99;\"><strong>1</strong></span> AP. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "What a Rush": {
+    "name": "What a Rush",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsWhatARush.png",
+    "description": "50%.",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>What a Rush</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsWhatARush\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsWhatARush.png\" title=\"talentsWhatARush\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        What A Rush increases your recovery and maximum Action Points by 1 when your health is below \n       <span style=\"color: #ffff99;\"><strong>50%.</strong></span>\n</div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Slingshot": {
+    "name": "Slingshot",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSlingshot.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Slingshot</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsSlingshot\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSlingshot.png\" title=\"talentsSlingshot\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Adds an extra 5m range to your grenade throws. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Duck Duck Goose": {
+    "name": "Duck Duck Goose",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsDuckDuckGoose.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Duck Duck Goose</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsDuckDuckGoose\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsDuckDuckGoose.png\" title=\"talentsDuckDuckGoose\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Lets you evade attacks of opportunity. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Arrow Recovery": {
+    "name": "Arrow Recovery",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsArrowRecovery.png",
+    "description": "33%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Arrow Recovery</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsArrowRecovery\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsArrowRecovery.png\" title=\"talentsArrowRecovery\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Grants a\u00a0 \n       <span style=\"color: #ffff99;\"><strong>33%</strong></span>\u00a0chance to recover a special arrow after firing it \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Picture of Health": {
+    "name": "Picture of Health",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsPictureOfHealth.png",
+    "description": "+3%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Picture of Health</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsPictureOfHealth\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsPictureOfHealth.png\" title=\"talentsPictureOfHealth\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives you extra Vitality: \n       <span style=\"color: #ffff99;\"><strong>+3%</strong></span> for every point in \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Warfare\" target=\"\" title=\"Divinity Original Sin 2 Warfare\">Warfare</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Leech": {
+    "name": "Leech",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsLeech.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Leech</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsLeech\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsLeech.png\" title=\"talentsLeech\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Leech heal you when standing in blood \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Parry Master": {
+    "name": "Parry Master",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsParryMaster.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Parry Master</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsParryMaster\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsParryMaster.png\" title=\"talentsParryMaster\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Parry Master gives you 10% Dodging while dual wielding. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Walk it Off": {
+    "name": "Walk it Off",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsWalkItOff.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Walk it Off</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsWalkItOff\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsWalkItOff.png\" title=\"talentsWalkItOff\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Reduces all status durations by 1 turn. This also affects positive statuses. This does not affect statuses with a 1 turn duration \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Escapist": {
+    "name": "Escapist",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsEscapist.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Escapist</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsEscapist\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsEscapist.png\" title=\"talentsEscapist\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Allows you to flee combat even when enemies are right next to you. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Unstable": {
+    "name": "Unstable",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsUnstable.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Unstable</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsUnstable\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsUnstable.png\" title=\"talentsUnstable\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        You explode upon death, dealing 50% of your vitality as physical damage in a 3 meter radius. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Five-star Diner": {
+    "name": "Five-star Diner",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsFiveStarDiner.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Five-Star Diner</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsFiveStarDiner\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsFiveStarDiner.png\" title=\"talentsFiveStarDiner\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Doubles the effects of foods and potions. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Ambidextrous": {
+    "name": "Ambidextrous",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsAmbidextrous.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Ambidextrous</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsAmbidextrous\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsAmbidextrous.png\" title=\"talentsAmbidextrous\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Reduces the cost of using grenades and scrolls by 1AP if your offhand is free. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Ancestral Knowledge": {
+    "name": "Ancestral Knowledge",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsAncestralKnowledge.png",
+    "description": "+1",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Ancestral Knowledge</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsAncestralKnowledge\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsAncestralKnowledge.png\" title=\"talentsAncestralKnowledge\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives you \n       <span style=\"color: #ffff99;\"><strong>+1</strong></span> to \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Loremaster\" target=\"\" title=\"Divinity Original Sin 2 Loremaster\">Loremaster</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Corpse Eater": {
+    "name": "Corpse Eater",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsCorpseEater.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Corpse Eater</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsCorpseEater\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsCorpseEater.png\" title=\"talentsCorpseEater\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Lets you eat body parts to access the memories of the dead. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Dwarven Guile": {
+    "name": "Dwarven Guile",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsDwarvenGuile.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Dwarven Guile</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsDwarvenGuile\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsDwarvenGuile.png\" title=\"talentsDwarvenGuile\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Dwarven Guile gives you +1 in Sneaking. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Gladiator": {
+    "name": "Gladiator",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/gladiator_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Gladiator</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"gladiator talents dos2 wiki guide168px\" height=\"169\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/gladiator_talents_dos2_wiki_guide168px.jpg\" title=\"gladiator_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Every time you are hit with a melee attack while wielding a shield, you perform a counterattack. Can happen only once per turn. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Greedy Vessel": {
+    "name": "Greedy Vessel",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/greedy_vessel_talents_dos2_wiki_guide168px.jpg",
+    "description": "20%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Greedy Vessel</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"greedy vessel talents dos2 wiki guide168px\" height=\"169\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/greedy_vessel_talents_dos2_wiki_guide168px.jpg\" title=\"greedy_vessel_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Every time someone casts a Source Spell in combat you receive a \n       <span style=\"color: #ffff99;\"><strong>20%</strong></span> chance of gaining a Source Point. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Haymaker": {
+    "name": "Haymaker",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/haymaker_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Haymaker</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"haymaker talents dos2 wiki guide168px\" height=\"169\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/haymaker_talents_dos2_wiki_guide168px.jpg\" title=\"haymaker_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Your attacks never miss but cannot deal critical strikes. (Note: can still backstab with normal weapon attacks, but not with skills, even weapon based) \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Indomitable": {
+    "name": "Indomitable",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/indomitable_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Indomitable</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"indomitable talents dos2 wiki guide168px\" height=\"168\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/indomitable_talents_dos2_wiki_guide168px.jpg\" title=\"indomitable_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        You gain immunity to stunned, frozen, knocked down, polymorphed, petrified, crippled for 1 turn after being affected by one of these statuses. Can happen once every 3 turns \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Ingenious": {
+    "name": "Ingenious",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsIngenious.png",
+    "description": "+5%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Ingenious</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsIngenious\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsIngenious.png\" title=\"talentsIngenious\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Ingenious rewards you with \n       <span style=\"color: #ffff99;\"> <strong>+5%</strong></span> Critical Chance and \n       <span style=\"color: #ffff99;\"><strong>+10%</strong></span> Critical Damage. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Magic Cycles": {
+    "name": "Magic Cycles",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/magic_cycles_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Magic Cycles</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"magic cycles talents dos2 wiki guide168px\" height=\"168\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/magic_cycles_talents_dos2_wiki_guide168px.jpg\" title=\"magic_cycles_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        At the start of an encounter, you gain one of two statuses: Cycle of Fire and Water or Cycle of Earth and Air. Cycle of Fire and Water increases your Pyrokinetic and Hydrosophist combat abilities by 2. Cycle of Earth and Air increases your Geomancer and Aerotheurge combat abilities by 2. Statuses swap each turn. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Master Thief": {
+    "name": "Master Thief",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/master_thief_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Master Thief</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"master thief talents dos2 wiki guide168px\" height=\"168\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/master_thief_talents_dos2_wiki_guide168px.jpg\" title=\"master_thief_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        You become Invisible while pickpocketing. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Rooted": {
+    "name": "Rooted",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsRooted.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Rooted</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsRooted\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsRooted.png\" title=\"talentsRooted\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives you 3 extra points in your Memory attribute.. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Sadist": {
+    "name": "Sadist",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/sadist_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Sadist</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"sadist talents dos2 wiki guide168px\" height=\"168\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/sadist_talents_dos2_wiki_guide168px.jpg\" title=\"sadist_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Melee attacks deal additional fire damage to burning targets, poison damage to poisoned targets and physical damage to bleeding targets \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Savage Sortilege": {
+    "name": "Savage Sortilege",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSavageSortilege.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Savage Sortilege</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsSavageSortilege\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSavageSortilege.png\" title=\"talentsSavageSortilege\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives all magical skills a critical chance equal to your critical chance score. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Sophisticated": {
+    "name": "Sophisticated",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsRefined.png",
+    "description": "+10%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Sophisticated</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsRefined\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsRefined.png\" title=\"talentsRefined\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives you \n       <span style=\"color: #ffff99;\"><strong>+10%</strong></span> Fire and \n       <span style=\"color: #ffff99;\"><strong>+10%</strong></span> poison resistances \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Soulcatcher": {
+    "name": "Soulcatcher",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/soulcatcher_talents_dos2_wiki_guide168px.jpg",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Soulcatcher</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"soulcatcher talents dos2 wiki guide168px\" height=\"168\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/soulcatcher_talents_dos2_wiki_guide168px.jpg\" title=\"soulcatcher_talents_dos2_wiki_guide168px\" width=\"168\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        When an allied character dies, a Zombie Crawler is raised at their corpse, under their control. Zombie crawler lasts 3 turns or until character is resurrected. Range 12m. Does not affect summoned creatures. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Spellsong": {
+    "name": "Spellsong",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSpellsong.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Spellsong</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsSpellsong\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSpellsong.png\" title=\"talentsSpellsong\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Spellsong immediately gives you 1 extra Combat Ability point and 1 extra Civil Ability point. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Spider's Kiss": {
+    "name": "Spider's Kiss",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSpidersKiss.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Spider's Kiss</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsSpidersKiss\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSpidersKiss.png\" title=\"talentsSpidersKiss\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Spider's Kiss gives you -2 on attribute and +2 to another. (depends on your choice in quest) \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Sturdy": {
+    "name": "Sturdy",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSturdy.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Sturdy</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsSturdy\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsSturdy.png\" title=\"talentsSturdy\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Sturdy\u00a0give you +10% max\u00a0 \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Vitality\" target=\"\" title=\"Divinity Original Sin 2 Vitality\">Vitality</a>\u00a0and +5%\u00a0 \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Dodging\" target=\"\" title=\"Divinity Original Sin 2 Dodging\">Dodging</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Thrifty": {
+    "name": "Thrifty",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsThrifty.png",
+    "description": "+1",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Thrifty</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsThrifty\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsThrifty.png\" title=\"talentsThrifty\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Thrifty gives you \n       <span style=\"color: #ffff99;\"><strong>+1</strong></span> to \n       <a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Bartering\" target=\"\" title=\"Divinity Original Sin 2 Bartering\">Bartering</a>. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Trader's Secrets": {
+    "name": "Trader's Secrets",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsTradersSecrets.png",
+    "description": "+1",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Trader's Secrets</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsTradersSecrets\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsTradersSecrets.png\" title=\"talentsTradersSecrets\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Gives \n       <span style=\"color: #ffff99;\"><strong>+1</strong></span>\n<a class=\"wiki_link\" href=\"https://divinityoriginalsin2.wiki.fextralife.com/Bartering\" target=\"\" title=\"Divinity Original Sin 2 Bartering\">Bartering</a> from eating Garvan's head. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Undead": {
+    "name": "Undead",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsZombie.png",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<tbody>\n<tr>\n<th colspan=\"2\"> <h2>Undead</h2> </th>\n</tr>\n<tr>\n<td colspan=\"2\" style=\"text-align: center;\"><img title=\"talentsZombie\" alt=\"talentsZombie\" height=\"381\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsZombie.png\" style=\"width: 160px; height: 381px;\" width=\"160\"/></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\"><strong>Tag Type</strong></td>\n<td style=\"text-align: center;\">\u00a0Race</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  },
+  "Living Armour": {
+    "name": "Living Armour",
+    "icon": "https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsLivingArmor.png",
+    "description": "35%",
+    "infoboxHtml": "<div class=\"infobox\" id=\"infobox\">\n<div class=\"table-responsive\">\n<table class=\"wiki_table\">\n<thead>\n<tr>\n<th> <h2>Living Armour</h2> </th>\n</tr>\n</thead>\n<tbody>\n<tr style=\"text-align: center;\">\n<td><img alt=\"talentsLivingArmor\" height=\"128\" src=\"https://divinityoriginalsin2.wiki.fextralife.com/file/Divinity-Original-Sin-2/talentsLivingArmor.png\" title=\"talentsLivingArmor\" width=\"128\"/></td>\n</tr>\n<tr>\n<td>\n<div class=\"lineleft\">\n        Living Armour adds \n       <span style=\"color: #ffff99;\"><strong>35%</strong></span> of all healing you receive by skills or consumables to your Magic Armour. \n      </div> </td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>"
+  }
+}
