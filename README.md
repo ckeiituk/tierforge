@@ -121,14 +121,18 @@ sudo systemctl reload nginx
 ```ini
 [Unit]
 Description=TierForge API Server
-After=network.target
+Wants=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple
 User=www-data
 WorkingDirectory=/var/www/tierforge/backend
 ExecStart=/var/www/tierforge/backend/tierforge --db tierforge.db
-Restart=always
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
